@@ -1,4 +1,4 @@
-[![Logo Node.js](nodejs-logo.png)](../)
+[![Logo Node.js](logo-nodejs.png)](../)
 
 [# Cours Node.js](../)
 

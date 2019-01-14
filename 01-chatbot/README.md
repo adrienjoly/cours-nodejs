@@ -36,13 +36,13 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 2. Initialiser le dépôt local (`git init`) avec ce fichier (`git add`, `git commit`) puis l'uploader sur GitLab. (`git push`)
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
-5. Modifier `package.json` de manière à ce qu'on puisse démarrer le serveur en tapant `npm start`.
-6. Mettre le serveur en production en le déployant sur votre compte Heroku ou Netlify.
+5. Mettre le serveur en production en le déployant sur votre compte Heroku.
+6. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
 7. Créer une "release" (ou un `git tag`) pour garder une trace de cette version du serveur dans votre dépôt.
 
 <!-- TODO: décrire déploiement plus en détails ? -->
 
-> Documentation de Express: https://expressjs.com/fr/starter/installing.html
+> Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html), [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 

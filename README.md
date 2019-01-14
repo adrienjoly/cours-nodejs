@@ -7,9 +7,9 @@
 ## Ressources alternatives en langue anglaise
 
 - [JS Books](http://jsbooks.revolunet.com/)
-- [Basic Node and Express | freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/basic-node-and-express/)
-- [Managing Packages with Npm | freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm/)
-- [MongoDB and Mongoose | freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/mongodb-and-mongoose/)
+- [Basic Node and Express - freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/basic-node-and-express/)
+- [Managing Packages with Npm - freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm/)
+- [MongoDB and Mongoose - freeCodeCamp](https://learn.freecodecamp.org/apis-and-microservices/mongodb-and-mongoose/)
 
 ## Ressources annexes au cours
 

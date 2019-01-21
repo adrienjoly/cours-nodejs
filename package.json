@@ -1,0 +1,11 @@
+{
+  "name": "cours-nodejs",
+  "version": "1.0.0",
+  "scripts": {
+    "start-http": "python -m SimpleHTTPServer",
+    "install": "gem install bundler && bundle install # requires ruby-lang.org",
+    "build": "bundle exec jekyll build",
+    "start": "bundle exec jekyll serve --incremental"
+  },
+  "author": "Adrien Joly"
+}

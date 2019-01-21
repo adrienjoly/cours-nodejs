@@ -137,6 +137,6 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou
 
 ## Pour aller plus loin
 
-- [The Best APIs are Built with Swagger Tools | Swagger](https://swagger.io/)
+- [The Best APIs are Built with Swagger Tools](https://swagger.io/)
 - [Mongoose ODM v5.4.5](https://mongoosejs.com/)
 - [mongodb - How to properly handle mongoose schema migrations? - Stack Overflow](https://stackoverflow.com/questions/18295357/how-to-properly-handle-mongoose-schema-migrations)

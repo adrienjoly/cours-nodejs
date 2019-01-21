@@ -20,11 +20,11 @@ Durée: 4h.
 
 ## Exercice 2.1 - Lecture et écriture dans MongoDB
 
-Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide de `mongodb-native`.
+Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
 
 Pour cela, nous allons:
 - créer une base de données MongoDB et une collection "`dates`";
-- découvrir comment lire et écrire des données dans cette collection depuis un programme Node.js, à l'aide du package `mongodb-native`.
+- découvrir comment lire et écrire des données dans cette collection depuis un programme Node.js, à l'aide du package `mongodb`.
 
 ### Critères de validation
 
@@ -132,7 +132,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou
 ### Bonus
 
 - Utiliser OpenAPI pour documenter votre API => ajouter le modèle au format YAML dans votre dépôt.
-- Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb-native`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.
+- Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.
 - Expliquez comment procéder si jamais la structure de votre base de données (aussi appelée "schema") est amenée à changée d'une version à l'autre de votre application. Comment éviter tout conflit de versions entre la structure des données en base de données et celle qui est reconnue par le programme, et tout bug ou crash que cela pourrait provoquer.
 
 ## Pour aller plus loin

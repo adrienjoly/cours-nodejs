@@ -29,9 +29,9 @@ Pour cela, nous allons:
 ### Critères de validation
 
 - Fonctionnel: Le code source doit se connecter à la base de données MongoDB accessible via l'URL `mongodb://localhost:27017/test`, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
-- Lisibilité: 50 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
-- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
-- Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.
+- Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
+- Structure: Le code source du projet ne doit pas contenir plus de 5 fichiers. (dont `dates.js`, `package.json` et `README.md`)
+- Production: À ce stade, vous n'aurez pas besoin de déployer quoi que ce soit en production.
 
 ### Étapes proposées
 

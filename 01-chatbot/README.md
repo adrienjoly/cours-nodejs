@@ -146,3 +146,9 @@ N'oubliez pas d'inclure à votre rendu:
 L'un de vous viendra présenter son audit en début de la prochaine séance.
 
 > Suggestions: Pour vous aider à identifier les limitations, vous pouvez utiliser un débogueur Node.js (ex: `ndb` ou Visual Studio Code), des scripts Bash lançant plusieurs requêtes d'affilée, et/ou un outil de test de charge. Vous pouvez aussi repérer certaines limitations (ex: cas limites) en lisant attentivement le code de votre camarade.
+
+## Pour aller plus loin
+
+💡 Avec l'aide de Node.js, il est possible de programmer un chat-bot contactable via Facebook Messenger, ou tout autre plateforme de messagerie instantanée.
+
+Exemple: [Build a Personal Facebook Messenger Bot in 10 minutes with Nodejs and Standard Library](https://hackernoon.com/build-a-personal-facebook-messenger-bot-in-10-minutes-a7a237f3f018)

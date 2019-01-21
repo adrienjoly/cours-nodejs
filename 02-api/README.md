@@ -18,6 +18,15 @@ Programme de la deuxième partie: (retour de la pause)
 
 Durée: 4h.
 
+## Pré-requis
+
+Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
+- `node`; (tester avec `$ node --version`)
+- `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
+- et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker Desktop (Community Edition) depuis [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)).
+
+Nous verrons dans l'exercice ci-dessous comment installer et exécuter un serveur MongoDB à l'aide de Docker.
+
 ## Exercice 2.1 - Lecture et écriture dans MongoDB
 
 Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
@@ -34,11 +43,6 @@ Pour cela, nous allons:
 - Production: À ce stade, vous n'aurez pas besoin de déployer quoi que ce soit en production.
 
 ### Étapes proposées
-
-Pour effectuer cet exercice, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
-- `node`; (tester avec `$ node --version`)
-- `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
-- et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker Desktop (Community Edition) depuis [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)).
 
 1. Installer et lancer un serveur de base de données MongoDB écoutant sur le port `27017`:
   - `$ docker pull mongo:4` pour télécharger l'image Docker de MongoDB 4;

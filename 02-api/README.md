@@ -1,9 +1,13 @@
 # Séance 2 - Serveur API avec base de données MongoDB
 
 <!--
-Programme de la séance:
+Programme de la première partie:
 - un(e) étudiant(e) vient présenter le travail effectué
 - favoriser l'entraide => répartir les étudiants de manière à ce que je puisse accéder facilement aux étudiants les plus en difficulté. + faire en sorte qu'ils soient assis à côté de personnes qui ont réussi le TP de la dernière fois.
+
+Programme de la deuxième partie: (retour de la pause)
+- faire un point sur code synchrone VS callbacks VS promises VS async/await
+- s'assurer que tout le monde a compris comment se connecter à MongoDB
 -->
 
 ## Objectifs de cette séance
@@ -102,6 +106,37 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
 5. Créer une nouvelle "release" (ou un `git tag`) pour garder une trace de cette version du serveur dans votre dépôt.
 
+## Exercice 2.3 (à rendre) - API et base de données en production
 
+Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi que sa base de données en production, afin qu'elle soit accessible en permanence et à quiconque sur internet.
+
+### Critères de validation
+
+- Fonctionnel: Même fonctionnalités que l'exercice précédent.
+- Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
+- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
+- Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
+- Production: Le serveur et sa base de données sont en production.
+
+ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
+
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+
+### Étapes proposées
+
+1. Ajouter un add-on "MongoDB" (hébergé gratuitement dans le Cloud) à notre application sur Heroku.
+2. Modifier `server.js` pour qu'il sache se connecter à cette base de données, à partir des variables d'environnement définies dans Heroku. (et qu'il puisse aussi fonctionner en local)
+3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
+4. Créer une nouvelle "release" (ou un `git tag`) nommé "`v1.0`" pour garder une trace du code que vous rendez.
+
+### Bonus
+
+- Utiliser OpenAPI pour documenter votre API => ajouter le modèle au format YAML dans votre dépôt.
+- Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb-native`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.
+- Expliquez comment procéder si jamais la structure de votre base de données (aussi appelée "schema") est amenée à changée d'une version à l'autre de votre application. Comment éviter tout conflit de versions entre la structure des données en base de données et celle qui est reconnue par le programme, et tout bug ou crash que cela pourrait provoquer.
 
 ## Pour aller plus loin
+
+- [The Best APIs are Built with Swagger Tools | Swagger](https://swagger.io/)
+- [Mongoose ODM v5.4.5](https://mongoosejs.com/)
+- [mongodb - How to properly handle mongoose schema migrations? - Stack Overflow](https://stackoverflow.com/questions/18295357/how-to-properly-handle-mongoose-schema-migrations)

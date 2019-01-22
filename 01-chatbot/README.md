@@ -16,6 +16,14 @@ Programme de la séance:
 
 Durée: 4h.
 
+## Pré-requis
+
+Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le terminal bash [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) ou [CMDER](http://cmder.net/). Sous Mac ou Linux, vous serez en mesure d'utiliser votre terminal par défaut.
+
+Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal bash (ou compatible):
+- `node`; (tester avec `$ node --version`)
+- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
+
 ## Exercice 1.1 - Hello World
 
 Le but est de développer et mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.

@@ -24,6 +24,8 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 - `node`; (tester avec `$ node --version`)
 - et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
 
+> Note: si vous avez installé Node.js sous Windows, il se peut que `node` ou `npm` ne fonctionnent pas depuis Ubuntu for Windows. Dans ce cas: désinstallez Node.js, installez-le depuis Ubuntu (cf [procédure](https://github.com/Microsoft/WSL/issues/3111#issuecomment-382713543)), puis redémarrez Ubuntu.
+
 ## Exercice 1.1 - Hello World
 
 Le but est de développer et mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.
@@ -51,6 +53,10 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 <!-- TODO: décrire déploiement plus en détails ? -->
 
 > Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html), [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
+
+> Pro tip: après l'étape 3, taper `$ echo node_modules >>.gitignore` pour éviter que les dépendances installées dans le répertoire `node_modules` (créé par `npm install`) ne soient sauvegardées dans votre historique `git`.
+
+> Pro tip 2: en cas de problèmes pour installer la commande `heroku` (cf étape 5), vous pouvez essayer `$ npm install --global heroku`, ou encore `$ npm install heroku` puis `./node_modules/.bin/heroku`.
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 

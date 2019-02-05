@@ -26,6 +26,7 @@
   - [Basic Node and Express](https://learn.freecodecamp.org/apis-and-microservices/basic-node-and-express/)
   - [Managing Packages with Npm](https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm/)
   - [MongoDB and Mongoose](https://learn.freecodecamp.org/apis-and-microservices/mongodb-and-mongoose/)
+- [Learn Node.js and MongoDB by building a URL Shortener app](https://freshman.tech/url-shortener/)
 
 ## Ressources annexes au cours
 

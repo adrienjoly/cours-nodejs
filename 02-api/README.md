@@ -25,6 +25,8 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 - `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
 - et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker Desktop (Community Edition) depuis [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)).
 
+Attention, si `$ docker run hello-world` ne fonctionne pas, il se peut que docker ne soit pas correctement installé, ou que votre système d'exploitation (ex: Windows 10 Home Edition) ne permette pas l'execution de Docker. Dans ce dernier cas, sachez que vous pouvez installer Ubuntu dans une machine virtuelle, à l'aide de VirtualBox.
+
 Nous verrons dans l'exercice ci-dessous comment installer et exécuter un serveur MongoDB à l'aide de Docker.
 
 ## Exercice 2.1 - Lecture et écriture dans MongoDB

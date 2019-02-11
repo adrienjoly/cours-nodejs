@@ -26,6 +26,7 @@
   - [Basic Node and Express](https://learn.freecodecamp.org/apis-and-microservices/basic-node-and-express/)
   - [Managing Packages with Npm](https://learn.freecodecamp.org/apis-and-microservices/managing-packages-with-npm/)
   - [MongoDB and Mongoose](https://learn.freecodecamp.org/apis-and-microservices/mongodb-and-mongoose/)
+- [How to create a REST API with Express.js in Node.js - RWieruch](https://www.robinwieruch.de/node-express-server-rest-api/)
 - [Learn Node.js and MongoDB by building a URL Shortener app](https://freshman.tech/url-shortener/)
 
 ## Ressources annexes au cours

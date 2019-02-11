@@ -17,7 +17,7 @@ Programme de la deuxième partie: (retour de la pause)
 
 - Étendre le chat-bot pour retrouver l'historique des conversations
 - Persistance de données dans une base de données MongoDB
-- Comprendre les différentes manières de programmer des fonctions asynchrones en Node.js
+- Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
 Durée: 4h.
 
@@ -28,7 +28,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 - `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
 - et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker Desktop (Community Edition) depuis [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)).
 
-Attention, si `$ docker run hello-world` ne fonctionne pas, il se peut que docker ne soit pas correctement installé, ou que votre système d'exploitation (ex: Windows 10 Home Edition) ne permette pas l'execution de Docker. Dans ce dernier cas, sachez que vous pouvez installer Ubuntu dans une machine virtuelle, à l'aide de VirtualBox.
+Attention, si `$ docker run hello-world` ne fonctionne pas, il se peut que docker ne soit pas correctement installé, ou que votre système d'exploitation (ex: Windows 10 Home Edition) ne permette pas l'execution directe de Docker. Dans ce dernier cas, sachez que vous pouvez installer Ubuntu dans une machine virtuelle, à l'aide de VirtualBox. (ex: en suivant les instructions vidéo depuis [Docker Tutorial for Beginners - Hashnode](https://hashnode.com/post/docker-tutorial-for-beginners-cjrj2hg5001s2ufs1nker9he2))
 
 Nous verrons dans l'exercice ci-dessous comment installer et exécuter un serveur MongoDB à l'aide de Docker.
 
@@ -37,13 +37,13 @@ Nous verrons dans l'exercice ci-dessous comment installer et exécuter un serveu
 Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
 
 Pour cela, nous allons:
-- créer une base de données MongoDB et une collection "`dates`";
+- créer une collection MongoDB "`dates`";
 - découvrir comment lire et écrire des données dans cette collection depuis un programme Node.js, à l'aide du package `mongodb`.
 
 ### Critères de validation
 
-- Fonctionnel: Le code source doit se connecter à la base de données MongoDB accessible via l'URL `mongodb://localhost:27017/test`, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
-- Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
+- Fonctionnel: Le programme doit se connecter à la base de données MongoDB accessible via l'URL `mongodb://localhost:27017/test`, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
+- Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
 - Structure: Le code source du projet ne doit pas contenir plus de 5 fichiers. (dont `dates.js`, `package.json` et `README.md`)
 - Production: À ce stade, vous n'aurez pas besoin de déployer quoi que ce soit en production.
 
@@ -98,7 +98,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 ### Critères de validation
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
-- Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
+- Lisibilité: 100 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
 - Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.

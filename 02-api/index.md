@@ -1,9 +1,7 @@
 ---
-title: Séance 2 - Serveur API avec base de données MongoDB
+title: Séance 2 - Serveur API avec données MongoDB
 layout: default
 ---
-
-# Séance 2 - Serveur API avec base de données MongoDB
 
 <!--
 Programme de la première partie:

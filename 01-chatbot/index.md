@@ -3,8 +3,6 @@ title: Séance 1 - Chat-bot avec Express
 layout: default
 ---
 
-# Séance 1 - Chat-bot avec Express
-
 <!--
 Programme de la séance:
 - présentations: bio, tour de table

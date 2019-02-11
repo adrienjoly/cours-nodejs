@@ -1,3 +1,8 @@
+---
+title: Séance 1 - Chat-bot avec Express
+layout: default
+---
+
 # Séance 1 - Chat-bot avec Express
 
 <!--

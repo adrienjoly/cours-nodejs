@@ -1,3 +1,8 @@
+---
+title: Séance 2 - Serveur API avec base de données MongoDB
+layout: default
+---
+
 # Séance 2 - Serveur API avec base de données MongoDB
 
 <!--

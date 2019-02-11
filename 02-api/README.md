@@ -110,7 +110,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou
 2. Implémenter et tester le point d'accès `GET /messages/all`. (il devrait retourner un tableau vide)
 3. Faire en sorte que ce point d'accès retourne l'historique des conversations => Enregistrer les messages de l'utilisateur et les réponses du chat-bot dans la collection `messages`.
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
-5. Créer une nouvelle "release" (ou un `git tag`) pour garder une trace de cette version du serveur dans votre dépôt.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.2`.
 
 ## Exercice 2.3 (à rendre) - API et base de données en production
 
@@ -133,11 +133,11 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou
 1. Ajouter un add-on "MongoDB" (hébergé gratuitement dans le Cloud) à notre application sur Heroku.
 2. Modifier `server.js` pour qu'il sache se connecter à cette base de données, à partir des variables d'environnement définies dans Heroku. (et qu'il puisse aussi fonctionner en local)
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
-4. Créer une nouvelle "release" (ou un `git tag`) nommé "`v1.0`" pour garder une trace du code que vous rendez.
+4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.3`.
 
 ### Bonus
 
-Important : ces étapes ne doivent pas être implémentées dans la v1 de votre historique git. (Cf dernière étape ci dessus)
+Important : assurez-vous d'avoir bien créé un `tag` dans votre dépôt GitLab avant d'effectuer les exercices bonus.
 
 - Utiliser OpenAPI pour documenter votre API => ajouter le modèle au format YAML dans votre dépôt.
 - Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.

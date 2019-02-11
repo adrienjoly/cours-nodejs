@@ -48,7 +48,7 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
 5. Mettre le serveur en production en le déployant sur votre compte Heroku.
 6. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
-7. Créer une "release" (ou un `git tag`) pour garder une trace de cette version du serveur dans votre dépôt.
+7. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis GitLab.
 
 <!-- TODO: décrire déploiement plus en détails ? -->
 
@@ -85,7 +85,7 @@ Exemples / cas d'usage:
 3. Modifier l'implémentation du point d'entrée pour afficher seulement la valeur de la propriété `msg` du contenu passé au format JSON.
 4. Modifier l'implémentation du point d'entrée pour que les cas d'usages listés ci-dessus soient remplis.
 5. Déployer une mise à jour de votre serveur en production.
-6. Créer une nouvelle "release" (ou un `git tag`) pour garder une trace de cette version du serveur dans votre dépôt.
+6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.2`.
 
 > Documentation de Express: https://expressjs.com/fr/starter/basic-routing.html
 
@@ -124,7 +124,7 @@ Pour cela, nous allons:
 2. Faire en sorte que, après avoir fourni une information, l'utilisateur puisse retrouver cette information en formulant une requête (cf étape 3 du cas d'usage), grâce au fichier `réponses.json`.
 3. Faire en sorte que toutes les étapes du cas d'usage fonctionne, plusieurs fois d'affilée, y compris avec d'autres mots que "demain" et d'autres valeurs que "Mercredi". S'assurer que les nouvelles informations sont encore exploitables même après avoir redémarré le serveur.
 4. Déployer une mise à jour de votre serveur en production.
-5. Créer une nouvelle "release" (ou un `git tag`) pour garder une trace de cette version du serveur dans votre dépôt.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.3`.
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 

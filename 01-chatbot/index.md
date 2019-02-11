@@ -107,7 +107,7 @@ Nous voulons désormais que notre chat-bot soit capable d'apprendre de nouvelles
 Exemples de conversation / cas d'usage:
 1. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain"}' http://localhost:3000/chat` répondra "Je ne connais pas demain..."
 2. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain = Mercredi"}' http://localhost:3000/chat` répondra "Merci pour cette information !"
-3. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain"}' http://localhost:3000/chat` répondra "Demain: Mercredi" (y compris après redémarrage du serveur)
+3. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain"}' http://localhost:3000/chat` répondra "demain: Mercredi" (y compris après redémarrage du serveur)
 
 Pour cela, nous allons:
 - enregistrer toute nouvelle information dans un fichier `réponses.json`,
@@ -123,7 +123,7 @@ Pour cela, nous allons:
 
 ### Étapes proposées
 
-1. Faire en sorte que le point d'entrée `/chat` enregistre la clé (ex: "demain") et la valeur (ex: "Mercredi") fournies par l'utilisateur de la fichier `réponses.json`, lorsque celui-ci fournit une nouvelle information. (étape 2 du cas d'usage)
+1. Faire en sorte que le point d'entrée `/chat` enregistre la clé (ex: "demain") et la valeur (ex: "Mercredi") fournies par l'utilisateur dans la fichier `réponses.json`, lorsque celui-ci fournit une nouvelle information. (étape 2 du cas d'usage)
 2. Faire en sorte que, après avoir fourni une information, l'utilisateur puisse retrouver cette information en formulant une requête (cf étape 3 du cas d'usage), grâce au fichier `réponses.json`.
 3. Faire en sorte que toutes les étapes du cas d'usage fonctionne, plusieurs fois d'affilée, y compris avec d'autres mots que "demain" et d'autres valeurs que "Mercredi". S'assurer que les nouvelles informations sont encore exploitables même après avoir redémarré le serveur.
 4. Déployer une mise à jour de votre serveur en production.

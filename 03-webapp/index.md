@@ -84,7 +84,7 @@ Dans cet exercice, nous créer un nouveau serveur Web avec Node.js et Express. C
 
 8. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
 
-9. Pousser vos *commits* dans votre dépôt GitLab.
+9. Créer un `git tag v3.1` puis pousser vos *commits* dans votre dépôt GitLab.
 
 ## Exercice 3.2 - Formulaire avec page de destination
 
@@ -119,7 +119,9 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 
 6. Ajouter un champ `description` de type `textarea` multi-ligne dans le formulaire, et faire en sorte que le contenu saisi par l'utilisateur soit affiché dans la page de destination en respectant les sauts de lignes et caractères spéciaux.
 
-7. Pousser vos *commits* dans votre dépôt GitLab. Puis le mettre le serveur en production sur Heroku.
+7. Tester le serveur en production sur Heroku.
+
+8. Créer un `git tag v3.2` puis pousser vos *commits* dans votre dépôt GitLab.
 
 ## Exercice 3.3 - Enrichissement de données à l'aide d'APIs externes
 
@@ -146,7 +148,7 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 4. Vérifier que l'application fonctionne aussi en production, en la déployant sur Heroku.
 
-5. Pousser vos modifications dans votre dépôt GitLab.
+5. Créer un `git tag v3.3` puis pousser vos *commits* dans votre dépôt GitLab.
 
 ## Étude: comment effectuer une requête HTTP depuis Node.js ?
 

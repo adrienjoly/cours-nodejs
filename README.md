@@ -28,6 +28,7 @@
   - [MongoDB and Mongoose](https://learn.freecodecamp.org/apis-and-microservices/mongodb-and-mongoose/)
 - [How to create a REST API with Express.js in Node.js - RWieruch](https://www.robinwieruch.de/node-express-server-rest-api/)
 - [Learn Node.js and MongoDB by building a URL Shortener app](https://freshman.tech/url-shortener/)
+- [leonardomso/33-js-concepts: 📜 33 concepts every JavaScript developer should know.](https://github.com/leonardomso/33-js-concepts)
 
 ## Ressources annexes au cours
 

@@ -57,7 +57,7 @@ Pour cela, nous allons:
 4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données `mongodb://localhost:27017/test`. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
 5. Après avoir vérifié que `$ node dates.js` s'exécute sans erreur, modifier `dates.js` pour qu'il affiche la liste des documents de la collection `dates` dans la sortie standard. (cf [Read methods](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#read-methods))
 6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
-7. Sauvegarder votre projet dans un dépôt GitLab.
+7. Sauvegarder votre projet dans un dépôt [GitLab](https://gitlab.eemi.tech/).
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
@@ -105,7 +105,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 
 Cet exercice s'appuie à la fois sur le code écrit lors de la séance précédente, et sur le code écrit dans l'exercice 2.1 (ci-dessus).
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt [GitLab](https://gitlab.eemi.tech/), ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
 ### Étapes proposées
 
@@ -129,7 +129,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi 
 
 ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt GitLab, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt [GitLab](https://gitlab.eemi.tech/), ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
 ### Étapes proposées
 

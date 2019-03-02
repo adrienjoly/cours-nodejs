@@ -47,7 +47,7 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 ### Étapes proposées
 
-1. Créer un dépôt "node-app" sur GitLab, puis le cloner localement:
+1. Créer un dépôt "node-app" sur le [GitLab de l'EEMI](https://gitlab.eemi.tech/), puis le cloner localement:
 
     ```bash
     $ git clone "insérer l'URL de votre dépôt GitLab ici"

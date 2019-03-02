@@ -181,3 +181,29 @@ Par ailleurs, il est possible d'utiliser Node.js pour créer des applications "n
 Bref, les possibilités sont quasi-illimitées !
 
 Quel framework essayerez-vous pour votre prochain projet Web ?
+
+<!-- Outils pour enseignant:
+
+- Exécuter le code Node.js des étudiants via docker:
+  https://gist.github.com/adrienjoly/95776086d850a1dd211dbfcd9b2c0a73
+
+- Barème d'évaluation pour exercices 3.1, 3.2 et 3.3:
+    - travail rendu dans le délai imparti
+    - app web accessible sur internet
+    - titre: "Node App" sur index
+    - favicon fonctionne + sur index
+    - formulaire avec page de destination
+    - recup param POST + accents supportés
+    - champ description multi ligne
+    - affichage de la ville sur une carte
+    - message erreur en cas de ville inconnue
+    - repo accessible
+    - structure fichiers de express-generator
+    - README qui explique comment install+run
+    - package.json avec express et start
+    - bon usage des templates mustache/hogan.js
+    - tags: v3.1, v3.2 et v3.3 + commit(s) entre chacun d'eux
+    - implem de la requete vers geocode.xyz
+    - compréhension apparente des fonctions asynchrones
+    - lisibilité (apostrophes, 2-space indent, points-virgule)
+-->

@@ -124,3 +124,14 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 
 👉 [Énoncé](../05-proj)
 
+---
+
+## Pour aller plus loin
+
+- Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
+- Concept à comprendre pour surveiller la maintenabilité du code: la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)
+- [Integration Continue](https://fr.wikipedia.org/wiki/Int%C3%A9gration_continue): exécuter ses tests automatisés dans le cloud. Exemples de services: [Circle CI](https://circleci.com/).
+- Exemple de faille de sécurité à prévenir: [injection par XSS](https://fr.wikipedia.org/wiki/Cross-site_scripting)
+- Sessions utilisateur depuis des services tiers: le protocole [OAuth](https://fr.wikipedia.org/wiki/OAuth)
+- Spécification, documentation et instrumentalisation d'API: [OpenAPI et Swagger](https://swagger.io/solutions/getting-started-with-oas/)
+- Alternative moderne aux APIs REST: [GraphQL](https://graphql.org/)

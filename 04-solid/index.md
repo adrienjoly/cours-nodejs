@@ -121,3 +121,6 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 ---
 
 ## Projet à rendre en groupe - Service de gestion de notes personnelles
+
+👉 [Énoncé](../05-proj)
+

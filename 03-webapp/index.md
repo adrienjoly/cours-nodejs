@@ -203,7 +203,7 @@ Quel framework essayerez-vous pour votre prochain projet Web ?
     - package.json avec express et start
     - bon usage des templates mustache/hogan.js
     - tags: v3.1, v3.2 et v3.3 + commit(s) entre chacun d'eux
-    - implem de la requete vers geocode.xyz
-    - compréhension apparente des fonctions asynchrones
+    - implem de la requete vers geocode.xyz (x2 PTS)
+    - compréhension apparente des fonctions asynchrones (x2 PTS)
     - lisibilité (apostrophes, 2-space indent, points-virgule)
 -->

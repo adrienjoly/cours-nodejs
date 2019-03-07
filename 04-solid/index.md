@@ -65,8 +65,8 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 1. Ajouter le moteur de tests "[Ava](https://www.npmjs.com/package/ava)" à notre projet Node.js.
 2. Créer `test.js` et y définir un test fonctionnel qui vérifiera que la page d'index du site comprend bien un formulaire HTML.
 3. Compléter `package.json` et `README.md` afin d'expliquer comment exécuter ce test.
-4. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt [GitLab](https://gitlab.eemi.tech/) que vous avez créé pendant la séance précédente.
-5. Ajouter à `test.js` un test fonctionnel qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
+4. Ajouter à `test.js` un test fonctionnel qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
+5. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt [GitLab](https://gitlab.eemi.tech/) que vous avez créé pendant la séance précédente.
 
 BONUS: ajouter un test d'intégration et un test unitaire.
 

@@ -24,7 +24,9 @@ Afin de savoir développer et maintenir une application Web réaliste et pérenn
 
 Durée: 4h.
 
+<!-->
 Projet à rendre en groupe, pour valider les acquis: service de gestion de notes personnelles.
+-->
 
 ## Pré-requis
 
@@ -118,11 +120,13 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
   - À l'aide de la documentation de passport.js et de ce que nous avons appris lors de la séance 2, modifier notre code pour maintenir la liste des utilisateurs et de leurs sessions dans une base de données MongoDB.
   - Conservez vos modifications: `$ git commit -m "users and sessions are persisted in mongodb"`
 
+<!--
 ---
 
 ## Projet à rendre en groupe - Service de gestion de notes personnelles
 
 👉 [Énoncé](../05-proj)
+-->
 
 ---
 

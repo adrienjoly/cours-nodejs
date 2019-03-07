@@ -67,6 +67,8 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 3. Compléter `package.json` et `README.md` afin d'expliquer comment exécuter ce test.
 4. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt [GitLab](https://gitlab.eemi.tech/) que vous avez créé pendant la séance précédente.
 
+BONUS: ajouter un test d'intégration et un test unitaire.
+
 ---
 
 ## Exercice 4.2 - Sessions utilisateur

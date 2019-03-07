@@ -3,6 +3,13 @@ title: Projet à rendre en groupe - Service de gestion de notes personnelles
 layout: default
 ---
 
+<!-- WORK IN PROGRESS
+
+- https://github.com/eemi-aj/node-note-keeper
+- https://circleci.com/gh/eemi-aj/node-note-keeper
+- réf: https://trello.com/c/OY8UVMiS/25-%F0%9F%8E%93-cours#comment-5c33318474ebba6e5f47f9d9
+-->
+
 Le but est d'écrire et de mettre en production une application Web permettant à des utilisateurs de gérer leurs notes personnelles.
 
 Ce travail est à effectuer en groupe, et sera évalué à la fois de manière collective et individuelle.

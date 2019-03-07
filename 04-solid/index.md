@@ -134,10 +134,20 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 
 ## Pour aller plus loin
 
-- Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
+Ressources sur la maintenabilité, les tests et la sécurité:
+
 - Concept à comprendre pour surveiller la maintenabilité du code: la [dette technique](https://fr.wikipedia.org/wiki/Dette_technique)
 - [Integration Continue](https://fr.wikipedia.org/wiki/Int%C3%A9gration_continue): exécuter ses tests automatisés dans le cloud. Exemples de services: [Circle CI](https://circleci.com/).
 - Exemple de faille de sécurité à prévenir: [injection par XSS](https://fr.wikipedia.org/wiki/Cross-site_scripting)
+
+Ressources sur l'identification et l'authentification:
+
+- Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
 - Sessions utilisateur depuis des services tiers: le protocole [OAuth](https://fr.wikipedia.org/wiki/OAuth)
-- Spécification, documentation et instrumentalisation d'API: [OpenAPI et Swagger](https://swagger.io/solutions/getting-started-with-oas/)
-- Alternative moderne aux APIs REST: [GraphQL](https://graphql.org/)
+
+Ressources sur l'architecture et scalabilité d'applications Node.js:
+
+- [What is the best way I can scale my nodejs app? - Stack Overflow](https://stackoverflow.com/questions/21981186/what-is-the-best-way-i-can-scale-my-nodejs-app)
+- [Good practices for high-performance and scalable Node.js applications [Part 1/3]](https://medium.com/iquii/good-practices-for-high-performance-and-scalable-node-js-applications-part-1-3-bb06b6204197)
+- [Cas d'utilisation de RabbitMQ - Développement - Human Coders Forum](https://forum.humancoders.com/t/cas-dutilisation-de-rabbitmq/1173)
+- Architecture: [Microservices](https://martinfowler.com/articles/microservices.html)

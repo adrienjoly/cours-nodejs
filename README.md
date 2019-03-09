@@ -23,9 +23,9 @@
 
 ## A propos de l'auteur
 
-Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur logiciel depuis 2007. Il a contribué à plusieurs projets de recherche et développement (chez Gemalto et Alcatel-Lucent Bell Labs), a dirigé le développement de la start-up Whyd dont il maintient toujours le produit (devenu open-source en 2016), a développé plusieurs applications web en tant que freelance et entrepreneur indépendant.
+Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur logiciel depuis 2007. Il a contribué à plusieurs projets de recherche et développement (chez Gemalto et Alcatel-Lucent Bell Labs), a dirigé le développement de la start-up Whyd dont il maintient toujours le produit (devenu "[Openwhyd](https://openwhyd.org)" en 2016), et a développé plusieurs applications web en tant que freelance et entrepreneur indépendant.
 
-Depuis fin 2017, Adrien développe et maintient en production le produit "Site-Search Crawler" d'Algolia, réalisé en Node.js. Il assure actuellement le rôle de Technical Leader de cette équipe de 8 personnes.
+Depuis fin 2017, Adrien développe et maintient en production le produit "[Site-Search Crawler](https://www.algolia.com/solutions/site-search/)" d'Algolia, réalisé en Node.js. Il assure actuellement le rôle de Technical Leader de cette équipe de 8 personnes.
 
 Parallèlement, Adrien donne des cours dans plusieurs écoles parisiennes, sur les sujets suivants:
 

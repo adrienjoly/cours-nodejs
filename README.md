@@ -21,6 +21,14 @@
 - [Projet à rendre en groupe - Service de gestion de notes personnelles](05-proj/)
 -->
 
+## Notes sur la conception et méthode pédagogique
+
+Ce cours a été conçu pour des étudiants ayant déjà écrit des programmes en JavaScript. Il a été donné en présentiel aux étudiants de 2A TC et 2A Dev. Web de l'EEMI, à raison de 4 heures par séance, toutes les deux semaines. Il était demandé aux étudiants de terminer et rendre les exercices de chaque séance, au plus tard une semaine après cette séance.
+
+Centrées sur la pratique, les séances sont majoritairement constituées d'exercices à effectuer seul·e ou en binôme, entrecoupés d'explications données par l'intervenant. Le but est de faire vivre chaque problème aux étudiants avant de donner des explications, pour les encourager à chercher par eux-mêmes, et rendre les explications plus motivantes à suivre.
+
+Les étudiants sont encouragés à s'entraider par l'usage d'un canal de communication partagé (ex: Slack, Mattermost ou autre). Outre l'intérêt de ne pas rester bloqué pendant des heures sur un problème, ce type de communication permet aux étudiants d'apprendre à observer la situation problématique à laquelle ils font face, de prendre le temps d'en chercher les causes potentielles, et de décrire le problème de manière synthétique mais précise. Et donc de développer à la fois leur autonomie et leur esprit d'entraide, compétences indispensables pour des développeurs professionnels.
+
 ## A propos de l'auteur
 
 Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur logiciel depuis 2007. Il a contribué à plusieurs projets de recherche et développement (chez Gemalto et Alcatel-Lucent Bell Labs), a dirigé le développement de la start-up Whyd dont il maintient toujours le produit (devenu "[Openwhyd](https://openwhyd.org)" en 2016), et a développé plusieurs applications web en tant que freelance et entrepreneur indépendant.

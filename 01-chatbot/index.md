@@ -21,7 +21,7 @@ Durée: 4h.
 
 ## Pré-requis
 
-Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le terminal bash [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) ou [CMDER](http://cmder.net/). Sous Mac ou Linux, vous serez en mesure d'utiliser votre terminal par défaut.
+Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le terminal bash [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) installé après avoir activé [Windows Subsystem for Linux](https://docs.microsoft.com/fr-fr/windows/wsl/install-win10), [CMDER](http://cmder.net/) ou d'utiliser Linux depuis une machine virtuelle. Sous Mac ou Linux, vous serez en mesure d'utiliser votre terminal par défaut.
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal bash (ou compatible):
 - `node`; (tester avec `$ node --version`)

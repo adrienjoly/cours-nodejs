@@ -19,7 +19,7 @@ Programme de la deuxième partie: (retour de la pause)
 - Persistance de données dans une base de données MongoDB
 - Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
-Durée: 4h.
+Durée estimée cours + exercices: 6 heures.
 
 ## Pré-requis
 

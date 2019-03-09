@@ -17,7 +17,7 @@ Programme de la séance:
 - Persistance de données: lecture et modification de fichiers
 - Bases: débogage et programmation asynchrone
 
-Durée: 4h.
+Durée estimée cours + exercices: 6 heures.
 
 ## Pré-requis
 

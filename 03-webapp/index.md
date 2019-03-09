@@ -24,7 +24,7 @@ Programme de la deuxième partie: (retour de la pause)
 - Rendre du contenu HTML statique puis dynamique à l'aide de templates “mustache”
 - Interroger des APIs externes avec les modules “http” (fourni) et “request”
 
-Durée: 4h.
+Durée estimée cours + exercices: 6 heures.
 
 ## Pré-requis
 

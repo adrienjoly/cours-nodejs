@@ -14,7 +14,7 @@ keywords: javascript,node.js,initiation,exercices,api,mongodb,cours,tuto
 
 repository: adrienjoly/cours-nodejs
 
-# google_analytics: UA-1858235-4
+google_analytics: UA-1858235-4
 
 twitter: # used by the jekyll seo plugin
   username: adrienjoly

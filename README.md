@@ -23,7 +23,7 @@
 
 ## Notes sur la conception et méthode pédagogique
 
-Ce cours a été conçu pour des étudiants ayant déjà écrit des programmes en JavaScript. Il a été donné en présentiel aux étudiants de 2A TC et 2A Dev. Web de l'EEMI, à raison de 4 heures par séance, toutes les deux semaines. Il était demandé aux étudiants de terminer et rendre les exercices de chaque séance, au plus tard une semaine après cette séance.
+Ce cours a été conçu pour des étudiants ayant déjà écrit des programmes en JavaScript.
 
 Centrées sur la pratique, les séances sont majoritairement constituées d'exercices à effectuer seul·e ou en binôme, entrecoupés d'explications données par l'intervenant. Le but est de faire vivre chaque problème aux étudiants avant de donner des explications, pour les encourager à chercher par eux-mêmes, et rendre les explications plus motivantes à suivre.
 

@@ -25,7 +25,7 @@ Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le ter
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
-- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
+- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 
 > Note: si vous avez installé Node.js sous Windows, il se peut que `node` ou `npm` ne fonctionnent pas depuis Ubuntu for Windows. Dans ce cas: désinstallez Node.js, installez-le depuis Ubuntu (cf [procédure](https://github.com/Microsoft/WSL/issues/3111#issuecomment-382713543)), puis redémarrez Ubuntu.
 
@@ -43,15 +43,15 @@ Le but est de développer et mettre en production un serveur web/API basique qui
 
 ### Étapes proposées
 
-Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) dans lequel `node` est installé, et `git` est configuré avec votre identité d'étudiant EEMI. (c.a.d. associé à votre adresse email `@eemi.com`)
+Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) dans lequel `node` est installé, et `git` est configuré avec votre identité d'étudiant·e.
 
 1. Créer une application Node.js (ex: fichier `server.js`) qui affiche "Hello World" dans la sortie standard. (1 ligne de code)
-2. Initialiser le dépôt local (`git init`) avec ce fichier (`git add`, `git commit`) puis l'uploader sur le [GitLab de l'EEMI](https://gitlab.eemi.tech/). (`git push`)
+2. Initialiser le dépôt local (`git init`) avec ce fichier (`git add`, `git commit`) puis l'uploader sur l'hébergeur de dépôts `git` de l'école. (`git push`)
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
 5. Mettre le serveur en production en le déployant sur votre compte Heroku.
 6. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
-7. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis GitLab.
+7. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
 
 <!-- TODO: décrire déploiement plus en détails ? -->
 

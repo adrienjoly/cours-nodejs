@@ -19,7 +19,7 @@ Afin de vérifier son bon fonctionnement, ainsi que le respect du cahier des cha
 ## Critères d'évaluation
 
 Chaque groupe devra rendre deux URLs:
-- l'URL du dépôt git contenant le code source et l'historique de commits, hébergé sur le GitLab de l'école;
+- l'URL du dépôt git contenant le code source et l'historique de commits, hébergé sur l'hébergeur de dépôts `git` de l'école;
 - et l'URL à laquelle l'application Web a été déployée en production.
 
 Le travail du groupe et de ses collaborateurs sera évalué selon les critères suivants:

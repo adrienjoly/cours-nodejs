@@ -30,7 +30,7 @@ Durée: 4h.
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
-- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
+- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 
 ℹ️ À partir de cette séance, nous allons développer un programme Node.js indépendant de celui effectué lors des séances 1 et 2. Nous allons donc créer un nouveau répertoire et un nouveau dépôt pour celui-ci. Nous l'appellerons **node-app**.
 
@@ -47,14 +47,14 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 ### Étapes proposées
 
-1. Créer un dépôt "node-app" sur le [GitLab de l'EEMI](https://gitlab.eemi.tech/), puis le cloner localement:
+1. Créer un dépôt "node-app" sur l'hébergeur de dépôts `git` de l'école, puis le cloner localement:
 
     ```bash
-    $ git clone "insérer l'URL de votre dépôt GitLab ici"
+    $ git clone "insérer l'URL de votre dépôt distant ici"
     $ cd node-app
     ```
 
-2. Générer une application Web dans ce répertoire à l'aide `express-generator`, puis pousser les changement dans le dépôt GitLab:
+2. Générer une application Web dans ce répertoire à l'aide `express-generator`, puis pousser les changement dans le dépôt distant:
 
     ```bash
     $ npx express-generator --hogan --git
@@ -84,7 +84,7 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 8. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
 
-9. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt GitLab.
+9. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Exercice 3.2 - Formulaire avec page de destination
 
@@ -121,7 +121,7 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 
 7. Tester le serveur en production sur Heroku.
 
-8. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt GitLab.
+8. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Exercice 3.3 - Enrichissement de données à l'aide d'APIs externes
 
@@ -148,7 +148,7 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 4. Vérifier que l'application fonctionne aussi en production, en la déployant sur Heroku.
 
-5. Créer un `git tag v3.3` puis le pousser ainsi que vos *commits* dans votre dépôt GitLab.
+5. Créer un `git tag v3.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Étude: comment effectuer une requête HTTP depuis Node.js ?
 

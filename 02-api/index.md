@@ -25,7 +25,7 @@ Durée: 4h.
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
-- `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
+- `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 - et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker Desktop (Community Edition) depuis [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)).
 
 Attention, si `$ docker run hello-world` ne fonctionne pas, il se peut que docker ne soit pas correctement installé, ou que votre système d'exploitation (ex: Windows 10 Home Edition) ne permette pas l'execution directe de Docker. Dans ce dernier cas, sachez que vous pouvez installer Ubuntu dans une machine virtuelle, à l'aide de VirtualBox. (ex: en suivant les instructions vidéo depuis [Docker Tutorial for Beginners - Hashnode](https://hashnode.com/post/docker-tutorial-for-beginners-cjrj2hg5001s2ufs1nker9he2))
@@ -51,13 +51,13 @@ Pour cela, nous allons:
 
 1. Installer et lancer un serveur de base de données MongoDB écoutant sur le port `27017`:
   - `$ docker pull mongo:4` pour télécharger l'image Docker de MongoDB 4;
-  - `$ docker run --publish 27017:27017 --name eemi-nodejs-ex-2-1 mongo:4` pour executer le serveur MongoDB. (laissez ce terminal ouvert)
-2. Dans une nouvelle session de terminal, tester que le serveur est accessible: `$ docker run -it --link eemi-nodejs-ex-2-1:mongo --rm mongo:4 mongo --host mongo test` pour démarrer le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)", puis vérifier que la commande `show dbs` affiche bien une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
+  - `$ docker run --publish 27017:27017 --name nodejs-ex-2-1 mongo:4` pour executer le serveur MongoDB. (laissez ce terminal ouvert)
+2. Dans une nouvelle session de terminal, tester que le serveur est accessible: `$ docker run -it --link nodejs-ex-2-1:mongo --rm mongo:4 mongo --host mongo test` pour démarrer le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)", puis vérifier que la commande `show dbs` affiche bien une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
 3. Installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` de votre projet.
 4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données `mongodb://localhost:27017/test`. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
 5. Après avoir vérifié que `$ node dates.js` s'exécute sans erreur, modifier `dates.js` pour qu'il affiche la liste des documents de la collection `dates` dans la sortie standard. (cf [Read methods](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#read-methods))
 6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
-7. Sauvegarder votre projet dans un dépôt [GitLab](https://gitlab.eemi.tech/).
+7. Sauvegarder votre projet dans un dépôt distant.
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
@@ -105,7 +105,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 
 Cet exercice s'appuie à la fois sur le code écrit lors de la séance précédente, et sur le code écrit dans l'exercice 2.1 (ci-dessus).
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt [GitLab](https://gitlab.eemi.tech/), ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
 ### Étapes proposées
 
@@ -129,7 +129,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi 
 
 ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt [GitLab](https://gitlab.eemi.tech/), ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
 ### Étapes proposées
 
@@ -140,7 +140,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt [GitLab](h
 
 ### Bonus
 
-Important : assurez-vous d'avoir bien créé un `tag` dans votre dépôt GitLab avant d'effectuer les exercices bonus.
+Important : assurez-vous d'avoir bien créé un `tag` et que celui-ci soit visible depuis votre dépôt distant avant d'effectuer les exercices bonus.
 
 - Utiliser OpenAPI pour documenter votre API => ajouter le modèle au format YAML dans votre dépôt.
 - Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.

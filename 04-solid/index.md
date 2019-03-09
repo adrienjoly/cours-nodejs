@@ -32,7 +32,7 @@ Projet à rendre en groupe, pour valider les acquis: service de gestion de notes
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
-- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email `@eemi.com`)
+- et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 
 ---
 
@@ -66,7 +66,7 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 2. Créer `test.js` et y définir un test fonctionnel qui vérifiera que la page d'index du site comprend bien un formulaire HTML.
 3. Compléter `package.json` et `README.md` afin d'expliquer comment exécuter ce test.
 4. Ajouter à `test.js` un test fonctionnel qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
-5. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt [GitLab](https://gitlab.eemi.tech/) que vous avez créé pendant la séance précédente.
+5. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
 BONUS: ajouter un test d'intégration et un test unitaire.
 

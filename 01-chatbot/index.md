@@ -131,7 +131,7 @@ Pour cela, nous allons:
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 
-<!--BONUS: Archivage des conversations dans plusieurs fichiers (un par interlocuteur)-->
+BONUS: Archivage des conversations dans plusieurs fichiers (un par interlocuteur)
 
 ## Étude: appels synchrones et asynchrones
 
@@ -162,7 +162,7 @@ N'oubliez pas d'inclure à votre rendu:
 
 L'un de vous viendra présenter son audit en début de la prochaine séance.
 
-> Suggestions: Pour vous aider à identifier les limitations, vous pouvez utiliser un débogueur Node.js (ex: `ndb` ou Visual Studio Code), des scripts Bash lançant plusieurs requêtes d'affilée, et/ou un outil de test de charge. Vous pouvez aussi repérer certaines limitations (ex: cas limites) en lisant attentivement le code de votre camarade.
+> Suggestions: Pour vous aider à identifier les limitations, vous pouvez utiliser un débogueur Node.js (ex: `ndb` ou Visual Studio Code), des scripts Bash lançant plusieurs requêtes d'affilée, et/ou un outil de test de charge (ex: Apache Benchmark). Vous pouvez aussi repérer certaines limitations (ex: cas limites) en lisant attentivement le code de votre camarade.
 
 ## Pour aller plus loin
 

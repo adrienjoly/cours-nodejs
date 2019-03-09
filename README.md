@@ -2,6 +2,16 @@
 
 # Cours Node.js
 
+## Objectifs pédagogiques
+
+- Découvrir la plateforme Node.js, comme alternative à PHP pour développer un back-end web moderne
+- Savoir développer, tester et mettre en production un serveur Node.js
+- Maîtriser la programmation asynchrone (callbacks, promises et async/await) et quelques fonctions incontournables fournies par Node.js: console, fs (filesystem)...
+- Installer et utiliser des modules npm: express.js, node-fetch et mongo
+- Applications: création d’un chatbot, d'une API et d’une application web connectée à une base de données NoSQL
+
+## Supports de cours et exercices
+
 - [Séance 1 - Chat-bot avec Express](01-chatbot/)
 - [Séance 2 - Serveur API avec base de données MongoDB](02-api/)
 - [Séance 3 - Application Web simple](03-webapp/)
@@ -11,7 +21,21 @@
 - [Projet à rendre en groupe - Service de gestion de notes personnelles](05-proj/)
 -->
 
-## Références
+## A propos de l'auteur
+
+Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur logiciel depuis 2007. Il a contribué à plusieurs projets de recherche et développement (chez Gemalto et Alcatel-Lucent Bell Labs), a dirigé le développement de la start-up Whyd dont il maintient toujours le produit (devenu open-source en 2016), a développé plusieurs applications web en tant que freelance et entrepreneur indépendant.
+
+Depuis fin 2017, Adrien développe et maintient en production le produit "Site-Search Crawler" d'Algolia, réalisé en Node.js. Il assure actuellement le rôle de Technical Leader de cette équipe de 8 personnes.
+
+Parallèlement, Adrien donne des cours dans plusieurs écoles parisiennes, sur les sujets suivants:
+
+- création d'applications web avec Node.js (ce cours)
+- initiation à la programmation et au développement web avec le langage JavaScript
+- découverte du métier de "Lead Developer"
+- atelier "Lean Management": découverte de la gestion de projet agile et mise en pratique de l'amélioration continue
+- comment collaborer avec git et github
+
+## Références du cours
 
 - [JavaScript language reference - DevDocs](https://devdocs.io/javascript/)
 - [Node.js API](https://nodejs.org/api)

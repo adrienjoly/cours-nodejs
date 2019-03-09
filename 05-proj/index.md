@@ -1,5 +1,5 @@
 ---
-title: Projet à rendre en groupe - Service de gestion de notes personnelles
+title: Projet en groupe - Service de gestion de notes personnelles
 layout: default
 ---
 

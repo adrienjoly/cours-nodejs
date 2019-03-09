@@ -37,11 +37,11 @@ Depuis fin 2017, Adrien développe et maintient en production le produit "[Site-
 
 Parallèlement, Adrien donne des cours dans plusieurs écoles parisiennes, sur les sujets suivants:
 
-- création d'applications web avec Node.js (ce cours)
-- initiation à la programmation et au développement web avec le langage JavaScript
-- découverte du métier de "Lead Developer"
-- atelier "Lean Management": découverte de la gestion de projet agile et mise en pratique de l'amélioration continue
-- comment collaborer avec git et github
+- [Création d'Applications Web avec Node.js](https://adrienjoly.com/cours-nodejs/) (ce cours)
+- [Initiation à la programmation et au développement web avec le langage JavaScript](https://adrienjoly.com/cours-javascript/)
+- [Découverte du métier de "Lead Developer"](https://adrienjoly.com/cours-lead-dev/)
+- [Comment collaborer avec git et GitHub](https://adrienjoly.com/cours-git/)
+- Atelier "Lean Management": découverte de la gestion de projet agile et mise en pratique de l'amélioration continue
 
 ## Références du cours
 

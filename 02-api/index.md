@@ -79,7 +79,7 @@ Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui a
 Le but est de compléter le code source du "Chat-bot avec mémoire" (cf exercice 1.3) afin de pouvoir consulter et modifier l'historique des messages et de leurs réponses.
 
 Exemples de conversation / cas d'usage (même que celui de l'exercice 1.3):
-1. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain"}' http://localhost:3000/chat` répondra "Demain: Mercredi" (y compris après redémarrage du serveur)
+1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat` répondra "Demain: Mercredi" (y compris après redémarrage du serveur)
 2. `$ curl -X GET http://localhost:3000/messages/all` affichera l'historique des conversations, tel que décrit ci-dessous (y compris après redémarrage du serveur)
 3. `$ curl -X DELETE http://localhost:3000/messages/last` supprimera le dernier échange de l'historique (message de l'utilisateur + réponse du chat-bot)
 

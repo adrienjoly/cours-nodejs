@@ -71,8 +71,8 @@ Le but est que notre API développée dans l'exercice précédent puisse égalem
 Pour cela, nous allons y ajouter un point d'entrée (*endpoint*) de méthode POST au chemin `/chat`. Celui-ci pourra adapter sa réponse en fonction du contenu passé avec chaque requête. Le contenu devra être passé au format JSON, et le message de l'utilisateur devra être transmis comme valeur de la propriété `msg`.
 
 Exemples / cas d'usage:
-- `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"ville"}' http://localhost:3000/chat` répondra "Nous sommes à Paris"
-- `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"météo"}' http://localhost:3000/chat` répondra "Il fait beau"
+- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` répondra "Nous sommes à Paris"
+- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" http://localhost:3000/chat` répondra "Il fait beau"
 
 ### Critères de validation
 
@@ -106,9 +106,9 @@ Nous avons à présent un serveur web dont l'API contient deux points d'entrée 
 Nous voulons désormais que notre chat-bot soit capable d'apprendre de nouvelles informations lors des échanges avec les utilisateurs, et d'exploiter ces informations pour mieux répondre lors des prochains échanges.
 
 Exemples de conversation / cas d'usage:
-1. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain"}' http://localhost:3000/chat` répondra "Je ne connais pas demain..."
-2. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain = Mercredi"}' http://localhost:3000/chat` répondra "Merci pour cette information !"
-3. `$ curl -X POST --header "Content-Type: application/json" --data '{"msg":"demain"}' http://localhost:3000/chat` répondra "demain: Mercredi" (y compris après redémarrage du serveur)
+1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat` répondra "Je ne connais pas demain..."
+2. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain = Mercredi\"}" http://localhost:3000/chat` répondra "Merci pour cette information !"
+3. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat` répondra "demain: Mercredi" (y compris après redémarrage du serveur)
 
 Pour cela, nous allons:
 - enregistrer toute nouvelle information dans un fichier `réponses.json`,
@@ -155,7 +155,7 @@ Le but de cet exercice est d'auditer l'API de l'étudiant qui se trouve assis à
 
 Vous devrez envoyer un court rapport de votre audit à l'enseignant, contenant pour chaque trouvaille les informations suivantes:
 - description concise de la limitation, (ex: "le serveur répond `error` quand `msg` vaut `0`")
-- lister de manière précise les actions à effectuer pour reproduire le bug ou faire apparaître cette limitation, (ex: 1. lancer le serveur, 2. executer `$ curl -X POST --data '{"msg":"demain"}' http://localhost:3000/chat`, 3. vérifier que la réponse à cette requête contient `error`)
+- lister de manière précise les actions à effectuer pour reproduire le bug ou faire apparaître cette limitation, (ex: 1. lancer le serveur, 2. executer `$ curl -X POST --data "{\"msg\":\"demain\"}" http://localhost:3000/chat`, 3. vérifier que la réponse à cette requête contient `error`)
 - proposer une solution pour corriger le bug, la faille de sécurité ou autre limitation. (ex: modifier la condition à la ligne 4 du fichier `server.js` afin de couvrir ce cas)
 
 N'oubliez pas d'inclure à votre rendu:

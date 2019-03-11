@@ -45,8 +45,9 @@ Le but est de développer et mettre en production un serveur web/API basique qui
 
 Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) dans lequel `node` est installé, et `git` est configuré avec votre identité d'étudiant·e.
 
+0. Créer un dépôt sur l'hébergeur `git` de votre école, clonez-le sur votre disque-dur (`git clone <url_du_projet>`), puis n'oubliez pas d'entrer dans le répertoire qui a été créé par `git clone`
 1. Créer une application Node.js (ex: fichier `server.js`) qui affiche "Hello World" dans la sortie standard. (1 ligne de code)
-2. Initialiser le dépôt local (`git init`) avec ce fichier (`git add`, `git commit`) puis l'uploader sur l'hébergeur de dépôts `git` de l'école. (`git push`)
+2. Créer un premier `git commit` avec ce fichier puis l'uploader sur votre dépôt distant. (`git push`)
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
 5. Mettre le serveur en production en le déployant sur votre compte Heroku.

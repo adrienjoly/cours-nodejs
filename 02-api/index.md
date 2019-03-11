@@ -128,7 +128,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
 5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.2`.
 
-## Exercice 2.3 (à rendre) - API et base de données en production
+## Exercice 2.3 - API et base de données en production
 
 Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi que sa base de données en production, afin qu'elle soit accessible en permanence et à quiconque sur internet.
 

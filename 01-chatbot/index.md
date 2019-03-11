@@ -146,7 +146,7 @@ Questions sur lesquelles réfléchir:
 
 <!-- Bonus: Comparer appels synchrones et asynchrones à l’aide d’un profileur -->
 
-## Exercice à rendre: audit d'API
+## Exercice 1.4: audit d'API
 
 Le but de cet exercice est d'auditer l'API de l'étudiant qui se trouve assis à votre gauche, afin d'y trouver des bugs, failles de sécurité et autres limitations.
 

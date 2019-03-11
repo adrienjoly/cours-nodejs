@@ -20,7 +20,7 @@
 
 ## Notes sur la conception et méthode pédagogique
 
-Ce cours a été conçu pour des étudiants ayant déjà écrit des programmes en JavaScript.
+Ce cours a été conçu pour des étudiants ayant déjà écrit des programmes en JavaScript, (cf [cours JavaScript](https://adrienjoly.com/cours-javascript)) et connaissant l'usage de base de `git`. (cf [cours `git`](https://adrienjoly.com/cours-git))
 
 Centrées sur la pratique, les séances sont majoritairement constituées d'exercices à effectuer seul·e ou en binôme, entrecoupés d'explications données par l'intervenant. Le but est de faire vivre chaque problème aux étudiants avant de donner des explications, pour les encourager à chercher par eux-mêmes, et rendre les explications plus motivantes à suivre.
 

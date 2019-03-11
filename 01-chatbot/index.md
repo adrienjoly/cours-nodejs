@@ -132,7 +132,10 @@ Pour cela, nous allons:
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 
-BONUS: Archivage des conversations dans plusieurs fichiers (un par interlocuteur)
+BONUS:
+
+- Utilisation de la version asynchrone des appels au file system: `readFile()` et `writeFile()`
+- Archivage des conversations dans plusieurs fichiers (un par interlocuteur)
 
 ## Étude: appels synchrones et asynchrones
 

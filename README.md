@@ -50,6 +50,9 @@ Parallèlement, Adrien donne des cours dans plusieurs écoles parisiennes, sur l
 
 ## Ressources pédagogiques alternatives
 
+- Meetups (rencontres ouvertes) de la communauté Node.js et JavaScript à Paris:
+  - [Node.js Paris](https://www.meetup.com/fr-FR/Nodejs-Paris)
+  - [Paris.js](https://www.meetup.com/fr-FR/Paris-js/)
 - [JS Books](http://jsbooks.revolunet.com/)
 - Workshops de [NodeSchool](https://nodeschool.io/fr-fr/#workshoppers):
   - [workshopper/learnyounode](https://github.com/workshopper/learnyounode): Learn You The Node.js For Much Win! An intro to Node.js via a set of self-guided workshops.

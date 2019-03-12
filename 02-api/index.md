@@ -44,6 +44,8 @@ Sous Windows, la démarche peut être plus ou moins compliquée ([source](https:
 
 Si vous utilisez pas l'édition Pro de Windows 10, ou que votre matériel n'est pas compatible avec Hyper-V, je vous recommande d'installer Ubuntu dans une machine virtuelle à l'aide de VirtualBox (ex: en suivant les instructions vidéo depuis [Docker Tutorial for Beginners - Hashnode](https://hashnode.com/post/docker-tutorial-for-beginners-cjrj2hg5001s2ufs1nker9he2)) ou d'essayer [Docker Toolbox](https://docs.docker.com/toolbox/overview/).
 
+Ceci étant dit, si toutes vos tentatives d'installation de Docker échouent, vous pouvez télécharger et installer le service MongoDB manuellement sur votre machine depuis [MongoDB Download Center](https://www.mongodb.com/download-center/community).
+
 Nous verrons dans l'exercice ci-dessous comment installer et exécuter un serveur MongoDB à l'aide de Docker.
 
 ## Exercice 2.1 - Lecture et écriture dans MongoDB
@@ -64,14 +66,27 @@ Pour cela, nous allons:
 ### Étapes proposées
 
 1. Installer et lancer un serveur de base de données MongoDB écoutant sur le port `27017`:
+
   - `$ docker pull mongo:4` pour télécharger l'image Docker de MongoDB 4;
   - `$ docker run --publish 27017:27017 --name nodejs-ex-2-1 mongo:4` pour executer le serveur MongoDB. (laissez ce terminal ouvert)
+
 2. Dans une nouvelle session de terminal, tester que le serveur est accessible: `$ docker run -it --link nodejs-ex-2-1:mongo --rm mongo:4 mongo --host mongo test` pour démarrer le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)", puis vérifier que la commande `show dbs` affiche bien une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
+
 3. Installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` de votre projet.
+
 4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données `mongodb://localhost:27017/test`. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
+
+  > Note: Vous pouvez ignorer le message disant que la méthode de connexion est dépréciée. Par contre, votre programme devrait pouvoir s'exécuter sans erreur.
+
 5. Après avoir vérifié que `$ node dates.js` s'exécute sans erreur, modifier `dates.js` pour qu'il affiche la liste des documents de la collection `dates` dans la sortie standard. (cf [Read methods](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#read-methods))
+
+  > Note: Sachant que nous n'avons pas encore ajouté de documents dans cette collection, la liste de documents doit être un tableau vide.
+
 6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
-7. Sauvegarder votre projet dans un dépôt distant.
+
+7. Créer une nouvelle "release" dans votre dépôt: `$ git tag v2.1`.
+
+8. Sauvegarder votre projet dans un dépôt distant. (vous pouvez utilisez le même que celui de la séance précédente)
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 

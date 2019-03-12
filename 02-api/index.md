@@ -25,6 +25,7 @@ Durée estimée cours + exercices: 6 heures.
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
+- `curl`; (tester avec `$ curl --version`)
 - `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 - et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker en suivant les instructions ci-dessous).
 

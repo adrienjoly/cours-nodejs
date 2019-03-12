@@ -25,6 +25,7 @@ Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le ter
 
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
+- `curl`; (tester avec `$ curl --version`)
 - et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 
 > Note: si vous avez installé Node.js sous Windows, il se peut que `node` ou `npm` ne fonctionnent pas depuis Ubuntu for Windows. Dans ce cas: désinstallez Node.js, installez-le depuis Ubuntu (cf [procédure](https://github.com/Microsoft/WSL/issues/3111#issuecomment-382713543)), puis redémarrez Ubuntu.

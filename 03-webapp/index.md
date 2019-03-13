@@ -160,6 +160,12 @@ Quelle solution préférez-vous ? Pourquoi ?
 
 ## Pour aller plus loin
 
+### Modules: `module.exports` et `require()`
+
+- [Comprendre module.exports et exportations dans Node.js](https://blog.arcoptimizer.com/comprendre-module-exports-et-exportations-dans-node-js)
+- [What is the purpose of Node.js module.exports and how do you use it? - Stack Overflow](https://stackoverflow.com/a/5311377/592254)
+- [Modules | Node.js v11.11.0 Documentation](https://nodejs.org/api/modules.html#modules_module_exports)
+
 ### *Fat arrow functions* (`=>`)
 
 - Explication concise: [Fonctions fléchées - JavaScript | MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)

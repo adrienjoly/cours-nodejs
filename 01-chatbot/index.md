@@ -59,9 +59,19 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 
 > Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html), [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
 
-> Pro tip: après l'étape 3, taper `$ echo node_modules >>.gitignore` pour éviter que les dépendances installées dans le répertoire `node_modules` (créé par `npm install`) ne soient sauvegardées dans votre historique `git`.
+> Pro tip: Le répertoire `node_modules` (créé par `npm install` à l'étape 3) ne doit jamais être inclus dans les commits d'un dépôt `git`. Pour ajouter ce répertoire à la liste des répertoires et fichiers ignorés par `git`, taper `$ echo node_modules >>.gitignore`.
 
-> Pro tip 2: en cas de problèmes pour installer la commande `heroku` (cf étape 5), vous pouvez essayer `$ npm install --global heroku`, ou encore `$ npm install heroku` puis `./node_modules/.bin/heroku`.
+> Pro tip 2: En cas de problème pour installer la commande `heroku` (cf étape 5), vous pouvez essayer `$ npm install --global heroku`, ou encore `$ npm install heroku` puis `./node_modules/.bin/heroku`.
+
+> Pro tip 3: Si `$ git push heroku master` ne fonctionne pas ou ne pousse pas vos commits vers la bonne application Heroku, exécutez les commandes suivantes:
+
+  ```sh
+    $ git remote -v
+    $ git remote rm heroku
+    $ heroku create
+    $ git remote add heroku <URL GIT RETOURNÉE PAR HEROKU>
+    $ git push heroku master
+  ```
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 

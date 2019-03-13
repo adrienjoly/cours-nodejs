@@ -16,7 +16,11 @@
 - [Séance 2 - Serveur API avec base de données MongoDB](02-api/)
 - [Séance 3 - Application Web simple](03-webapp/)
 - [Séance 4 - Application Web avancée](04-solid/)
-- [Projet de groupe - Service de gestion de notes personnelles](05-proj/)
+
+Annexes:
+
+- Aide-mémoire: [Fonctions synchrones VS asynchrones](sync-vs-async)
+- Projet de groupe: [Service de gestion de notes personnelles](05-proj/)
 
 ## Logiciels utilisés
 

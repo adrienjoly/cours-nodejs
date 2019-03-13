@@ -76,15 +76,11 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 4. Modifier le code du serveur de manière à ce que la page d'accueil de l'application Web affiche "Node App" au lieu de "Express", sans altérer le style de la page, puis enregistrer ces modifications dans un *commit git*.
 
-5. Ajouter un *favicon* au format PNG dans le répertoire `public/images/`, faire en sorte qu'il soit reconnu par le navigateur, puis enregistrer ces modifications dans un *commit git*.
+5. Mettre le serveur en production sur Heroku.
 
-6. Modifier le modèle de page `views/index.hjs` et la feuille de style `.css` de manière à ce que le *favicon* soit aussi affiché à gauche du `<h1>`, avec la même hauteur que le texte correspondant. Enregistrer ces modifications dans un *commit git*.
+6. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
 
-7. Mettre le serveur en production sur Heroku.
-
-8. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
-
-9. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
+7. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Exercice 3.2 - Formulaire avec page de destination
 
@@ -105,7 +101,7 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 
 ### Étapes proposées
 
-1. Dans le modèle de la page `index`, ajouter un formulaire HTML qui permettra d'envoyer un champ nommé `nom_ville` via une requête HTTP GET, sur la route/chemin `/ville`.
+1. Dans le modèle de la page `index`, ajouter un [formulaire HTML](https://devdocs.io/html/element/form) qui permettra d'envoyer un champ nommé `nom_ville` via une requête HTTP GET, sur la route/chemin `/ville`.
 
 2. Créer un modèle de page `ville.hjs` qui affichera "Ville:" suivi du nom de la ville saisie par l'utilisateur. (paramètre du modèle)
 
@@ -117,11 +113,9 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 
 5. Modifier l'application de manière à ce que le nom de la ville saisi par l'utilisateur soit transmis via HTTP POST au lieu de HTTP GET. Et s'assurer que les espaces et caractères accentués sont respectés sur la page de destination.
 
-6. Ajouter un champ `description` de type `textarea` multi-ligne dans le formulaire, et faire en sorte que le contenu saisi par l'utilisateur soit affiché dans la page de destination en respectant les sauts de lignes et caractères spéciaux.
+6. Tester le serveur en production sur Heroku.
 
-7. Tester le serveur en production sur Heroku.
-
-8. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
+7. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Exercice 3.3 - Enrichissement de données à l'aide d'APIs externes
 

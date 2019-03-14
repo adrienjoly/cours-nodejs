@@ -162,7 +162,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 
 ### Étapes proposées
 
-1. Ajouter un add-on "MongoDB" (hébergé gratuitement dans le Cloud) à notre application sur Heroku.
+1. Créer un serveur MongoDB depuis [mlab.com](https://mlab.com) (gratuit), puis enregistrer l'URL de ce serveur dans une variable d'environnement de votre application sur Heroku: `MONGODB_URI`.
 2. Modifier `server.js` pour qu'il sache se connecter à cette base de données, à partir des variables d'environnement définies dans Heroku. (et qu'il puisse aussi fonctionner en local)
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
 4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.3`.

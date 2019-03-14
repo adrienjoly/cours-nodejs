@@ -66,7 +66,7 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 
 BONUS:
 
-- ajouter un deuxième test fonctionnel pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas
+- ajouter un deuxième test fonctionnel pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas. Vous pouvez utiliser le module [`nock`](https://www.npmjs.com/package/nock) pour intercepter et modifier les réponses de l'API externe `geocode.xyz`.
 - ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement
 - ajouter l'endpoint `/chat` (version avec mémoire, cf exercice 1.3) à votre application web, puis ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via cet endpoint est bien stockée dans `réponses.json`.
 

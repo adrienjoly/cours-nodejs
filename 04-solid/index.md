@@ -123,7 +123,12 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
   - À l'aide de la documentation de passport.js et de ce que nous avons appris lors de la séance 2, modifier notre code pour maintenir la liste des utilisateurs et de leurs sessions dans une base de données MongoDB.
   - Conservez vos modifications: `$ git commit -m "users and sessions are persisted in mongodb"`
 
-BONUS: Écrire des tests fonctionnels pour vérifier le bon fonctionnement des sessions utilisateur. Vous pouvez utilisez [Puppeteer](https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md) si nécessaire.
+5. Versionner le code avec `$ git tag v4.2` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
+
+BONUS:
+
+- Écrire des tests fonctionnels pour vérifier le bon fonctionnement des sessions utilisateur. Vous pouvez utilisez [Puppeteer](https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md) si nécessaire.
+- Refaire cet exercice sans avoir à stocker de sessions en base de donnés. Pour cela, utiliser le standard [JSON Web Tokens](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52) au lieu de Passport.js et des cookies.
 
 ---
 
@@ -139,6 +144,7 @@ Ressources sur l'identification et l'authentification:
 
 - Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
 - Sessions utilisateur depuis des services tiers: le protocole [OAuth](https://fr.wikipedia.org/wiki/OAuth)
+- Alternative aux sessions: [Securing Node.js RESTful APIs with JSON Web Tokens – freeCodeCamp.org](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52)
 
 Ressources sur l'architecture et scalabilité d'applications Node.js:
 

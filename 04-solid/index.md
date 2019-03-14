@@ -61,14 +61,16 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 1. Ajouter le moteur de tests "[Ava](https://www.npmjs.com/package/ava)" à notre projet Node.js.
 2. Créer `test.js` et y définir un test fonctionnel qui vérifiera que la page d'index du site comprend bien un formulaire HTML.
 3. Compléter `package.json` et `README.md` afin d'expliquer comment exécuter ce test.
-4. Ajouter à `test.js` un test fonctionnel qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
+4. Ajouter à `test.js` un test fonctionnel ou d'intégration qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
 5. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
 BONUS:
 
-- ajouter un deuxième test fonctionnel pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas. Vous pouvez utiliser le module [`nock`](https://www.npmjs.com/package/nock) pour intercepter et modifier les réponses de l'API externe `geocode.xyz`.
-- ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement
+- ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas.
+- ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement.
 - ajouter l'endpoint `/chat` (version avec mémoire, cf exercice 1.3) à votre application web, puis ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via cet endpoint est bien stockée dans `réponses.json`.
+
+Pro tip: Vous pouvez utiliser le module [`nock`](https://www.npmjs.com/package/nock) dans vos tests d'intégration pour intercepter et modifier les réponses de l'API externe `geocode.xyz`.
 
 ---
 

@@ -20,7 +20,7 @@
 Annexes:
 
 - Aide-mémoire: [Fonctions synchrones VS asynchrones](sync-vs-async)
-- Projet de groupe: [Service de gestion de notes personnelles](05-proj/)
+- Projet en groupe: [API de gestion de notes personnelles](05-proj/)
 
 ## Logiciels utilisés
 

@@ -64,7 +64,10 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 4. Ajouter à `test.js` un test fonctionnel qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
 5. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
-BONUS: ajouter un test d'intégration et un test unitaire.
+BONUS:
+
+- ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement
+- ajouter l'endpoint `/chat` (version avec mémoire, cf exercice 1.3) à votre application web, puis ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via cet endpoint est bien stockée dans `réponses.json`.
 
 ---
 

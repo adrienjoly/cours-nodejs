@@ -67,6 +67,7 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 BONUS:
 
 - ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas.
+- ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur dans le cas où l'API `geocode.xyz` retourne un code `404`.
 - ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement.
 - ajouter l'endpoint `/chat` (version avec mémoire, cf exercice 1.3) à votre application web, puis ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via cet endpoint est bien stockée dans `réponses.json`.
 

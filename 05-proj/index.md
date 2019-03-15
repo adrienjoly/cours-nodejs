@@ -197,6 +197,31 @@ Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
 - si l'utilisateur n'est pas connecté => `Utilisateur non connecté` et retourner un code HTTP `401`.
 
+##### Route `PATCH /notes/:id`
+
+Cette route permet à un utilisateur connecté de modifier une note existante.
+
+Le jeton JWT de l'utilisateur connecté doit être fourni en base 64 dans le *header* HTTP `x-access-token`.
+
+Paramètres attendus dans l'URL de la requête:
+
+- `id`: identifiant unique de la note à modifier.
+
+Propriétés JSON attendues dans le corps de la requête:
+
+- `content`: contenu de la note saisie par l'utilisateur. (mise à jour)
+
+Propriétés JSON en réponse de chaque requête:
+
+- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
+- `note` (type: `Object`): En cas de succès, cette propriété aura pour valeur un l'objet qui a été mis à jour dans la collection `notes`, comprenant son `_id`. (cf schéma de la collection `notes` fourni plus haut)
+
+Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
+
+- si l'utilisateur n'est pas connecté => `Utilisateur non connecté` et retourner un code HTTP `401`.
+- si `id` n'est associé à aucune note stockée dans la base de données => `Cet identifiant est inconnu` et retourner un code HTTP `404`.
+- si `id` est associé à une note appartenant à un autre utilisateur => `Accès non autorisé à cette note` et retourner un code HTTP `403`.
+
 ##### Route `DELETE /notes/:id`
 
 Cette route permet à un utilisateur connecté de supprimer une de ses notes.

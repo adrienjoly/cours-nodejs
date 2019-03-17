@@ -50,7 +50,7 @@ Le but de cet exercice est de compléter le site dynamique que nous avons créé
 ### Critères de validation
 
 - Fonctionnel: La commande `npm test` doit permettre d'exécuter notre test fonctionnel, et celui-ci doit seulement "passer" si la route `/ville` de notre serveur web fonctionne comme défini dans les exercices 3.x.
-- Lisibilité: Suivre les conventions de codage de Express: chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
+- Lisibilité: Suivre les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
 - Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `test.js` qui contiendra notre test fonctionnel.
 - Production: (non nécessaire à ce stade)
 

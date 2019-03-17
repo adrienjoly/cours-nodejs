@@ -41,7 +41,7 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 ### Critères de validation
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant une page d'accueil (index) modifiée.
-- Lisibilité: Suivre les conventions de codage de Express: chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
+- Lisibilité: Suivre les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
 - Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `README.md` pour expliquer comment télécharger et faire fonctionner ce serveur depuis un terminal.
 - Production: Le serveur devra être mis en production à l'aide de Heroku.
 

@@ -24,7 +24,7 @@ Chaque groupe devra rendre deux URLs:
 
 Le travail du groupe et de ses collaborateurs sera évalué selon les critères suivants:
 - Fonctionnel: Les fonctionnalités ont été implémentées conformément au cahier des charges fourni ci-dessous.
-- Lisibilité: Le dépôt git respecte la structure de fichiers de `express-generator`. Il contient un fichier `README.md` qui explique comment cloner et faire fonctionner l'application depuis une autre machine que la sienne. Les fichiers JavaScript doivent respecter les conventions de codage de Express: chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
+- Lisibilité: Le dépôt git respecte la structure de fichiers de `express-generator`. Il contient un fichier `README.md` qui explique comment cloner et faire fonctionner l'application depuis une autre machine que la sienne. Les fichiers JavaScript doivent respecter les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
 - Production: L'application Web doit être accessible et fonctionnelle en production, à l'URL fournie.
 - Collaboration: Chaque collaborateur de l'équipe devra avoir contribué une partie substantielle du code source de l'application. Ceci sera vérifié grâce à l'historique des commits git.
 

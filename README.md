@@ -80,6 +80,7 @@ Parallèlement, Adrien donne des cours dans plusieurs écoles parisiennes, sur l
 - [Learn Node.js and MongoDB by building a URL Shortener app](https://freshman.tech/url-shortener/)
 - [leonardomso/33-js-concepts: 📜 33 concepts every JavaScript developer should know.](https://github.com/leonardomso/33-js-concepts)
 - [19 ways to become a better Node.js developer in 2019](https://medium.com/@me_37286/19-ways-to-become-a-better-node-js-developer-in-2019-ffd3a8fbfe38)
+- [Linting ES2015+ — ESLint with StyleGuides: Google, AirBnB, Common](https://medium.com/@uistephen/style-guides-for-linting-ecmascript-2015-eslint-common-google-airbnb-6c25fd3dff0)
 
 ## Ressources annexes au cours
 

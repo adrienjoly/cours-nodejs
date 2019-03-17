@@ -78,7 +78,7 @@ La base de données doit être nommée `notes-api`.
 Les documents stockés dans la collection `notes` doivent contenir les propriétés suivantes:
 
 - `_id` (type: `ObjectID`): identifiant unique de la note, généré automatiquement par MongoDB lors de l'insertion.
-- `userId` (type: `ObjectID`): identifiant unique de l'utilisateur qui a créé cette note.
+- `userId` (type: `ObjectID`): identifiant unique (`_id`) de l'utilisateur qui a créé cette note.
 - `content` (type: `String`): contenu textuel de la note.
 - `createdAt` (type: `Date`): date et heure à laquelle la note a été créé.
 - `lastUpdatedAt` (type: `Date`): date et heure à laquelle la note a été mise à jour pour la dernière fois. Lors de la création de la note, cette value doit être `null`.
@@ -125,7 +125,7 @@ Une fois le compte créé, un jeton JWT est généré et retourné pour effectue
 
 Propriétés JSON attendues dans le corps de la requête:
 
-- `userId`: identifiant choisi par l'utilisateur;
+- `username`: identifiant unique choisi par l'utilisateur;
 - `password`: mot de passe choisi par l'utilisateur. (en clair / non chiffré)
 
 Propriétés JSON en réponse de chaque requête:
@@ -136,9 +136,9 @@ Propriétés JSON en réponse de chaque requête:
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
 - si `password` contient moins de 4 caractères => `Le mot de passe doit contenir au moins 4 caractères` et retourner un code HTTP `400`.
-- si `userId` contient un ou plusieurs caractères autre que des lettres minuscules non accentuées entre `a` et `z` => `Votre identifiant ne doit contenir que des lettres minuscules non accentuées` et retourner un code HTTP `400`.
-- si `userId` contient moins de 2 caractères ou plus de 20 caractères => `Votre identifiant doit contenir entre 2 et 20 caractères` et retourner un code HTTP `400`.
-- si `userId` est déjà associé à un utilisateur existant en base de données => `Cet identifiant est déjà associé à un compte` et retourner un code HTTP `400`.
+- si `username` contient un ou plusieurs caractères autre que des lettres minuscules non accentuées entre `a` et `z` => `Votre identifiant ne doit contenir que des lettres minuscules non accentuées` et retourner un code HTTP `400`.
+- si `username` contient moins de 2 caractères ou plus de 20 caractères => `Votre identifiant doit contenir entre 2 et 20 caractères` et retourner un code HTTP `400`.
+- si `username` est déjà associé à un utilisateur existant en base de données => `Cet identifiant est déjà associé à un compte` et retourner un code HTTP `400`.
 
 ##### Route `POST /signin`
 
@@ -148,7 +148,7 @@ Une fois les identifiants vérifiés, un jeton JWT est généré et retourné po
 
 Propriétés JSON attendues dans le corps de la requête:
 
-- `userId`: identifiant choisi par l'utilisateur;
+- `username`: identifiant unique choisi par l'utilisateur;
 - `password`: mot de passe choisi par l'utilisateur. (en clair / non chiffré)
 
 Propriétés JSON en réponse de chaque requête:
@@ -159,9 +159,9 @@ Propriétés JSON en réponse de chaque requête:
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
 - si `password` contient moins de 4 caractères => `Le mot de passe doit contenir au moins 4 caractères` et retourner un code HTTP `400`.
-- si `userId` contient un ou plusieurs caractères autre que des lettres minuscules non accentuées entre `a` et `z` => `Votre identifiant ne doit contenir que des lettres minuscules non accentuées` et retourner un code HTTP `400`.
-- si `userId` contient moins de 2 caractères ou plus de 20 caractères => `Votre identifiant doit contenir entre 2 et 20 caractères` et retourner un code HTTP `400`.
-- si `userId` n'est associé à aucun compte utilisateur de la base de données => `Cet identifiant est inconnu` et retourner un code HTTP `403`.
+- si `username` contient un ou plusieurs caractères autre que des lettres minuscules non accentuées entre `a` et `z` => `Votre identifiant ne doit contenir que des lettres minuscules non accentuées` et retourner un code HTTP `400`.
+- si `username` contient moins de 2 caractères ou plus de 20 caractères => `Votre identifiant doit contenir entre 2 et 20 caractères` et retourner un code HTTP `400`.
+- si `username` n'est associé à aucun compte utilisateur de la base de données => `Cet identifiant est inconnu` et retourner un code HTTP `403`.
 
 ##### Route `GET /notes`
 

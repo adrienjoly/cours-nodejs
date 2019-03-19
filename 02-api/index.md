@@ -68,7 +68,7 @@ Pour cela, nous allons:
 1. Installer et lancer un serveur de base de données MongoDB écoutant sur le port `27017`:
 
   - `$ docker pull mongo:4` pour télécharger l'image Docker de MongoDB 4;
-  - `$ docker run --publish 27017:27017 --name nodejs-ex-2-1 mongo:4` pour executer le serveur MongoDB. (laissez ce terminal ouvert)
+  - `$ docker run --rm --publish 27017:27017 --name nodejs-ex-2-1 mongo:4` pour executer le serveur MongoDB. (laissez ce terminal ouvert)
 
 2. Dans une nouvelle session de terminal, tester que le serveur est accessible: `$ docker run -it --link nodejs-ex-2-1:mongo --rm mongo:4 mongo --host mongo test` pour démarrer le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)", puis vérifier que la commande `show dbs` affiche bien une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
 

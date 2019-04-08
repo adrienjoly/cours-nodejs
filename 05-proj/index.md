@@ -3,11 +3,11 @@ title: Projet en groupe - API de gestion de notes personnelles
 layout: default
 ---
 
-<!-- WORK IN PROGRESS
-
+<!-- REFERENCE LINKS
+- skeleton with tests: https://github.com/adrienjoly/ava-tests-for-note-keeper
 - https://github.com/eemi-aj/node-note-keeper
 - https://circleci.com/gh/eemi-aj/node-note-keeper
-- réf: https://trello.com/c/OY8UVMiS/25-%F0%9F%8E%93-cours#comment-5c33318474ebba6e5f47f9d9
+- https://trello.com/c/OY8UVMiS/25-%F0%9F%8E%93-cours#comment-5c33318474ebba6e5f47f9d9
 -->
 
 L'objectif est d'écrire et de mettre en production une API HTTP de gestion de notes personnelles. Cette API sera le back-end d'une application mobile et d'une application web. (ces deux applications ne sont pas à rendre)

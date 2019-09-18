@@ -66,7 +66,7 @@ Pour cela, nous allons:
 
 6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
 
-7. Créer une nouvelle "release" dans votre dépôt: `$ git tag v2.1`.
+7. Créer une nouvelle "release" dans votre dépôt: `$ git tag v3.1`.
 
 8. Sauvegarder votre projet dans un dépôt distant. (vous pouvez utilisez le même que celui de la partie précédente)
 
@@ -114,7 +114,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.
 
-Cet exercice s'appuie à la fois sur le code écrit lors de la partie précédente, et sur le code écrit dans l'exercice 2.1 (ci-dessus).
+Cet exercice s'appuie à la fois sur le code écrit lors de la partie précédente, et sur le code écrit dans l'exercice 1 (ci-dessus).
 
 Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la partie précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
@@ -124,7 +124,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 2. Implémenter et tester le point d'accès `GET /messages/all`. (il devrait retourner un tableau vide)
 3. Faire en sorte que ce point d'accès retourne l'historique des conversations => Enregistrer les messages de l'utilisateur et les réponses du chat-bot dans la collection `messages`.
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
-5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.2`.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v3.2`.
 
 ## Exercice 3 - API et base de données en production
 
@@ -147,7 +147,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 1. Créer un serveur MongoDB depuis [mlab.com](https://mlab.com) (gratuit), puis enregistrer l'URL de ce serveur dans une variable d'environnement de votre application sur Heroku: `MONGODB_URI`.
 2. Modifier `server.js` pour qu'il sache se connecter à cette base de données, à partir des variables d'environnement définies dans Heroku. (et qu'il puisse aussi fonctionner en local)
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
-4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.3`.
+4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v3.3`.
 
 ### Bonus
 

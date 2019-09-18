@@ -14,7 +14,7 @@
 
 - [Partie 1 - Chat-bot avec Express](01-chatbot/)
 - [Partie 2 - Application Web simple](02-webapp/)
-- [Partie 3 - Serveur API avec base de données MongoDB](03-api/)
+- [Partie 3 - Connexion base de données MongoDB](03-db/)
 
 Annexes:
 

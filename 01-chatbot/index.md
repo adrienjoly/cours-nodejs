@@ -175,8 +175,6 @@ N'oubliez pas d'inclure à votre rendu:
 - l'URL à laquelle votre serveur API est accessible en production
 - l'URL à laquelle le serveur API que vous avez audité est accessible en production
 
-L'un de vous viendra présenter son audit en début de la prochaine séance.
-
 > Suggestions: Pour vous aider à identifier les limitations, vous pouvez utiliser un débogueur Node.js (ex: `ndb` ou Visual Studio Code), des scripts Bash lançant plusieurs requêtes d'affilée, et/ou un outil de test de charge (ex: Apache Benchmark). Vous pouvez aussi repérer certaines limitations (ex: cas limites) en lisant attentivement le code de votre camarade.
 
 ## Pour aller plus loin

@@ -32,7 +32,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 - `node`; (tester avec `$ node --version`)
 - et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 
-ℹ️ À partir de cette séance, nous allons développer un programme Node.js indépendant de celui effectué lors des séances 1 et 2. Nous allons donc créer un nouveau répertoire et un nouveau dépôt pour celui-ci. Nous l'appellerons **node-app**.
+ℹ️ Dans cette partie, nous allons développer un nouveau programme Node.js. Nous allons donc créer un nouveau répertoire et un nouveau dépôt pour celui-ci. Nous l'appellerons **node-app**.
 
 ## Exercice 3.1 - Générer une application Web avec `express-generator`
 

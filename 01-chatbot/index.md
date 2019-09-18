@@ -148,9 +148,10 @@ BONUS:
 - Utilisation de la version asynchrone des appels au file system: `readFile()` et `writeFile()`
 - Archivage des conversations dans plusieurs fichiers (un par interlocuteur)
 
-## Étude: appels synchrones et asynchrones
+## Prise de recul: appels synchrones et asynchrones
 
-Questions sur lesquelles réfléchir:
+Questions auxquelles savoir répondre:
+
 - Quelles fonctions avez-vous appelées de manière asynchrone ?
 - Quelles fonctions avez-vous appelées de manière synchrone ?
 - Comment reconnaître un appel synchrone d'un appel asynchrone ? Quelle différence ?
@@ -160,24 +161,21 @@ Questions sur lesquelles réfléchir:
 
 <!-- Bonus: Comparer appels synchrones et asynchrones à l’aide d’un profileur -->
 
-## Exercice 4: audit d'API
-
-Le but de cet exercice est d'auditer l'API de l'étudiant qui se trouve assis à votre gauche, afin d'y trouver des bugs, failles de sécurité et autres limitations.
-
-Vous devrez envoyer un court rapport de votre audit à l'enseignant, contenant pour chaque trouvaille les informations suivantes:
-- description concise de la limitation, (ex: "le serveur répond `error` quand `msg` vaut `0`")
-- lister de manière précise les actions à effectuer pour reproduire le bug ou faire apparaître cette limitation, (ex: 1. lancer le serveur, 2. executer `$ curl -X POST --data "{\"msg\":\"demain\"}" http://localhost:3000/chat`, 3. vérifier que la réponse à cette requête contient `error`)
-- proposer une solution pour corriger le bug, la faille de sécurité ou autre limitation. (ex: modifier la condition à la ligne 4 du fichier `server.js` afin de couvrir ce cas)
-
-N'oubliez pas d'inclure à votre rendu:
-- l'URL du dépôt git de votre serveur API
-- l'URL du dépôt git du serveur API que vous avez audité
-- l'URL à laquelle votre serveur API est accessible en production
-- l'URL à laquelle le serveur API que vous avez audité est accessible en production
-
-> Suggestions: Pour vous aider à identifier les limitations, vous pouvez utiliser un débogueur Node.js (ex: `ndb` ou Visual Studio Code), des scripts Bash lançant plusieurs requêtes d'affilée, et/ou un outil de test de charge (ex: Apache Benchmark). Vous pouvez aussi repérer certaines limitations (ex: cas limites) en lisant attentivement le code de votre camarade.
-
 ## Pour aller plus loin
+
+### Modules: `module.exports` et `require()`
+
+- [Comprendre module.exports et exportations dans Node.js](https://blog.arcoptimizer.com/comprendre-module-exports-et-exportations-dans-node-js)
+- [What is the purpose of Node.js module.exports and how do you use it? - Stack Overflow](https://stackoverflow.com/a/5311377/592254)
+- [Modules | Node.js v11.11.0 Documentation](https://nodejs.org/api/modules.html#modules_module_exports)
+
+### *Fat arrow functions* (`=>`)
+
+- Explication concise: [Fonctions fléchées - JavaScript | MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
+- [Les fat arrow function en Javascript](https://blog.nathanaelcherrier.com/fr/les-fat-arrow-function-en-javascript/)
+- [ES6, ES2015 : les fonctions fléchées](https://putaindecode.io/fr/articles/js/es2015/arrow-functions/)
+
+### Création d'un véritable chat-bot en ligne
 
 💡 Avec l'aide de Node.js, il est possible de programmer un chat-bot contactable via Facebook Messenger, ou tout autre plateforme de messagerie instantanée. Il est aussi possible de déployer sur d'autres hébergeurs Cloud que Heroku.
 

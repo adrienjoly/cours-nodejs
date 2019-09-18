@@ -141,7 +141,7 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 5. Créer un `git tag v2.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
-## Étude: comment effectuer une requête HTTP depuis Node.js ?
+## Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
 
 Il existe plusieurs moyens d'effectuer des requêtes HTTP depuis Node.js.
 
@@ -156,18 +156,6 @@ Notamment:
 Quelle solution préférez-vous ? Pourquoi ?
 
 ## Pour aller plus loin
-
-### Modules: `module.exports` et `require()`
-
-- [Comprendre module.exports et exportations dans Node.js](https://blog.arcoptimizer.com/comprendre-module-exports-et-exportations-dans-node-js)
-- [What is the purpose of Node.js module.exports and how do you use it? - Stack Overflow](https://stackoverflow.com/a/5311377/592254)
-- [Modules | Node.js v11.11.0 Documentation](https://nodejs.org/api/modules.html#modules_module_exports)
-
-### *Fat arrow functions* (`=>`)
-
-- Explication concise: [Fonctions fléchées - JavaScript | MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
-- [Les fat arrow function en Javascript](https://blog.nathanaelcherrier.com/fr/les-fat-arrow-function-en-javascript/)
-- [ES6, ES2015 : les fonctions fléchées](https://putaindecode.io/fr/articles/js/es2015/arrow-functions/)
 
 ### Alternatives à Express
 

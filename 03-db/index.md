@@ -4,12 +4,8 @@ layout: default
 ---
 
 <!--
-Programme de la première partie:
-- un(e) étudiant(e) vient présenter le travail effectué
+Programme:
 - favoriser l'entraide => répartir les étudiants de manière à ce que je puisse accéder facilement aux étudiants les plus en difficulté. + faire en sorte qu'ils soient assis à côté de personnes qui ont réussi le TP de la dernière fois.
-
-Programme de la deuxième partie: (retour de la pause)
-- faire un point sur code synchrone VS callbacks VS promises VS async/await
 - s'assurer que tout le monde a compris comment se connecter à MongoDB
 -->
 

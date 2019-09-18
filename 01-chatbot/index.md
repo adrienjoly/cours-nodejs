@@ -85,6 +85,8 @@ Exemples / cas d'usage:
 - `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` répondra "Nous sommes à Paris"
 - `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" http://localhost:3000/chat` répondra "Il fait beau"
 
+> Indice: vous allez devoir intégrer un *middleware* à votre application Express, afin qu'elle soit en mesure d'extraire les données au format JSON.
+
 ### Critères de validation
 
 - Fonctionnel: Le serveur implémente bien les cas d'usages listés ci-dessus, ainsi que celui de l'exercice précédent. (rétro-compatibilité)

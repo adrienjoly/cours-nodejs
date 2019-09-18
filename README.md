@@ -15,12 +15,10 @@
 - [Séance 1 - Chat-bot avec Express](01-chatbot/)
 - [Séance 2 - Serveur API avec base de données MongoDB](02-api/)
 - [Séance 3 - Application Web simple](03-webapp/)
-- [Séance 4 - Application Web avancée](04-solid/)
 
 Annexes:
 
 - Aide-mémoire: [Fonctions synchrones VS asynchrones](sync-vs-async)
-- Projet en groupe: [API de gestion de notes personnelles](05-proj/)
 
 ## Logiciels utilisés
 

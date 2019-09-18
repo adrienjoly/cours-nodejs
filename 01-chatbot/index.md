@@ -17,7 +17,7 @@ Programme de la partie:
 - Persistance de données: lecture et modification de fichiers
 - Bases: débogage et programmation asynchrone
 
-Durée estimée cours + exercices: 6 heures.
+Durée estimée cours + exercices: 3 heures.
 
 ## Pré-requis
 

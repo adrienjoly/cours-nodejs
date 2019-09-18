@@ -1,5 +1,5 @@
 ---
-title: Partie 3 - Serveur API avec données MongoDB
+title: Partie 3 - Connexion base de données MongoDB
 layout: default
 ---
 
@@ -19,7 +19,7 @@ Programme de la deuxième partie: (retour de la pause)
 - Persistance de données dans une base de données MongoDB
 - Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
-Durée estimée cours + exercices: 6 heures.
+Durée estimée cours + exercices: 3 heures.
 
 ## Pré-requis
 

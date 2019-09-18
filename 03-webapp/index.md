@@ -41,7 +41,6 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 ### Critères de validation
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant une page d'accueil (index) modifiée.
-- Lisibilité: Suivre les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
 - Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `README.md` pour expliquer comment télécharger et faire fonctionner ce serveur depuis un terminal.
 - Production: Le serveur devra être mis en production à l'aide de Heroku.
 
@@ -95,7 +94,6 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 ### Critères de validation
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant un formulaire et une page de destination.
-- Lisibilité: (cf exercice précédent)
 - Structure: (cf exercice précédent)
 - Production: (cf exercice précédent)
 
@@ -128,7 +126,6 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 ### Critères de validation
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant un formulaire de saisie de ville et une page de destination affichant des données sur cette ville.
-- Lisibilité: (cf exercice précédent)
 - Structure: (cf exercice précédent)
 - Production: (cf exercice précédent)
 

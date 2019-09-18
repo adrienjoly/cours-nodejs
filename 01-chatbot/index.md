@@ -37,7 +37,7 @@ Le but est de développer et mettre en production un serveur web/API basique qui
 ### Critères de validation
 
 - Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/hello` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
-- Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code, et doit respecter les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
+- Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code.
 - Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 4 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner), et éventuellement un fichier de configuration pour sa mise en production.
 - Accessibilité: Il est possible de faire fonctionner ce serveur depuis une autre machine en seulement 3 étapes: `git clone`, `npm install` et `npm start`. Ces étapes sont décrites dans `README.md`.
 - Production: Le serveur tourne en production, et fonctionne de la même manière qu'en local depuis n'importe quelle machine ayant accès à Internet.

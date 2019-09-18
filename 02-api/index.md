@@ -26,27 +26,9 @@ Durée estimée cours + exercices: 6 heures.
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
 - `curl`; (tester avec `$ curl --version`)
-- `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
-- et `docker`. (si `$ docker --version` ne retourne pas un numéro de version, installer Docker en suivant les instructions ci-dessous).
+- et `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e).
 
-### Installation de Docker
-
-Nous allons utiliser Docker pour exécuter le serveur de base de données MongoDB sans interférer avec votre système d'exploitation.
-
-Les instructions de cette section ne seront à suivre que si les deux commandes suivantes ne fonctionnent pas comme prévu:
-
-- `$ docker --version` doit retourner un numéro de version
-- `$ docker run hello-world` doit afficher "Hello World"
-
-Sous Linux et macOS il suffit d'installer Docker Desktop (Community Edition) depuis [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
-
-Sous Windows, la démarche peut être plus ou moins compliquée ([source](https://stackoverflow.com/a/48252608/592254)). En effet, la version Windows de Docker repose sur une technologie appelée Hyper-V, et celle-ci n'est supportée que par l'édition Pro de Windows 10, sur architectures 64 bits. Si c'est votre cas, suivez [ces instructions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) pour activer Hyper-V, puis installez [Docker Desktop](https://www.docker.com/products/docker-desktop).
-
-Si vous utilisez pas l'édition Pro de Windows 10, ou que votre matériel n'est pas compatible avec Hyper-V, je vous recommande d'installer Ubuntu dans une machine virtuelle à l'aide de VirtualBox (ex: en suivant les instructions vidéo depuis [Docker Tutorial for Beginners - Hashnode](https://hashnode.com/post/docker-tutorial-for-beginners-cjrj2hg5001s2ufs1nker9he2)) ou d'essayer [Docker Toolbox](https://docs.docker.com/toolbox/overview/).
-
-Ceci étant dit, si toutes vos tentatives d'installation de Docker échouent, vous pouvez télécharger et installer le service MongoDB manuellement sur votre machine depuis [MongoDB Download Center](https://www.mongodb.com/download-center/community).
-
-Nous verrons dans l'exercice ci-dessous comment installer et exécuter un serveur MongoDB à l'aide de Docker.
+<!-- TODO: expliquer comment utiliser bdd NoSQL distante: www.mongodb.com/cloud/atlas -->
 
 ## Exercice 2.1 - Lecture et écriture dans MongoDB
 

@@ -25,7 +25,6 @@ Annexes:
 - Node.js + npm
 - `git`
 - `curl`
-- Docker
 - MongoDB
 
 ## Pré-requis

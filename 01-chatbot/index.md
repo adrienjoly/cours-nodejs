@@ -1,17 +1,17 @@
 ---
-title: Séance 1 - Chat-bot avec Express
+title: Partie 1 - Chat-bot avec Express
 layout: default
 ---
 
 <!--
-Programme de la séance:
+Programme de la partie:
 - présentations: bio, tour de table
 - intro: qu'est-ce que node.js ? quels usages ?
-- objectifs et plan du cours, nombre et structure des séances, évaluation
+- objectifs et plan du cours, nombre et structure des parties, évaluation
 - favoriser l'entraide => scinder la classe en 2 groupes: ceux qui ont déjà mis une app node.js en prod, et les autres => répartir les étudiants de manière à ce que chaque personne du groupe 1 soit assise à côté d'une personne du groupe 2, et que l'écran des personnes les plus débutantes me soient le plus accessible possible.
 -->
 
-## Objectifs de cette séance
+## Objectifs de cette partie
 
 - Développer un chat-bot en Node.js et le mettre en production
 - Persistance de données: lecture et modification de fichiers

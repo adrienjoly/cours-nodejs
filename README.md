@@ -12,9 +12,9 @@
 
 ## Supports de cours et exercices
 
-- [Séance 1 - Chat-bot avec Express](01-chatbot/)
-- [Séance 2 - Serveur API avec base de données MongoDB](02-api/)
-- [Séance 3 - Application Web simple](03-webapp/)
+- [Partie 1 - Chat-bot avec Express](01-chatbot/)
+- [Partie 2 - Serveur API avec base de données MongoDB](02-api/)
+- [Partie 3 - Application Web simple](03-webapp/)
 
 Annexes:
 

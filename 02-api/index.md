@@ -1,5 +1,5 @@
 ---
-title: Séance 2 - Serveur API avec données MongoDB
+title: Partie 2 - Serveur API avec données MongoDB
 layout: default
 ---
 
@@ -13,7 +13,7 @@ Programme de la deuxième partie: (retour de la pause)
 - s'assurer que tout le monde a compris comment se connecter à MongoDB
 -->
 
-## Objectifs de cette séance
+## Objectifs de cette partie
 
 - Étendre le chat-bot pour retrouver l'historique des conversations
 - Persistance de données dans une base de données MongoDB
@@ -68,7 +68,7 @@ Pour cela, nous allons:
 
 7. Créer une nouvelle "release" dans votre dépôt: `$ git tag v2.1`.
 
-8. Sauvegarder votre projet dans un dépôt distant. (vous pouvez utilisez le même que celui de la séance précédente)
+8. Sauvegarder votre projet dans un dépôt distant. (vous pouvez utilisez le même que celui de la partie précédente)
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
@@ -114,9 +114,9 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.
 
-Cet exercice s'appuie à la fois sur le code écrit lors de la séance précédente, et sur le code écrit dans l'exercice 2.1 (ci-dessus).
+Cet exercice s'appuie à la fois sur le code écrit lors de la partie précédente, et sur le code écrit dans l'exercice 2.1 (ci-dessus).
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la partie précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
 ### Étapes proposées
 
@@ -140,7 +140,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi 
 
 ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la séance précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
+Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la partie précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
 
 ### Étapes proposées
 

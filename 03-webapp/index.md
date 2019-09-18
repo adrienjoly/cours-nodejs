@@ -1,5 +1,5 @@
 ---
-title: Séance 3 - Application Web simple
+title: Partie 3 - Application Web simple
 layout: default
 ---
 
@@ -18,7 +18,7 @@ Programme de la deuxième partie: (retour de la pause)
 - avancer le plus possible sur les exercices
 -->
 
-## Objectifs de cette séance
+## Objectifs de cette partie
 
 - Développer une application web avec server-side rendering (SSR) et interrogation d'APIs externes
 - Rendre du contenu HTML statique puis dynamique à l'aide de templates “mustache”

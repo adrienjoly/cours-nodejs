@@ -30,7 +30,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 > Note: si vous avez installé Node.js sous Windows, il se peut que `node` ou `npm` ne fonctionnent pas depuis Ubuntu for Windows. Dans ce cas: désinstallez Node.js, installez-le depuis Ubuntu (cf [procédure](https://github.com/Microsoft/WSL/issues/3111#issuecomment-382713543)), puis redémarrez Ubuntu.
 
-## Exercice 1.1 - Hello World
+## Exercice 1 - Hello World
 
 Le but est de développer et mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.
 
@@ -75,7 +75,7 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
-## Exercice 1.2 - Chat-bot
+## Exercice 2 - Chat-bot
 
 Le but est que notre API développée dans l'exercice précédent puisse également répondre un message pertinent à chaque message envoyé par les utilisateurs via le corps d'une requête HTTP POST.
 
@@ -108,7 +108,7 @@ Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui a
 
 BONUS: Ajouter un point d'entrée GET à la racine du serveur (chemin: `/`) qui retourne une page HTML permettant aux utilisateurs d'envoyer des messages plus facilement, à l'aide d'un formulaire.
 
-## Exercice 1.3 - Chat-bot avec mémoire
+## Exercice 3 - Chat-bot avec mémoire
 
 Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
 - `GET /hello` retourne systématiquement "Hello World".
@@ -160,7 +160,7 @@ Questions sur lesquelles réfléchir:
 
 <!-- Bonus: Comparer appels synchrones et asynchrones à l’aide d’un profileur -->
 
-## Exercice 1.4: audit d'API
+## Exercice 4: audit d'API
 
 Le but de cet exercice est d'auditer l'API de l'étudiant qui se trouve assis à votre gauche, afin d'y trouver des bugs, failles de sécurité et autres limitations.
 

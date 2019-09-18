@@ -1,5 +1,5 @@
 ---
-title: Partie 2 - Serveur API avec données MongoDB
+title: Partie 3 - Serveur API avec données MongoDB
 layout: default
 ---
 
@@ -30,7 +30,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 <!-- TODO: expliquer comment utiliser bdd NoSQL distante: www.mongodb.com/cloud/atlas -->
 
-## Exercice 2.1 - Lecture et écriture dans MongoDB
+## Exercice 1 - Lecture et écriture dans MongoDB
 
 Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
 
@@ -72,7 +72,7 @@ Pour cela, nous allons:
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
-## Exercice 2.2 - Stockage de l'historique dans MongoDB
+## Exercice 2 - Stockage de l'historique dans MongoDB
 
 Le but est de compléter le code source du "Chat-bot avec mémoire" (cf exercice 1.3) afin de pouvoir consulter et modifier l'historique des messages et de leurs réponses.
 
@@ -126,7 +126,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
 5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.2`.
 
-## Exercice 2.3 - API et base de données en production
+## Exercice 3 - API et base de données en production
 
 Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi que sa base de données en production, afin qu'elle soit accessible en permanence et à quiconque sur internet.
 

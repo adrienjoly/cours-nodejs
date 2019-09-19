@@ -24,8 +24,6 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 - `curl`; (tester avec `$ curl --version`)
 - et `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e).
 
-<!-- TODO: expliquer comment utiliser bdd NoSQL distante: www.mongodb.com/cloud/atlas -->
-
 ## Exercice 1 - Lecture et écriture dans MongoDB
 
 Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
@@ -36,23 +34,22 @@ Pour cela, nous allons:
 
 ### Critères de validation
 
-- Fonctionnel: Le programme doit se connecter à la base de données MongoDB accessible via l'URL `mongodb://localhost:27017/test`, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
+- Fonctionnel: Le programme doit se connecter à une base de données MongoDB, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
 - Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
 - Structure: Le code source du projet ne doit pas contenir plus de 5 fichiers. (dont `dates.js`, `package.json` et `README.md`)
 - Production: À ce stade, vous n'aurez pas besoin de déployer quoi que ce soit en production.
 
 ### Étapes proposées
 
-1. Installer et lancer un serveur de base de données MongoDB écoutant sur le port `27017`:
+1. Initialiser un serveur de base de données MongoDB en ligne. Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".
 
-  - `$ docker pull mongo:4` pour télécharger l'image Docker de MongoDB 4;
-  - `$ docker run --rm --publish 27017:27017 --name nodejs-ex-2-1 mongo:4` pour executer le serveur MongoDB. (laissez ce terminal ouvert)
+<!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
 
-2. Dans une nouvelle session de terminal, tester que le serveur est accessible: `$ docker run -it --link nodejs-ex-2-1:mongo --rm mongo:4 mongo --host mongo test` pour démarrer le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)", puis vérifier que la commande `show dbs` affiche bien une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
+2. Dans une session de terminal, utiliser le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)" pour vérifier que la base de données est bien accessible. La commande `show dbs` devrait afficher une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
 
-3. Installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` de votre projet.
+3. De retour dans votre projet Node.js, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
 
-4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données `mongodb://localhost:27017/test`. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
+4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données créée à l'étape 1. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
 
   > Note: Vous pouvez ignorer le message disant que la méthode de connexion est dépréciée. Par contre, votre programme devrait pouvoir s'exécuter sans erreur.
 
@@ -78,12 +75,12 @@ Exemples de conversation / cas d'usage (même que celui de l'exercice 1.3):
 3. `$ curl -X DELETE http://localhost:3000/messages/last` supprimera le dernier échange de l'historique (message de l'utilisateur + réponse du chat-bot)
 
 Pour cela, nous allons:
-- nous connecter à la collection "`messages`" de la base de données `mongodb://localhost:27017/chat-bot`, puis y lire et écrire des documents JSON possédant trois propriétés:
+- nous connecter à la collection "`messages`" de la base de données "`chat-bot`", puis y lire et écrire des documents JSON possédant trois propriétés:
   - `_id` (type: `ObjectId`) contiendra un identifiant généré automatiquement par MongoDB pour chaque message,
   - `from` (type: `string`) contiendra le nom de l'émetteur du message, (ex: `bot` ou `user`)
   - `msg` (type: `string`) contiendra le contenu du message. (ex: `demain = Mercredi`)
 - enregistrer chaque message de l'utilisateur et du chat-bot dans la collection "`messages`" de notre base de données MongoDB;
-- ajouter les points d'accès `GET /messages/all` et `DELETE /messages/last`, permettant respectivement de retourner un tableau JavaScript contenant tous les messages dans l'ordre chronologique, et de supprimer le dernier échange (message de l'utilisateur + réponse du chat-bot) de l'historique.
+- ajouter les points d'accès (routes) `GET /messages/all` et `DELETE /messages/last`, permettant respectivement de retourner un tableau JavaScript contenant tous les messages dans l'ordre chronologique, et de supprimer le dernier échange (message de l'utilisateur + réponse du chat-bot) de l'historique.
 
 ### Description de l'affichage de l'historique des conversations
 
@@ -116,7 +113,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 
 ### Étapes proposées
 
-1. Modifier `server.js` pour qu'il se connecte à la base de données `mongodb://localhost:27017/chat-bot`.
+1. Modifier `server.js` pour qu'il se connecte à la base de données "`chat-bot`".
 2. Implémenter et tester le point d'accès `GET /messages/all`. (il devrait retourner un tableau vide)
 3. Faire en sorte que ce point d'accès retourne l'historique des conversations => Enregistrer les messages de l'utilisateur et les réponses du chat-bot dans la collection `messages`.
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
@@ -124,7 +121,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 
 ## Exercice 3 - API et base de données en production
 
-Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi que sa base de données en production, afin qu'elle soit accessible en permanence et à quiconque sur internet.
+Le but de cet exercice est de mettre le serveur API développé ci-dessus en production, afin qu'il soit accessible en permanence et à quiconque sur internet.
 
 ### Critères de validation
 
@@ -132,7 +129,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus ainsi 
 - Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
 - Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
-- Production: Le serveur et sa base de données sont en production.
+- Production: Le serveur et sa base de données sont accessible sur Internet.
 
 ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
 
@@ -140,8 +137,8 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 
 ### Étapes proposées
 
-1. Créer un serveur MongoDB depuis [mlab.com](https://mlab.com) (gratuit), puis enregistrer l'URL de ce serveur dans une variable d'environnement de votre application sur Heroku: `MONGODB_URI`.
-2. Modifier `server.js` pour qu'il sache se connecter à cette base de données, à partir des variables d'environnement définies dans Heroku. (et qu'il puisse aussi fonctionner en local)
+1. Enregistrer l'URL d'accès à votre base de données MongoDB dans une variable d'environnement de votre application sur Heroku: `MONGODB_URI`.
+2. Modifier `server.js` pour qu'il parvienne à se connecter à cette base de données, que celui-ci s'exécute en production ou en local, grâce à cette variable d'environnement.
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
 4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v3.3`.
 

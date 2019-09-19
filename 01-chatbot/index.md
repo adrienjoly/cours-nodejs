@@ -14,8 +14,8 @@ Programme:
 ## Objectifs de cette partie
 
 - Développer un chat-bot en Node.js et le mettre en production
-- Persistance de données: lecture et modification de fichiers
 - Bases: débogage et programmation asynchrone
+- Persistance de données: lecture et modification de fichiers
 
 Durée estimée: 3 heures.
 
@@ -32,7 +32,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 ## Exercice 1 - Hello World
 
-Le but est de développer et mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.
+Le but est de développer puis de mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.
 
 ### Objectifs
 
@@ -46,7 +46,7 @@ Le but est de développer et mettre en production un serveur web/API basique qui
 
 Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) dans lequel `node` est installé, et `git` est configuré avec votre identité d'étudiant·e.
 
-0. Créer un dépôt sur l'hébergeur `git` de votre école, clonez-le sur votre disque-dur (`git clone <url_du_projet>`), puis n'oubliez pas d'entrer dans le répertoire qui a été créé par `git clone`
+0. Créer un dépôt sur l'hébergeur `git` de votre école, clonez-le sur votre disque-dur (`git clone <url_du_projet>`), puis n'oubliez pas d'entrer (avec `cd`) dans le répertoire qui aura été créé par `git clone`
 1. Créer une application Node.js (ex: fichier `server.js`) qui affiche "Hello World" dans la sortie standard. (1 ligne de code)
 2. Créer un premier `git commit` avec ce fichier puis l'uploader sur votre dépôt distant. (`git push`)
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.

@@ -17,7 +17,7 @@ Programme:
 - Persistance de données: lecture et modification de fichiers
 - Bases: débogage et programmation asynchrone
 
-Durée estimée cours + exercices: 3 heures.
+Durée estimée: 3 heures.
 
 ## Pré-requis
 
@@ -34,7 +34,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 Le but est de développer et mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/hello` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
 - Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code.
@@ -87,7 +87,7 @@ Exemples / cas d'usage:
 
 > Indice: vous allez devoir intégrer un *middleware* à votre application Express, afin qu'elle soit en mesure d'extraire les données au format JSON.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le serveur implémente bien les cas d'usages listés ci-dessus, ainsi que celui de l'exercice précédent. (rétro-compatibilité)
 - Lisibilité: 30 lignes de code max.
@@ -127,7 +127,7 @@ Pour cela, nous allons:
 - enregistrer toute nouvelle information dans un fichier `réponses.json`,
 - pour chaque requête reçue, chercher si le fichier contient la réponse correspondante.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni ci-dessus, ainsi que ceux des exercices précédents. (rétro-compatibilité)
 - Lisibilité: 50 lignes de code max.

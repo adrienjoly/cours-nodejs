@@ -16,7 +16,7 @@ Programme:
 - Rendre du contenu HTML statique puis dynamique à l'aide de templates “mustache”
 - Interroger des APIs externes avec les modules “http” (fourni) et “request”
 
-Durée estimée cours + exercices: 3 heures.
+Durée estimée: 3 heures.
 
 ## Pré-requis
 
@@ -30,7 +30,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Express. Cette fois-ci, nous allons utiliser `express-generator` pour générer une structure de fichiers digne d'une véritable application Web. Puis nous allons y effectuer quelques changements, pour comprendre comment fonctionne le moteur de rendu "Hogan.js" (inspiré de "Mustache").
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant une page d'accueil (index) modifiée.
 - Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `README.md` pour expliquer comment télécharger et faire fonctionner ce serveur depuis un terminal.
@@ -83,7 +83,7 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 - un nouveau modèle de page HTML (aussi appelé *vue*);
 - et une route permettant d'afficher une page HTML s'appuyant sur ce modèle, à partir de données reçues depuis le formulaire.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant un formulaire et une page de destination.
 - Structure: (cf exercice précédent)
@@ -115,7 +115,7 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 > Exemple de requête: [geocode.xyz/new+york?json=1](https://geocode.xyz/new+york?json=1)
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant un formulaire de saisie de ville et une page de destination affichant des données sur cette ville.
 - Structure: (cf exercice précédent)

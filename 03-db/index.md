@@ -15,7 +15,7 @@ Programme:
 - Persistance de données dans une base de données MongoDB
 - Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
-Durée estimée cours + exercices: 3 heures.
+Durée estimée: 3 heures.
 
 ## Pré-requis
 
@@ -32,7 +32,7 @@ Pour cela, nous allons:
 - créer une collection MongoDB "`dates`";
 - découvrir comment lire et écrire des données dans cette collection depuis un programme Node.js, à l'aide du package `mongodb`.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le programme doit se connecter à une base de données MongoDB, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
 - Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
@@ -99,7 +99,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 ]
 ```
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
 - Lisibilité: 100 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
@@ -123,7 +123,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 
 Le but de cet exercice est de mettre le serveur API développé ci-dessus en production, afin qu'il soit accessible en permanence et à quiconque sur internet.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Même fonctionnalités que l'exercice précédent.
 - Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.

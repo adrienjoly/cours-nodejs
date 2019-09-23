@@ -64,7 +64,7 @@ Maintenant que notre serveur Node.js/Express.js fonctionne en local, le but de c
 
 ### Objectifs
 
-- Fonctionnel: Une fois le serveur déployé sur Heroku, `$ curl http://localhost:3000/` il est possible de voir le "Hello World" en s'y connectant via le navigateur web.
+- Fonctionnel: Une fois le serveur déployé sur Heroku, il est possible de voir le "Hello World" en s'y connectant via le navigateur web.
 - Lisibilité: (mêmes exigences que pour l'exercice précédent)
 - Structure: (mêmes exigences que pour l'exercice précédent)
 - Accessibilité: (mêmes exigences que pour l'exercice précédent)

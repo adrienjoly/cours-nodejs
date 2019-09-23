@@ -108,8 +108,6 @@ Exemples / cas d'usage:
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
-BONUS: Ajouter un point d'entrée GET à la racine du serveur (chemin: `/`) qui retourne une page HTML permettant aux utilisateurs d'envoyer des messages plus facilement, à l'aide d'un formulaire.
-
 ## Exercice 3 - Paramètres `GET`
 
 Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
@@ -133,7 +131,7 @@ Nous allons ajouter un point d'entrée `GET /hello` qui acceptera un paramètre,
 ### Étapes proposées
 
 1. Ajouter un point d'entrée `GET /hello` qui répond systématiquement `Quel est votre nom ?`.
-2. Chercher dans la documentation de Express.js comment récupérer la valeur d'un paramètre `GET`.
+2. Chercher dans [la documentation de Express.js](http://expressjs.com/fr/4x/api.html#req) comment récupérer la valeur d'un paramètre `GET`.
 3. Modifier le point d'entrée `GET /hello` de manière à ce qu'il réponde `Bonjour, <nom> !` si un nom a été fourni en paramètre `GET`, ou `Quel est votre nom ?` si ce n'est pas le cas.
 4. Déployer une mise à jour de votre serveur en production.
 5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.3`.
@@ -199,7 +197,7 @@ Questions auxquelles savoir répondre:
 
 - [Comprendre module.exports et exportations dans Node.js](https://blog.arcoptimizer.com/comprendre-module-exports-et-exportations-dans-node-js)
 - [What is the purpose of Node.js module.exports and how do you use it? - Stack Overflow](https://stackoverflow.com/a/5311377/592254)
-- [Modules | Node.js v11.11.0 Documentation](https://nodejs.org/api/modules.html#modules_module_exports)
+- [Modules - Node.js v11.11.0 Documentation](https://nodejs.org/api/modules.html#modules_module_exports)
 
 ### *Fat arrow functions* (`=>`)
 

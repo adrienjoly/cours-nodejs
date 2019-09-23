@@ -32,11 +32,11 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 ## Exercice 1 - Hello World
 
-Le but est de développer puis de mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/hello`.
+Le but est de développer puis de mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/` (racine).
 
 ### Objectifs
 
-- Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/hello` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
+- Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
 - Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code.
 - Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 4 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner), et éventuellement un fichier de configuration pour sa mise en production.
 - Accessibilité: Il est possible de faire fonctionner ce serveur depuis une autre machine en seulement 3 étapes: `git clone`, `npm install` et `npm start`. Ces étapes sont décrites dans `README.md`.
@@ -110,10 +110,39 @@ Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui a
 
 BONUS: Ajouter un point d'entrée GET à la racine du serveur (chemin: `/`) qui retourne une page HTML permettant aux utilisateurs d'envoyer des messages plus facilement, à l'aide d'un formulaire.
 
+## Exercice 3 - Paramètres `GET`
+
+Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
+- `GET /` retourne systématiquement "Hello World".
+- `POST /chat` retourne une réponse en fonction de la valeur de la propriété `msg` passée au format JSON.
+
+Nous allons ajouter un point d'entrée `GET /hello` qui acceptera un paramètre, et ajustera le contenu de la réponse en fonction de la valeur de ce paramètre:
+
+- `$ curl http://localhost:3000/hello?nom=Sasha` répondra `Bonjour, Sasha !`
+- `$ curl http://localhost:3000/hello?nom=Michel` répondra `Bonjour, Michel !`
+- `$ curl http://localhost:3000/hello` répondra `Quel est votre nom ?`
+
+### Objectifs
+
+- Fonctionnel: Le serveur implémente bien les cas d'usages fournis ci-dessus, ainsi que ceux des exercices précédents. (rétro-compatibilité)
+- Lisibilité: 40 lignes de code max.
+- Structure: (mêmes exigences que pour l'exercice précédent)
+- Accessibilité: (mêmes exigences que pour l'exercice précédent)
+- Production: (mêmes exigences que pour l'exercice précédent)
+
+### Étapes proposées
+
+1. Ajouter un point d'entrée `GET /hello` qui répond systématiquement `Quel est votre nom ?`.
+2. Chercher dans la documentation de Express.js comment récupérer la valeur d'un paramètre `GET`.
+3. Modifier le point d'entrée `GET /hello` de manière à ce qu'il réponde `Bonjour, <nom> !` si un nom a été fourni en paramètre `GET`, ou `Quel est votre nom ?` si ce n'est pas le cas.
+4. Déployer une mise à jour de votre serveur en production.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.3`.
+
+<!--
 ## Exercice 3 - Chat-bot avec mémoire
 
 Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
-- `GET /hello` retourne systématiquement "Hello World".
+- `GET /` retourne systématiquement "Hello World".
 - `POST /chat` retourne une réponse en fonction de la valeur de la propriété `msg` passée au format JSON.
 
 Nous voulons désormais que notre chat-bot soit capable d'apprendre de nouvelles informations lors des échanges avec les utilisateurs, et d'exploiter ces informations pour mieux répondre lors des prochains échanges.
@@ -160,6 +189,7 @@ Questions auxquelles savoir répondre:
 - Quelles fonctionnalités auraient pu être implémentées de manière synchrone ou asynchrone ?
 - Quels auraient été les impacts de ces deux manières de faire sur notre application ? (ex: avantages, inconvénients, risques, impacts sur la performance, cas limites, etc...)
 - Qu'est-ce qu'un *callback* ?
+-->
 
 <!-- Bonus: Comparer appels synchrones et asynchrones à l’aide d’un profileur -->
 

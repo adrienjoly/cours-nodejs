@@ -32,15 +32,14 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 ## Exercice 1 - Hello World
 
-Le but est de développer puis de mettre en production un serveur web/API basique qui répondra systématiquement "Hello World" à tous les clients qui enverront une requête HTTP GET au chemin `/` (racine).
+Le but est de développer un serveur Web/API basique qui répondra systématiquement "Hello World" à toutes les requêtes HTTP GET émises par des clients au chemin `/` (racine).
 
 ### Objectifs
 
 - Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
 - Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code.
-- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 4 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner), et éventuellement un fichier de configuration pour sa mise en production.
+- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 4 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner).
 - Accessibilité: Il est possible de faire fonctionner ce serveur depuis une autre machine en seulement 3 étapes: `git clone`, `npm install` et `npm start`. Ces étapes sont décrites dans `README.md`.
-- Production: Le serveur tourne en production, et fonctionne de la même manière qu'en local depuis n'importe quelle machine ayant accès à Internet.
 
 ### Étapes proposées
 
@@ -51,19 +50,49 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 2. Créer un premier `git commit` avec ce fichier puis l'uploader sur votre dépôt distant. (`git push`)
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
-5. Mettre le serveur en production en le déployant sur votre compte Heroku.
-6. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
-7. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
+5. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
 
-<!-- TODO: décrire déploiement plus en détails ? -->
-
-> Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html), [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
+> Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html)
 
 > Pro tip: Le répertoire `node_modules` (créé par `npm install` à l'étape 3) ne doit jamais être inclus dans les commits d'un dépôt `git`. Pour ajouter ce répertoire à la liste des répertoires et fichiers ignorés par `git`, taper `$ echo node_modules >>.gitignore`.
 
-> Pro tip 2: En cas de problème pour installer la commande `heroku` (cf étape 5), vous pouvez essayer `$ npm install --global heroku`, ou encore `$ npm install heroku` puis `./node_modules/.bin/heroku`.
+Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
-> Pro tip 3: Si `$ git push heroku master` ne fonctionne pas ou ne pousse pas vos commits vers la bonne application Heroku, exécutez les commandes suivantes:
+## Exercice 2 - Déploiement en production
+
+Maintenant que notre serveur Node.js/Express.js fonctionne en local, le but de cet exercice est de pouvoir y envoyer des requêtes via Internet, et donc de le déployer en production, sur Heroku.
+
+### Objectifs
+
+- Fonctionnel: Une fois le serveur déployé sur Heroku, `$ curl http://localhost:3000/` il est possible de voir le "Hello World" en s'y connectant via le navigateur web.
+- Lisibilité: (mêmes exigences que pour l'exercice précédent)
+- Structure: (mêmes exigences que pour l'exercice précédent)
+- Accessibilité: (mêmes exigences que pour l'exercice précédent)
+- Production: Le serveur tourne en production, et fonctionne de la même manière qu'en local depuis n'importe quelle machine ayant accès à Internet.
+
+### Étapes proposées
+
+1. Créer une "application" depuis [heroku.com](https://heroku.com).
+
+2. Suivre les instructions fournies pour installer la commande (aussi appelé "CLI") `heroku` sur votre machine.
+
+  > En cas de problème pour installer la commande `heroku`, vous pouvez essayer `$ npm install --global heroku`.
+
+3. Suivre les instructions fournies pour associer le projet Node.js à l'application créée à l'étape 1.
+
+  > Important: ne cliquez pas sur l'icone "GitHub" depuis heroku.com. Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` installée à l'étape 2.
+
+4. Suivre les instructions fournies pour déployer le serveur en production, sur votre application Heroku.
+
+5. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
+
+  > Documentation pour vous aider: [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
+
+6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.2`.
+
+Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
+
+> Si `$ git push heroku master` ne fonctionne pas (cf étape 4) ou ne pousse pas vos commits vers la bonne application Heroku, exécutez les commandes suivantes:
 
   ```sh
     $ git remote -v
@@ -73,46 +102,10 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
     $ git push heroku master
   ```
 
-Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
-
-## Exercice 2 - Chat-bot
-
-Le but est que notre API développée dans l'exercice précédent puisse également répondre un message pertinent à chaque message envoyé par les utilisateurs via le corps d'une requête HTTP POST.
-
-Pour cela, nous allons y ajouter un point d'entrée (*endpoint*) de méthode POST au chemin `/chat`. Celui-ci pourra adapter sa réponse en fonction du contenu passé avec chaque requête. Le contenu devra être passé au format JSON, et le message de l'utilisateur devra être transmis comme valeur de la propriété `msg`.
-
-Exemples / cas d'usage:
-- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` répondra "Nous sommes à Paris"
-- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" http://localhost:3000/chat` répondra "Il fait beau"
-
-> Indice: vous allez devoir intégrer un *middleware* à votre application Express, afin qu'elle soit en mesure d'extraire les données au format JSON.
-
-### Objectifs
-
-- Fonctionnel: Le serveur implémente bien les cas d'usages listés ci-dessus, ainsi que celui de l'exercice précédent. (rétro-compatibilité)
-- Lisibilité: 30 lignes de code max.
-- Structure: (mêmes exigences que pour l'exercice précédent)
-- Accessibilité: (mêmes exigences que pour l'exercice précédent)
-- Production: (mêmes exigences que pour l'exercice précédent)
-
-### Étapes proposées
-
-1. Ajouter le point d'entrée, sans modifier celui que nous avons développé à l'exercice précédent.
-2. Faire en sorte que ce point d'entrée retourne le contenu passé avec la requête, tel quel, quel que soit son format.
-3. Modifier l'implémentation du point d'entrée pour afficher seulement la valeur de la propriété `msg` du contenu passé au format JSON.
-4. Modifier l'implémentation du point d'entrée pour que les cas d'usages listés ci-dessus soient remplis.
-5. Déployer une mise à jour de votre serveur en production.
-6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.2`.
-
-> Documentation de Express: https://expressjs.com/fr/starter/basic-routing.html
-
-Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
-
 ## Exercice 3 - Paramètres `GET`
 
-Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
+Nous avons à présent un serveur web dont l'API contient un seul point d'entrée (*endpoint*):
 - `GET /` retourne systématiquement "Hello World".
-- `POST /chat` retourne une réponse en fonction de la valeur de la propriété `msg` passée au format JSON.
 
 Nous allons ajouter un point d'entrée `GET /hello` qui acceptera un paramètre, et ajustera le contenu de la réponse en fonction de la valeur de ce paramètre:
 
@@ -123,7 +116,7 @@ Nous allons ajouter un point d'entrée `GET /hello` qui acceptera un paramètre,
 ### Objectifs
 
 - Fonctionnel: Le serveur implémente bien les cas d'usages fournis ci-dessus, ainsi que ceux des exercices précédents. (rétro-compatibilité)
-- Lisibilité: 40 lignes de code max.
+- Lisibilité: 30 lignes de code max.
 - Structure: (mêmes exigences que pour l'exercice précédent)
 - Accessibilité: (mêmes exigences que pour l'exercice précédent)
 - Production: (mêmes exigences que pour l'exercice précédent)
@@ -135,6 +128,45 @@ Nous allons ajouter un point d'entrée `GET /hello` qui acceptera un paramètre,
 3. Modifier le point d'entrée `GET /hello` de manière à ce qu'il réponde `Bonjour, <nom> !` si un nom a été fourni en paramètre `GET`, ou `Quel est votre nom ?` si ce n'est pas le cas.
 4. Déployer une mise à jour de votre serveur en production.
 5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.3`.
+
+Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
+
+## Exercice 4 - Chat-bot / message en `POST`
+
+Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
+- `GET /` retourne systématiquement "Hello World".
+- `GET /hello` retourne une saluation au `nom` fourni en paramètre GET.
+
+Le but est que notre API développée dans l'exercice précédent puisse également répondre un message pertinent à chaque message envoyé par les utilisateurs. Sachant qu'un message peut être trop long pour passer par un paramètre GET, nous allons le passer via le corps d'une requête HTTP POST.
+
+Pour cela, nous allons y ajouter un point d'entrée (*endpoint*) de méthode POST au chemin `/chat`. Celui-ci pourra adapter sa réponse en fonction du contenu passé avec chaque requête. Le contenu devra être passé au format JSON, et le message de l'utilisateur devra être transmis comme valeur de la propriété `msg`.
+
+Exemples / cas d'usage:
+- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` répondra "Nous sommes à Paris"
+- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" http://localhost:3000/chat` répondra "Il fait beau"
+
+> Indice: vous allez devoir intégrer un *middleware* à votre application Express, afin qu'elle soit en mesure d'extraire les données au format JSON.
+
+### Objectifs
+
+- Fonctionnel: Le serveur implémente bien les cas d'usages listés ci-dessus, ainsi que ceux des exercices précédents. (rétro-compatibilité)
+- Lisibilité: 40 lignes de code max.
+- Structure: (mêmes exigences que pour l'exercice précédent)
+- Accessibilité: (mêmes exigences que pour l'exercice précédent)
+- Production: (mêmes exigences que pour l'exercice précédent)
+
+### Étapes proposées
+
+1. Ajouter le point d'entrée, sans modifier celui que nous avons développé à l'exercice précédent.
+2. Faire en sorte que ce point d'entrée retourne le contenu passé avec la requête, tel quel, quel que soit son format.
+3. Modifier l'implémentation du point d'entrée pour afficher seulement la valeur de la propriété `msg` du contenu passé au format JSON.
+4. Modifier l'implémentation du point d'entrée pour que les cas d'usages listés ci-dessus soient remplis.
+5. Déployer une mise à jour de votre serveur en production.
+6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.4`.
+
+> Documentation de Express: https://expressjs.com/fr/starter/basic-routing.html
+
+Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
 <!--
 ## Exercice 3 - Chat-bot avec mémoire

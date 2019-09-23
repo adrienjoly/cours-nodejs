@@ -1,5 +1,5 @@
 ---
-title: Partie 2 - Application Web simple
+title: Partie 3 - Application Web simple
 layout: default
 ---
 
@@ -71,7 +71,7 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 6. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
 
-7. Créer un `git tag v2.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
+7. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Exercice 2 - Formulaire avec page de destination
 
@@ -105,7 +105,7 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 
 6. Tester le serveur en production sur Heroku.
 
-7. Créer un `git tag v2.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
+7. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Exercice 3 - Enrichissement de données à l'aide d'APIs externes
 
@@ -131,7 +131,7 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 4. Vérifier que l'application fonctionne aussi en production, en la déployant sur Heroku.
 
-5. Créer un `git tag v2.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
+5. Créer un `git tag v3.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ## Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
 

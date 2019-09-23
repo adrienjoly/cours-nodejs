@@ -59,7 +59,7 @@ Pour cela, nous allons:
 
 6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
 
-7. Créer une nouvelle "release" dans votre dépôt: `$ git tag v3.1`.
+7. Créer une nouvelle "release" dans votre dépôt: `$ git tag v2.1`.
 
 8. Sauvegarder votre projet dans un dépôt distant. (vous pouvez utilisez le même que celui de la partie précédente)
 
@@ -117,7 +117,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 2. Implémenter et tester le point d'accès `GET /messages/all`. (il devrait retourner un tableau vide)
 3. Faire en sorte que ce point d'accès retourne l'historique des conversations => Enregistrer les messages de l'utilisateur et les réponses du chat-bot dans la collection `messages`.
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
-5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v3.2`.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.2`.
 
 ## Exercice 3 - API et base de données en production
 
@@ -140,7 +140,7 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 1. Enregistrer l'URL d'accès à votre base de données MongoDB dans une variable d'environnement de votre application sur Heroku: `MONGODB_URI`.
 2. Modifier `server.js` pour qu'il parvienne à se connecter à cette base de données, que celui-ci s'exécute en production ou en local, grâce à cette variable d'environnement.
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
-4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v3.3`.
+4. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v2.3`.
 
 ### Bonus
 

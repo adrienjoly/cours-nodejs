@@ -13,8 +13,8 @@
 ## Supports de cours et exercices
 
 - [Partie 1 - Chat-bot avec Express](01-chatbot/)
-- [Partie 2 - Application Web simple](02-webapp/)
-- [Partie 3 - Connexion base de données MongoDB](03-db/)
+- [Partie 2 - Connexion base de données MongoDB](02-db/)
+- [Partie 3 - Application Web simple](03-webapp/)
 
 Annexes:
 

@@ -76,17 +76,17 @@ Maintenant que notre serveur Node.js/Express.js fonctionne en local, le but de c
 
 2. Suivre les instructions fournies pour installer la commande (aussi appelé "CLI") `heroku` sur votre machine.
 
-  > En cas de problème pour installer la commande `heroku`, vous pouvez essayer `$ npm install --global heroku`.
+    > En cas de problème pour installer la commande `heroku`, vous pouvez essayer `$ npm install --global heroku`.
 
 3. Suivre les instructions fournies pour associer le projet Node.js à l'application créée à l'étape 1.
 
-  > Important: ne cliquez pas sur l'icone "GitHub" depuis heroku.com. Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` installée à l'étape 2.
+    > Important: ne cliquez pas sur l'icone "GitHub" depuis heroku.com. Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` installée à l'étape 2.
 
 4. Suivre les instructions fournies pour déployer le serveur en production, sur votre application Heroku.
 
 5. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
 
-  > Documentation pour vous aider: [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
+    > Documentation pour vous aider: [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
 
 6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.2`.
 

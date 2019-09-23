@@ -51,11 +51,11 @@ Pour cela, nous allons:
 
 4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données créée à l'étape 1. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
 
-  > Note: Vous pouvez ignorer le message disant que la méthode de connexion est dépréciée. Par contre, votre programme devrait pouvoir s'exécuter sans erreur.
+    > Note: Vous pouvez ignorer le message disant que la méthode de connexion est dépréciée. Par contre, votre programme devrait pouvoir s'exécuter sans erreur.
 
 5. Après avoir vérifié que `$ node dates.js` s'exécute sans erreur, modifier `dates.js` pour qu'il affiche la liste des documents de la collection `dates` dans la sortie standard. (cf [Read methods](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#read-methods))
 
-  > Note: Sachant que nous n'avons pas encore ajouté de documents dans cette collection, la liste de documents doit être un tableau vide.
+    > Note: Sachant que nous n'avons pas encore ajouté de documents dans cette collection, la liste de documents doit être un tableau vide.
 
 6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
 

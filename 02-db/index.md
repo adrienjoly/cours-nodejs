@@ -43,11 +43,28 @@ Pour cela, nous allons:
 
 1. Initialiser un serveur de base de données MongoDB en ligne. Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".
 
-    > Si vous ne parvenez pas à vous connecter à votre cluster MongoDB Atlas depuis le réseau de votre école, vous allez devoir installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
+    > Si vous ne parvenez pas à vous connecter à votre cluster MongoDB Atlas depuis le réseau de votre école, il est possible de mettre en place une version locale de MongoDB. Il existe deux manières de procéder:
+    >
+    > (A) Lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
+    >
+    > 1. Téléchager et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
+    >    ```sh
+    >    $ docker run --rm --publish 27017:27017 --name mongodb-pour-nodejs mongo:4
+    >    ```
+    > 2. Tester la connection au serveur MongoDB en exécutant cette commande:
+    >    ```sh
+    >    $ docker run --rm -it --link mongodb-pour-nodejs:mongo mongo:4 mongo --host mongo test
+    >    ```
+    >
+    > (B) Sinon: installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
+    >
     > 1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine,
     > 2. Après avoir redémarré votre terminal, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
     > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécéssaires: `$ sudo chmod 777 /data/db`.
     > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de terminal. (cf étape suivante de l'exercice)
+
+
+
 
 <!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
 

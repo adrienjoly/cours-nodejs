@@ -43,7 +43,11 @@ Pour cela, nous allons:
 
 1. Initialiser un serveur de base de données MongoDB en ligne. Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".
 
-    > Si vous ne parvenez pas à vous connecter à votre cluster MongoDB Atlas depuis le réseau de votre école, [installez MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1), puis lancez le serveur en suivant les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb).
+    > Si vous ne parvenez pas à vous connecter à votre cluster MongoDB Atlas depuis le réseau de votre école, vous allez devoir installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
+    > 1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine,
+    > 2. Après avoir redémarré votre terminal, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
+    > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécéssaires: `$ sudo chmod 777 /data/db`.
+    > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de terminal. (cf étape suivante de l'exercice)
 
 <!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
 

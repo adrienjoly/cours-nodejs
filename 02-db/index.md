@@ -43,9 +43,13 @@ Pour cela, nous allons:
 
 1. Initialiser un serveur de base de données MongoDB en ligne. Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".
 
+    > Si vous ne parvenez pas à vous connecter à votre cluster MongoDB Atlas depuis le réseau de votre école, [installez MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine.
+
 <!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
 
 2. Dans une session de terminal, utiliser le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)" pour vérifier que la base de données est bien accessible. La commande `show dbs` devrait afficher une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
+
+    > Si vous utilisez une version locale de MongoDB, suivez [ces instructions](https://docs.mongodb.com/guides/server/install/#run-mongodb).
 
 3. De retour dans votre projet Node.js, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
 

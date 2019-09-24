@@ -50,7 +50,8 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 2. Créer un premier `git commit` avec ce fichier puis l'uploader sur votre dépôt distant. (`git push`)
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
-5. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
+5. Créer un fichier `README.md` pour expliquer le plus simplement possible à d'autres personnes: que fait votre programme Node.js, comment l'installer et l'exécuter sur sa propre machine, et comment le tester. Ajouter ce fichier dans votre dépot `git`.
+6. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
 
 > Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html)
 

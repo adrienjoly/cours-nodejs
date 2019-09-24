@@ -1,5 +1,5 @@
 ---
-title: Partie 3 - Connexion base de données MongoDB
+title: Partie 2 - Connexion base de données MongoDB
 layout: default
 ---
 

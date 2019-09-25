@@ -41,11 +41,11 @@ Pour cela, nous allons:
 
 ### Étapes proposées
 
-1. Initialiser un serveur de base de données MongoDB en ligne. Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".
+1. Initialiser un serveur de base de données MongoDB. Il existe (au moins) trois manières de procéder:
 
-    > Si vous ne parvenez pas à vous connecter à votre cluster MongoDB Atlas depuis le réseau de votre école, il est possible de mettre en place une version locale de MongoDB. Il existe deux manières de procéder:
+    > ~~(A) Utilisation d'un serveur MongoDB dans le cloud: Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".~~ ⚠ Cette méthode ne fonctionne pas via le réseau WiFi de l'ESGI.
     >
-    > (A) Lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
+    > (B) Sinon -- si Docker fonctionne bien sur votre machine -- lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
     >
     > 1. Téléchager et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
     >    ```sh
@@ -56,7 +56,7 @@ Pour cela, nous allons:
     >    $ docker run --rm -it --link mongodb-pour-nodejs:mongo mongo:4 mongo --host mongo test
     >    ```
     >
-    > (B) Sinon: installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
+    > (C) Sinon: installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
     >
     > 1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine,
     > 2. Après avoir redémarré votre terminal, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),

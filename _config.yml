@@ -46,6 +46,9 @@ jailed: false
 theme: jekyll-theme-primer
 gfm_quirks: paragraph_end
 markdown: "CommonMarkGhPages" # necessary to allow quotes between numbered list items without breaking the numbering, like on GitHub
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 # additional config
 exclude:

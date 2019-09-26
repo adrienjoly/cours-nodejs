@@ -90,11 +90,14 @@ Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui a
 
 ## Exercice 2 - Stockage de l'historique dans MongoDB
 
-Le but est de compléter le code source du "Chat-bot avec mémoire" (cf exercice 1.3) afin de pouvoir consulter et modifier l'historique des messages et de leurs réponses.
+Le but est:
+- de tenir un historique des messages envoyés au point d'accès `POST /chat` (cf dernier exercice de la partie précédente)
+et de leurs réponses, dans une collection MongoDB,
+- et de donner accès à cet historique via deux nouveaux points d'accès: `GET /messages/all` et `DELETE /messages/last`.
 
-Exemples de conversation / cas d'usage (même que celui de l'exercice 1.3):
-1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat` répondra "Demain: Mercredi" (y compris après redémarrage du serveur)
-2. `$ curl -X GET http://localhost:3000/messages/all` affichera l'historique des conversations, tel que décrit ci-dessous (y compris après redémarrage du serveur)
+Exemples de conversation / cas d'usage:
+1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` répondra "Nous sommes à Paris" (comme dans le dernier exercice de la partie précédente)
+2. `$ curl -X GET http://localhost:3000/messages/all` affichera l'historique des conversations (messages de l'utilisateur et réponses du chat-bot), tel que décrit ci-dessous, y compris après redémarrage du serveur
 3. `$ curl -X DELETE http://localhost:3000/messages/last` supprimera le dernier échange de l'historique (message de l'utilisateur + réponse du chat-bot)
 
 Pour cela, nous allons:
@@ -125,7 +128,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 ### Objectifs
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
-- Lisibilité: 100 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
+- Lisibilité: 100 lignes de code max, utilisation de `async`/`await` pour tous les appels asynchrones.
 - Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.

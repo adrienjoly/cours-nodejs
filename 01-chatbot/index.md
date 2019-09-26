@@ -75,13 +75,13 @@ Maintenant que notre serveur Node.js/Express.js fonctionne en local, le but de c
 
 1. Créer une "application" depuis [heroku.com](https://heroku.com).
 
+    > Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` (CLI). => Ne cliquez pas sur l'icone "GitHub" depuis heroku.com et n'activez pas de "pipeline". 
+
 2. Suivre les instructions fournies pour installer la commande (aussi appelé "CLI") `heroku` sur votre machine.
 
     > En cas de problème pour installer la commande `heroku`, vous pouvez essayer `$ npm install --global heroku`.
 
 3. Suivre les instructions fournies pour associer le projet Node.js à l'application créée à l'étape 1.
-
-    > Important: ne cliquez pas sur l'icone "GitHub" depuis heroku.com. Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` installée à l'étape 2.
 
 4. Suivre les instructions fournies pour déployer le serveur en production, sur votre application Heroku.
 

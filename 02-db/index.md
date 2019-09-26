@@ -178,12 +178,16 @@ Important : assurez-vous d'avoir bien créé un `tag` et que celui-ci soit visib
 
 ## Pour aller plus loin
 
-Ressources sur la création d'APIs:
+### Ressources sur l'exécution de code asynchrone
+
+- [Apprendre les mécanismes de base de l'asynchrone en JavaScript,un tutoriel de Yahiko](https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/)
+
+### Ressources sur la création d'APIs:
 
 - Spécification, documentation et instrumentalisation d'API: [OpenAPI et Swagger](https://swagger.io/solutions/getting-started-with-oas/)
 - Alternative moderne aux APIs REST: [GraphQL](https://graphql.org/)
 
-Ressources sur la conception et exploitation de base de données MongoDB en production:
+### Ressources sur la conception et exploitation de base de données MongoDB en production:
 
 - [Mongoose ODM v5.4.5](https://mongoosejs.com/)
 - [mongodb - How to properly handle mongoose schema migrations? - Stack Overflow](https://stackoverflow.com/questions/18295357/how-to-properly-handle-mongoose-schema-migrations)

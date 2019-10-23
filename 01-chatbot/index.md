@@ -32,7 +32,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 ## Exercice 1 - Hello World
 
-Le but est de développer un serveur Web/API basique qui répondra systématiquement "Hello World" à toutes les requêtes HTTP GET émises par des clients au chemin `/` (racine).
+Le but est de développer un serveur Web/API basique qui répondra systématiquement "Hello World" à toutes les requêtes HTTP GET émises par des clients au chemin `/` (racine). Nous allons pour cela utiliser la bibliothèque [Express.js](https://expressjs.com/).
 
 ### Objectifs
 
@@ -46,16 +46,22 @@ Le but est de développer un serveur Web/API basique qui répondra systématique
 Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) dans lequel `node` est installé, et `git` est configuré avec votre identité d'étudiant·e.
 
 0. Créer un dépôt sur l'hébergeur `git` de votre école, clonez-le sur votre disque-dur (`git clone <url_du_projet>`), puis n'oubliez pas d'entrer (avec `cd`) dans le répertoire qui aura été créé par `git clone`
+
 1. Créer une application Node.js (ex: fichier `server.js`) qui affiche "Hello World" dans la sortie standard. (1 ligne de code)
+
 2. Créer un premier `git commit` avec ce fichier puis l'uploader sur votre dépôt distant. (`git push`)
+
 3. Initialiser `package.json` avec `npm init` puis ajouter la dépendance `express` à l'aide de `npm install` avec l'option `--save`.
+
+    > Pro tip: Le répertoire `node_modules` (créé par `npm install`) ne doit jamais être inclus dans les commits d'un dépôt `git`. Pour ajouter ce répertoire à la liste des répertoires et fichiers ignorés par `git`, taper `$ echo node_modules >>.gitignore`.
+
 4. Modifier le fichier `server.js` de manière à ce que l'application Node.js démarre un serveur HTTP qui réponde "Hello World" quand on lui envoie une requête GET.
+
+    > Pour vous aider: [utilisation d'Express](https://expressjs.com/fr/starter/hello-world.html)
+
 5. Créer un fichier `README.md` pour expliquer le plus simplement possible à d'autres personnes: que fait votre programme Node.js, comment l'installer et l'exécuter sur sa propre machine, et comment le tester. Ajouter ce fichier dans votre dépot `git`.
+
 6. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
-
-> Documentation pour vous aider: [Install Express](https://expressjs.com/fr/starter/installing.html)
-
-> Pro tip: Le répertoire `node_modules` (créé par `npm install` à l'étape 3) ne doit jamais être inclus dans les commits d'un dépôt `git`. Pour ajouter ce répertoire à la liste des répertoires et fichiers ignorés par `git`, taper `$ echo node_modules >>.gitignore`.
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 

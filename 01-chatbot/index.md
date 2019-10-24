@@ -181,7 +181,7 @@ Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui a
 
 ## Exercice 5 - Chat-bot avec mémoire
 
-Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
+Nous avons à présent un serveur web dont l'API contient les points d'entrée (*endpoints*) suivants:
 - `GET /` retourne systématiquement "Hello World".
 - `GET /hello` retourne une salutation personnalisée.
 - `POST /chat` retourne une réponse en fonction de la valeur de la propriété `msg` passée au format JSON.
@@ -230,7 +230,6 @@ Questions auxquelles savoir répondre:
 - Quelles fonctionnalités auraient pu être implémentées de manière synchrone ou asynchrone ?
 - Quels auraient été les impacts de ces deux manières de faire sur notre application ? (ex: avantages, inconvénients, risques, impacts sur la performance, cas limites, etc...)
 - Qu'est-ce qu'un *callback* ?
--->
 
 <!-- Bonus: Comparer appels synchrones et asynchrones à l’aide d’un profileur -->
 

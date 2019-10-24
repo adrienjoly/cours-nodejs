@@ -38,7 +38,7 @@ Le but est de développer un serveur Web/API basique qui répondra systématique
 
 - Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
 - Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code.
-- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 4 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner).
+- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner).
 - Accessibilité: Il est possible de faire fonctionner ce serveur depuis une autre machine en seulement 3 étapes: `git clone`, `npm install` et `npm start`. Ces étapes sont décrites dans `README.md`.
 
 ### Étapes proposées
@@ -59,9 +59,13 @@ Ces étapes supposent que vous avez accès à un terminal Bash (ou compatible) d
 
     > Pour vous aider: [utilisation d'Express](https://expressjs.com/fr/starter/hello-world.html)
 
+    > Veiller à ce que la réponse de chaque requête respecte *à la lettre* ce qui est demandé dans les *objectifs fonctionnels* fournis plus haut.
+
 5. Créer un fichier `README.md` pour expliquer le plus simplement possible à d'autres personnes: que fait votre programme Node.js, comment l'installer et l'exécuter sur sa propre machine, et comment le tester. Ajouter ce fichier dans votre dépot `git`.
 
 6. Créer une "release" `v1.1` pour garder une trace de cette version du serveur dans votre dépôt, avec `$ git tag v1.1`, puis assurez-vous qu'elle soit visible depuis l'hébergeur de dépôts `git` de l'école.
+
+    > Pour enregistrer les tags sur votre dépot distant, il faut passer un paramètre supplémentaire à `git push`. À vous de trouver lequel !
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
@@ -79,23 +83,23 @@ Maintenant que notre serveur Node.js/Express.js fonctionne en local, le but de c
 
 ### Étapes proposées
 
-1. Créer une "application" depuis [heroku.com](https://heroku.com).
+1. Créer un compte puis une "application" depuis [heroku.com](https://heroku.com).
 
-    > Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` (CLI). => Ne cliquez pas sur l'icone "GitHub" depuis heroku.com et n'activez pas de "pipeline". 
+    > Nous allons utiliser le déploiement manuel à l'aide de la commande `heroku` (CLI). => Ne cliquez pas sur l'icône "GitHub" depuis heroku.com et n'activez pas de "pipeline". 
 
-2. Suivre les instructions fournies pour installer la commande (aussi appelé "CLI") `heroku` sur votre machine.
+2. Suivre les instructions fournies pour installer la commande (aussi appelé "CLI") `heroku` sur votre machine, puis vous connecter à votre compte depuis le terminal.
 
-    > En cas de problème pour installer la commande `heroku`, vous pouvez essayer `$ npm install --global heroku`.
+    > En cas de problème pour installer la commande `heroku`, vous pouvez l'installer comme dépendance locale à votre projet: `$ npm install heroku`. Dans ce cas, il faudra préciser son chemin à chaque usage de la commande `heroku`, exemple: `./node_modules/.bin/heroku login`
 
-3. Suivre les instructions fournies pour associer le projet Node.js à l'application créée à l'étape 1.
+3. Suivre les instructions fournies pour déployer le serveur en production, sur votre application Heroku.
 
-4. Suivre les instructions fournies pour déployer le serveur en production, sur votre application Heroku.
+    > La commande `$ git push heroku master` vous dira à quelle URL votre application a été déployée. Il est probable que votre serveur ne fonctionne pas en production, même si le déploiement s'est bien passé. (voir étape suivante)
 
-5. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'execution en local.
+4. Modifier le serveur pour qu'il puisse se lancer sur le port défini par la variable d'environnement `PORT` fournie par Heroku, avec une valeur par défaut à `3000` pour l'exécution en local.
 
     > Documentation pour vous aider: [Specify port for Heroku](https://devcenter.heroku.com/articles/deploying-nodejs#specifying-a-start-script)
 
-6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.2`.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.2`.
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
@@ -142,7 +146,7 @@ Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui a
 
 Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
 - `GET /` retourne systématiquement "Hello World".
-- `GET /hello` retourne une saluation au `nom` fourni en paramètre GET.
+- `GET /hello` retourne une salutation au `nom` fourni en paramètre GET.
 
 Le but est que notre API développée dans l'exercice précédent puisse également répondre un message pertinent à chaque message envoyé par les utilisateurs. Sachant qu'un message peut être trop long pour passer par un paramètre GET, nous allons le passer via le corps d'une requête HTTP POST.
 
@@ -175,11 +179,11 @@ Exemples / cas d'usage:
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
-<!--
-## Exercice 3 - Chat-bot avec mémoire
+## Exercice 5 - Chat-bot avec mémoire
 
 Nous avons à présent un serveur web dont l'API contient deux points d'entrée (*endpoints*):
 - `GET /` retourne systématiquement "Hello World".
+- `GET /hello` retourne une salutation personnalisée.
 - `POST /chat` retourne une réponse en fonction de la valeur de la propriété `msg` passée au format JSON.
 
 Nous voulons désormais que notre chat-bot soit capable d'apprendre de nouvelles informations lors des échanges avec les utilisateurs, et d'exploiter ces informations pour mieux répondre lors des prochains échanges.
@@ -207,7 +211,7 @@ Pour cela, nous allons:
 2. Faire en sorte que, après avoir fourni une information, l'utilisateur puisse retrouver cette information en formulant une requête (cf étape 3 du cas d'usage), grâce au fichier `réponses.json`.
 3. Faire en sorte que toutes les étapes du cas d'usage fonctionne, plusieurs fois d'affilée, y compris avec d'autres mots que "demain" et d'autres valeurs que "Mercredi". S'assurer que les nouvelles informations sont encore exploitables même après avoir redémarré le serveur.
 4. Déployer une mise à jour de votre serveur en production.
-5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.3`.
+5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.5`.
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 

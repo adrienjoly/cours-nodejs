@@ -43,7 +43,7 @@ Pour cela, nous allons:
 
 1. Initialiser un serveur de base de données MongoDB. Il existe (au moins) trois manières de procéder:
 
-    > ~~(A) Utilisation d'un serveur MongoDB dans le cloud: Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".~~ ⚠ Cette méthode ne fonctionne pas via le réseau WiFi de l'ESGI.
+    > (A) Utilisation d'un serveur MongoDB dans le cloud: Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure". ⚠ Vérifier que vous parvenez bien à vous connecter via le réseau WiFi de votre école, ce n'est pas toujours le cas.
     >
     > (B) Sinon -- si Docker fonctionne bien sur votre machine -- lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
     >

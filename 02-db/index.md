@@ -129,7 +129,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
 - Lisibilité: 100 lignes de code max, utilisation de `async`/`await` pour tous les appels asynchrones.
-- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
+- Structure: Le code source du projet doit être disponible dans un dépôt git public, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.
 
@@ -153,7 +153,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus en pro
 
 - Fonctionnel: Même fonctionnalités que l'exercice précédent.
 - Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
-- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
+- Structure: Le code source du projet doit être disponible dans un dépôt git public, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: Le serveur et sa base de données sont accessible sur Internet.
 

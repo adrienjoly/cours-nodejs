@@ -38,7 +38,7 @@ Le but est de développer un serveur Web/API basique qui répondra systématique
 
 - Fonctionnel: Une fois le serveur lancé, `$ curl http://localhost:3000/` retourne bien le texte "Hello World". (le corps de la réponse doit seulement contenir ce texte)
 - Lisibilité: Le fichier JavaScript ne doit pas dépasser 15 lignes de code.
-- Structure: Le code source du projet doit être disponible dans un dépôt git, et celui-ci ne doit pas contenir plus de 5 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner).
+- Structure: Le code source du projet doit être disponible dans un dépôt git public, et celui-ci ne doit pas contenir plus de 5 fichiers: le fichier JavaScript (extension `.js`) contenant le code du serveur, `package.json`, `README.md` (description du projet et explication sur comment le faire fonctionner).
 - Accessibilité: Il est possible de faire fonctionner ce serveur depuis une autre machine en seulement 3 étapes: `git clone`, `npm install` et `npm start`. Ces étapes sont décrites dans `README.md`.
 
 ### Étapes proposées

@@ -89,7 +89,7 @@ Maintenant que notre serveur Node.js/Express.js fonctionne en local, le but de c
 
 2. Suivre les instructions fournies pour installer la commande (aussi appelé "CLI") `heroku` sur votre machine, puis vous connecter à votre compte depuis le terminal.
 
-    > En cas de problème pour installer la commande `heroku`, vous pouvez l'installer comme dépendance locale à votre projet: `$ npm install heroku`. Dans ce cas, il faudra préciser son chemin à chaque usage de la commande `heroku`, exemple: `./node_modules/.bin/heroku login`
+    > En cas de problème pour installer la commande `heroku`, vous pouvez l'installer comme dépendance locale à votre projet: `$ npm install -g heroku`.
 
 3. Suivre les instructions fournies pour déployer le serveur en production, sur votre application Heroku.
 

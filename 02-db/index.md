@@ -15,7 +15,7 @@ Programme:
 - Persistance de données dans une base de données MongoDB
 - Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
-Durée estimée: 3 heures.
+Durée estimée: 3-6 heures.
 
 ## Pré-requis
 

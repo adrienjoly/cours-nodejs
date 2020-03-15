@@ -31,10 +31,10 @@ Conseils pour favoriser l'entraide:
 ## Objectifs de cette partie
 
 - Développer un chat-bot en Node.js et le mettre en production
-- Bases: débogage et programmation asynchrone
+- Bases: déboggage et programmation asynchrone
 - Persistance de données: lecture et modification de fichiers
 
-Durée estimée: 3 heures.
+Durée estimée: 3-6 heures.
 
 ## Pré-requis
 

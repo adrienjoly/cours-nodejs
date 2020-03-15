@@ -16,7 +16,7 @@ Programme:
 - Rendre du contenu HTML statique puis dynamique à l'aide de templates “mustache”
 - Interroger des APIs externes avec les modules “http” (fourni) et “request”
 
-Durée estimée: 3 heures.
+Durée estimée: 3-6 heures.
 
 ## Pré-requis
 

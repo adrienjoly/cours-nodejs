@@ -22,7 +22,7 @@ Afin de savoir développer et maintenir une application Web réaliste et pérenn
 - Initier et persister des sessions utilisateur avec le module “passport”
 - Identifier et corriger les failles de sécurité: injection et XSS
 
-Durée estimée cours + exercices: 6 heures.
+Durée estimée: 3-6 heures.
 
 ## Pré-requis
 

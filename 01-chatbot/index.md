@@ -4,11 +4,28 @@ layout: default
 ---
 
 <!--
-Programme:
+Programme: (cf schémas capturés au tableau, https://github.com/adrienjoly/cours-nodejs/issues/8)
+
 - bio
-- intro: qu'est-ce que node.js ? quels usages ?
-- objectifs, plan du cours et évaluation
-- favoriser l'entraide => scinder la classe en 2 groupes: ceux qui ont déjà mis une app node.js en prod, et les autres => répartir les étudiants de manière à ce que chaque personne du groupe 1 soit assise à côté d'une personne du groupe 2, et que l'écran des personnes les plus débutantes me soient le plus accessible possible.
+- objectifs du cours:
+  - la base: savoir développer un serveur web avec Node.js
+  - développer autonomie / problem solving
+  - aider les autres
+- programme des X jours
+  - sujets abordés
+  - évaluation: exercices, QCMs, partiel ou projet
+- règles et recommandations
+  - règles: pauses, ordi fermé, boissons et nourriture dans la salle de classe
+  - conseils: participer, être curieux, faire attention aux détails, utiliser les salons de discussions ouverts aux autres étudiants
+- intro: qu'est-ce que node.js ? quels usages ? (Q&A interactif)
+- validations des pré-requis:
+  - vocabulaire et fonctionnement du web (serveurs, requêtes HTTP, etc...)
+  - usage de git (add, commit, push)
+
+Conseils pour favoriser l'entraide:
+
+- scinder la classe en 2 groupes: ceux qui ont déjà mis une app node.js en prod, et les autres
+- répartir les étudiants de manière à ce que chaque personne du groupe 1 soit assise à côté d'une personne du groupe 2, et que l'écran des personnes les plus débutantes me soient le plus accessible possible.
 -->
 
 ## Objectifs de cette partie

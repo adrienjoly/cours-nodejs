@@ -42,17 +42,11 @@ Les étudiants sont encouragés à s'entraider par l'usage d'un canal de communi
 
 ## A propos de l'auteur
 
-Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur logiciel depuis 2007. Il a contribué à plusieurs projets de recherche et développement (chez Gemalto et Alcatel-Lucent Bell Labs), a dirigé le développement de la start-up Whyd dont il maintient toujours le produit (devenu "[Openwhyd](https://openwhyd.org)" en 2016), et a développé plusieurs applications web en tant que freelance et entrepreneur indépendant.
+Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur logiciel depuis 2007. Il a contribué à plusieurs projets de recherche et développement (chez Gemalto, Alcatel-Lucent Bell Labs et Algolia), a dirigé le développement de la start-up Whyd dont il maintient toujours le produit (devenu "[Openwhyd](https://openwhyd.org)" en 2016), et a développé plusieurs applications web en tant que freelance et entrepreneur indépendant.
 
-Depuis fin 2017, Adrien développe et maintient en production le produit "[Site-Search Crawler](https://www.algolia.com/solutions/site-search/)" d'Algolia, réalisé en Node.js. Il assure actuellement le rôle de Technical Leader de cette équipe de 8 personnes.
+Parallèlement, et depuis 2015, Adrien donne des cours de développement logiciel dans plusieurs écoles parisiennes.
 
-Parallèlement, Adrien donne des cours dans plusieurs écoles parisiennes, sur les sujets suivants:
-
-- [Création d'Applications Web avec Node.js](https://adrienjoly.com/cours-nodejs/) (ce cours)
-- [Initiation à la programmation et au développement web avec le langage JavaScript](https://adrienjoly.com/cours-javascript/)
-- [Découverte du métier de "Lead Developer"](https://adrienjoly.com/cours-lead-dev/)
-- [Comment collaborer avec git et GitHub](https://adrienjoly.com/cours-git/)
-- Atelier "Lean Management": découverte de la gestion de projet agile et mise en pratique de l'amélioration continue
+Enfin, depuis Mars 2020, Adrien propose des prestations de développement et de conseil via l'ESN "<a href="https://shodo.io/">SHODO</a>".
 
 ## Références du cours
 

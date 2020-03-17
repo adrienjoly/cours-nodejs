@@ -222,13 +222,16 @@ Pour cela, nous allons:
 - Accessibilité: (mêmes exigences que pour l'exercice précédent)
 - Production: (mêmes exigences que pour l'exercice précédent)
 
+Note: Le serveur doit pouvoir s'exécuter même si le fichier `réponses.json` n'existe pas. Vous pouvez demander à `git` d'ignorer ce fichier, afin de ne pas le stocker dans votre dépot.
+
 ### Étapes proposées
 
 1. Faire en sorte que le point d'entrée `/chat` enregistre la clé (ex: "demain") et la valeur (ex: "Mercredi") fournies par l'utilisateur dans la fichier `réponses.json`, lorsque celui-ci fournit une nouvelle information. (étape 2 du cas d'usage)
 2. Faire en sorte que, après avoir fourni une information, l'utilisateur puisse retrouver cette information en formulant une requête (cf étape 3 du cas d'usage), grâce au fichier `réponses.json`.
 3. Faire en sorte que toutes les étapes du cas d'usage fonctionne, plusieurs fois d'affilée, y compris avec d'autres mots que "demain" et d'autres valeurs que "Mercredi". S'assurer que les nouvelles informations sont encore exploitables même après avoir redémarré le serveur.
-4. Déployer une mise à jour de votre serveur en production.
-5. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.5`.
+4. Faites en sorte que le fichier `réponses.json` puisse retenir plus d'une information à la fois.
+5. Déployer une mise à jour de votre serveur en production.
+6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.5`.
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 

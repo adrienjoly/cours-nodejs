@@ -235,9 +235,36 @@ Note: Le serveur doit pouvoir s'exécuter même si le fichier `réponses.json` n
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 
-BONUS:
+## Exercice 6 - Utilisation d'appels asynchrones
 
-- Utilisation de la version asynchrone des appels au file system: `readFile()` et `writeFile()`
+L'utilisation de fonctions d'entrées-sorties synchrones (comme [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options) et [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), par exemple) est à proscrire dans les programmes Node.js, et particulièrement dans l'implémentation de serveurs.
+
+En effet, ces opérations sont asynchrones par nature, car leur temps d'exécution est imprévisible. Or, exécuter ce genre d'opérations de manière synchrone revient à bloquer l'exécution du programme Node.js en attendant que celles-ci soient terminées.
+
+Un serveur web doit être en permanence capable de recevoir des requêtes, et d'y répondre au plus vite. Afin de permettre cela, nous allons devoir effectuer nos opérations d'entrées-sorties de manière asynchrone, au lieu de synchrone.
+
+Modifier le code source produit à l'exercice précédent de manière à utiliser les fonctions asynchrones `readFile()` et `writeFile()` au lieu de `readFileSync()` et `writeFileSync()`.
+
+Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.6`.
+
+## Exercice 7 - Utilisation de Promesses
+
+Le concept de Promesse (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le "callback hell".
+
+Modifier le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent des Promesses au lieu de fonctions de `callback`.
+
+Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.7`.
+
+## Exercice 8 - Utilisation de `async` et `await`
+
+Les mots clés `async` et `await` (cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) ont été intégrés au langage JavaScript pour simplifier rendre encore plus lisible la définition et l'usage de fonctions asynchrones à base de Promesses.
+
+Modifier à nouveau le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent les mots clés `async` et `await` au lieu de `Promise`, `resolve`, `reject`, `.then()` et `.catch()`.
+
+Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.8`.
+
+## BONUS
+
 - Archivage des conversations dans plusieurs fichiers (un par interlocuteur)
 
 ## Prise de recul: appels synchrones et asynchrones
@@ -254,6 +281,10 @@ Questions auxquelles savoir répondre:
 <!-- Bonus: Comparer appels synchrones et asynchrones à l’aide d’un profileur -->
 
 ## Pour aller plus loin
+
+### Fonctions asynchrones
+
+- Aide-mémoire: [Fonctions synchrones VS asynchrones](/sync-vs-async)
 
 ### Modules: `module.exports` et `require()`
 

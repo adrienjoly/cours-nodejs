@@ -236,3 +236,23 @@ Par ailleurs, il est possible d'utiliser Node.js pour créer des applications "n
 Bref, les possibilités sont quasi-illimitées !
 
 Quel framework essayerez-vous pour votre prochain projet Web ?
+
+### Sécurité
+
+- Exemple de faille de sécurité à prévenir: [injection par XSS](https://fr.wikipedia.org/wiki/Cross-site_scripting)
+- [We’re under attack! 23+ Node.js security best practices](https://medium.com/@nodepractices/were-under-attack-23-node-js-security-best-practices-e33c146cb87d)
+- [Node.js Security Handbook | Sqreen](https://www.sqreen.com/resources/nodejs-security-handbook)
+
+### Identification et authentification
+
+- Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
+- Sessions utilisateur depuis des services tiers: le protocole [OAuth](https://fr.wikipedia.org/wiki/OAuth)
+- Alternative aux sessions: [Securing Node.js RESTful APIs with JSON Web Tokens – freeCodeCamp.org](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52)
+- [The Beer Drinker’s Guide to SAML | Duo Security](https://duo.com/blog/the-beer-drinkers-guide-to-saml)
+
+### Architecture et passage d'applications Node.js à l'échelle
+
+- [What is the best way I can scale my nodejs app? - Stack Overflow](https://stackoverflow.com/questions/21981186/what-is-the-best-way-i-can-scale-my-nodejs-app)
+- [Good practices for high-performance and scalable Node.js applications [Part 1/3]](https://medium.com/iquii/good-practices-for-high-performance-and-scalable-node-js-applications-part-1-3-bb06b6204197)
+- [Cas d'utilisation de RabbitMQ - Développement - Human Coders Forum](https://forum.humancoders.com/t/cas-dutilisation-de-rabbitmq/1173)
+- Architecture: [Microservices](https://martinfowler.com/articles/microservices.html)

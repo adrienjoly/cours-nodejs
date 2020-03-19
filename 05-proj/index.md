@@ -5,8 +5,8 @@ layout: default
 
 <!-- REFERENCE LINKS
 - skeleton with tests: https://github.com/adrienjoly/cours-nodejs-project-tester
-- https://github.com/adrienjoly/cours-nodejs-project-implem
-- https://circleci.com/gh/eemi-aj/node-note-keeper
+- https://github.com/adrienjoly/cours-nodejs-project-solution
+- https://circleci.com/gh/eemi-aj/node-note-keeper [RIP]
 - https://trello.com/c/OY8UVMiS/25-%F0%9F%8E%93-cours#comment-5c33318474ebba6e5f47f9d9
 -->
 
@@ -20,15 +20,15 @@ Afin de vérifier son bon fonctionnement, ainsi que le respect du cahier des cha
 
 Chaque groupe devra rendre trois URLs:
 
-- l'URL du dépôt git contenant le code source et l'historique de commits, hébergé sur l'hébergeur de dépôts `git` de l'école;
+- l'URL du dépôt GitHub contenant le code source, l'historique de commits et l'intégration continue;
 - et l'URL à laquelle l'API a été déployée en production.
 
 Le travail du groupe et de chacune des personnes du groupe sera évalué selon les critères suivants:
 
 - Fonctionnel: Les fonctionnalités ont été implémentées conformément au cahier des charges fourni ci-dessous.
-- Lisibilité: Le dépôt git respecte la structure de fichiers de `express-generator`. Il contient un fichier `README.md` qui explique comment cloner, faire fonctionner et tester l'API depuis une autre machine que la sienne. Les fichiers JavaScript doivent respecter les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
+- Lisibilité: Le dépôt git contient un fichier `README.md` qui explique comment cloner, faire fonctionner et tester l'API depuis une autre machine que la sienne. Les fichiers JavaScript doivent respecter les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
 - Production: L'API doit être accessible et fonctionnelle en production, à l'URL fournie.
-- Collaboration: Chaque collaborateur de l'équipe devra avoir contribué une partie substantielle du code source de l'API. Ceci sera vérifié grâce à l'historique des commits git.
+- Collaboration: Chaque collaborateur de l'équipe devra avoir contribué une partie substantielle du code source de l'API. Ceci sera notamment vérifié grâce à l'historique des commits git.
 
 ## Cahier des charges
 
@@ -54,7 +54,7 @@ Les notes seront à stocker en tant que texte brut (c.a.d. non HTML) et doivent 
 
 #### Environnement d'exécution
 
-Le serveur API doit pouvoir s'exécuter dans un environnement de type Linux, doté de Node.js version 10 et de MongoDB version 4.
+Le serveur API doit pouvoir s'exécuter dans un environnement de type Linux, doté de Node.js version 12.15 et de MongoDB version 4.
 
 Les variables d'environnement suivantes devront permettre de paramétrer le serveur:
 
@@ -79,7 +79,7 @@ Les documents stockés dans la collection `notes` doivent contenir les propriét
 
 - `_id` (type: `ObjectID`): identifiant unique de la note, généré automatiquement par MongoDB lors de l'insertion.
 - `userId` (type: `ObjectID`): identifiant unique (`_id`) de l'utilisateur qui a créé cette note.
-- `content` (type: `String`): contenu textuel de la note.
+- `content` (type: `string`): contenu textuel de la note.
 - `createdAt` (type: `Date`): date et heure à laquelle la note a été créé.
 - `lastUpdatedAt` (type: `Date`): date et heure à laquelle la note a été mise à jour pour la dernière fois. Lors de la création de la note, cette value doit être `null`.
 
@@ -88,8 +88,8 @@ Les documents stockés dans la collection `notes` doivent contenir les propriét
 Les documents stockés dans la collection `users` doivent contenir les propriétés suivantes:
 
 - `_id` (type: `ObjectID`): identifiant unique de l'utilisateur, généré automatiquement par MongoDB lors de l'insertion.
-- `username` (type: `String`): nom unique choisi par l'utilisateur lors de son inscription. Ce nom doit être constitué uniquement de lettres minuscules non accentuées (entre `a` et `z`) pour une longueur totale de 2 à 20 caractères max.
-- `password` (type: `String`): mot de passe choisi par l'utilisateur lors de son inscription. Ce mot de passe doit contenir au moins 4 caractères et être hashé au format MD5.
+- `username` (type: `string`): nom unique choisi par l'utilisateur lors de son inscription. Ce nom doit être constitué uniquement de lettres minuscules non accentuées (entre `a` et `z`) pour une longueur totale de 2 à 20 caractères max.
+- `password` (type: `string`): mot de passe choisi par l'utilisateur lors de son inscription. Ce mot de passe doit contenir au moins 4 caractères et être hashé avec l'algorithme `bcrypt` (alternative à MD5).
 
 #### Authentification des utilisateurs
 
@@ -113,7 +113,7 @@ Les routes doivent être capables d'extraire les paramètres passés dans le cor
 
 La réponse envoyée par chacune de ces routes doit aussi être au format JSON. Elle doit systématiquement contenir la propriété suivante:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant. Sinon elle vaudra `null`.
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant. Sinon elle sera `null`.
 
 Les autres propriétés de la réponse JSON sont spécifiées dans chaque route à implémenter, tel que décrites ci-dessous.
 
@@ -130,8 +130,8 @@ Propriétés JSON attendues dans le corps de la requête:
 
 Propriétés JSON en réponse de chaque requête:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
-- `token` (type: `String`): En cas de succès, cette propriété aura pour valeur le token JWT généré pour l'utilisateur, en base 64.
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle sera `null`.
+- `token` (type: `string`): En cas de succès, cette propriété aura pour valeur le token JWT généré pour l'utilisateur, en base 64.
 
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
@@ -153,8 +153,8 @@ Propriétés JSON attendues dans le corps de la requête:
 
 Propriétés JSON en réponse de chaque requête:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
-- `token` (type: `String`): En cas de succès, cette propriété aura pour valeur le token JWT généré pour l'utilisateur, en base 64.
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle sera `null`.
+- `token` (type: `string`): En cas de succès, cette propriété aura pour valeur le token JWT généré pour l'utilisateur, en base 64.
 
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
@@ -171,8 +171,8 @@ Le jeton JWT de l'utilisateur connecté doit être fourni en base 64 dans le *he
 
 Propriétés JSON en réponse de chaque requête:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
-- `notes` (type: `Array`): En cas de succès, cette propriété aura pour valeur un tableau d'objets respectant le schéma de la collection `notes`. (fourni plus haut)
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle sera `null`.
+- `notes` (type: `array`): En cas de succès, cette propriété aura pour valeur un tableau d'objets respectant le schéma de la collection `notes`. (fourni plus haut)
 
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
@@ -190,8 +190,8 @@ Propriétés JSON attendues dans le corps de la requête:
 
 Propriétés JSON en réponse de chaque requête:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
-- `note` (type: `Object`): En cas de succès, cette propriété aura pour valeur un l'objet qui a été inséré dans la collection `notes`, comprenant son `_id`. (cf schéma de la collection `notes` fourni plus haut)
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle sera `null`.
+- `note` (type: `object`): En cas de succès, cette propriété aura pour valeur un l'objet qui a été inséré dans la collection `notes`, comprenant son `_id`. (cf schéma de la collection `notes` fourni plus haut)
 
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
@@ -213,8 +213,8 @@ Propriétés JSON attendues dans le corps de la requête:
 
 Propriétés JSON en réponse de chaque requête:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
-- `note` (type: `Object`): En cas de succès, cette propriété aura pour valeur un l'objet qui a été mis à jour dans la collection `notes`, comprenant son `_id`. (cf schéma de la collection `notes` fourni plus haut)
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle sera `null`.
+- `note` (type: `object`): En cas de succès, cette propriété aura pour valeur un l'objet qui a été mis à jour dans la collection `notes`, comprenant son `_id`. (cf schéma de la collection `notes` fourni plus haut)
 
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
@@ -234,10 +234,16 @@ Paramètres attendus dans l'URL de la requête:
 
 Propriétés JSON en réponse de chaque requête:
 
-- `error` (type: `String`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle vaudra `null`.
+- `error` (type: `string` ou `null`): En cas d'erreur pendant l'exécution de la requête, cette propriété aura pour valeur le message d'erreur correspondant (cf cas d'erreurs ci-dessous). Sinon elle sera `null`.
 
 Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 
 - si l'utilisateur n'est pas connecté => `Utilisateur non connecté` et retourner un code HTTP `401`.
 - si `id` n'est associé à aucune note stockée dans la base de données => `Cet identifiant est inconnu` et retourner un code HTTP `404`.
 - si `id` est associé à une note appartenant à un autre utilisateur => `Accès non autorisé à cette note` et retourner un code HTTP `403`.
+
+## Annexes
+
+Pour faciliter l'initialisation de votre projet et sa recette lors de votre rendu, nous fournissons un dépôt contenant un code source de départ et quelques tests automatisés: [cours-nodejs-project-tester](https://github.com/adrienjoly/cours-nodejs-project-tester).
+
+Libre à vous d'utiliser ou pas ce canevas.

@@ -26,6 +26,8 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 ℹ️ Dans cette partie, nous allons développer un nouveau programme Node.js. Nous allons donc créer un nouveau répertoire et un nouveau dépôt pour celui-ci. Nous l'appellerons **node-app**.
 
+---
+
 ## Exercice 1 - Générer une application Web avec `express-generator`
 
 Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Express. Cette fois-ci, nous allons utiliser `express-generator` pour générer une structure de fichiers digne d'une véritable application Web. Puis nous allons y effectuer quelques changements, pour comprendre comment fonctionne le moteur de rendu "Hogan.js" (inspiré de "Mustache").
@@ -73,6 +75,8 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 7. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
+---
+
 ## Exercice 2 - Formulaire avec page de destination
 
 Dans cet exercice, nous allons compléter l'application Web de l'exercice précédent, de manière à ce que l'utilisateur puisse afficher une page personnalisée.
@@ -107,6 +111,8 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 
 7. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
+---
+
 ## Exercice 3 - Enrichissement de données à l'aide d'APIs externes
 
 Dans cet exercice, nous allons compléter l'application Web de l'exercice précédent, de manière à ce qu'elle récupère et affiche des informations supplémentaires sur la ville saisie par l'utilisateur.
@@ -133,7 +139,7 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 5. Créer un `git tag v3.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
-## Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
+### Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
 
 Il existe plusieurs moyens d'effectuer des requêtes HTTP depuis Node.js.
 
@@ -146,6 +152,8 @@ Notamment:
 - un petit nouveau: [httpie](https://github.com/lukeed/httpie)
 
 Quelle solution préférez-vous ? Pourquoi ?
+
+---
 
 ## Pour aller plus loin
 

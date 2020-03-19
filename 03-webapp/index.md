@@ -209,10 +209,10 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 
 5. Versionner le code avec `$ git tag v3.4` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
-BONUS:
+## Bonus
 
-- Écrire des tests fonctionnels pour vérifier le bon fonctionnement des sessions utilisateur. Vous pouvez utilisez [Puppeteer](https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md) si nécessaire.
 - Refaire cet exercice sans avoir à stocker de sessions en base de donnés. Pour cela, utiliser le standard [JSON Web Tokens](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52) au lieu de Passport.js et des cookies.
+- Écrire des tests fonctionnels pour vérifier le bon fonctionnement des sessions utilisateur. Pour cela, vous pouvez utiliser [Cypress](https://www.cypress.io/) et/ou [Puppeteer](https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md), par exemple.
 
 ---
 

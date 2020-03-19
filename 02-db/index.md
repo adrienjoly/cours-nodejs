@@ -178,10 +178,6 @@ Important : assurez-vous d'avoir bien créé un `tag` et que celui-ci soit visib
 
 ## Pour aller plus loin
 
-### Ressources sur l'exécution de code asynchrone
-
-- [Apprendre les mécanismes de base de l'asynchrone en JavaScript,un tutoriel de Yahiko](https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/)
-
 ### Ressources sur la création d'APIs:
 
 - Spécification, documentation et instrumentalisation d'API: [OpenAPI et Swagger](https://swagger.io/solutions/getting-started-with-oas/)

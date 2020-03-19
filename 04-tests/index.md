@@ -1,5 +1,5 @@
 ---
-title: Partie 4 - Application Web avancée
+title: Partie 4 - Tests et intégration continue
 layout: default
 ---
 
@@ -16,9 +16,10 @@ Programme de la première partie:
 
 ## Objectifs de cette séance
 
-Afin de savoir développer et maintenir une application Web réaliste et pérenne, nous allons:
+Afin de savoir développer et maintenir une application Node.js de manière pérenne, nous allons:
 
 - Écrire des tests automatisés: unitaires, d'intégration et fonctionnels
+- Mettre en place un processus d'intégration continue avec GitHub Actions
 
 Durée estimée: TBD.
 
@@ -30,7 +31,7 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 
 ---
 
-## Exercice 4.1 - Tests automatisés avec Ava
+## Introduction
 
 La plupart des applications sont amenées à fonctionner pendant plusieurs années. L'évolution des besoins des utilisateurs, des entreprises, ainsi que l'évolution des technologies et des normes de sécurité implique que le code source de ces applications devra être modifié régulièrement. Notamment pour y ajouter des fonctionnalités et corriger des bugs. Afin d'éviter que la **maintenance** d'un programme ne devienne de plus en plus coûteuse et risquée, il faut suivre quelques règles d'hygiène, parmi lesquelles: définir des tests.
 
@@ -43,9 +44,13 @@ Il existe trois grandes catégories de tests:
 - les **tests fonctionnels** permettent de vérifier le bon fonctionnement du site (ou programme) dans son ensemble, comme un utilisateur pourrait le faire manuellement;
 - enfin, les **tests d'intégration** permettent de vérifier le bon comportement de plusieurs composants définis à l'intérieur du programme.
 
-Le but de cet exercice est de compléter le site dynamique que nous avons créé lors de la séance précédente, afin d'y intégrer des tests automatisés.
+---
 
-### Critères de validation
+## Exercice 4.1 - Premier test automatisé avec Ava
+
+Le but de cet exercice est de compléter le site dynamique que nous avons créé dans la partie précédente, afin d'y intégrer des tests automatisés.
+
+### Objectifs
 
 - Fonctionnel: La commande `npm test` doit permettre d'exécuter notre test fonctionnel, et celui-ci doit seulement "passer" si la route `/ville` de notre serveur web fonctionne comme défini dans les exercices 3.x.
 - Lisibilité: Suivre les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
@@ -62,14 +67,45 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 4. Ajouter à `test.js` un test fonctionnel ou d'intégration qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
 5. Versionner le code avec `$ git tag v4.1` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
-BONUS:
+---
 
-- ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas.
-- ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur dans le cas où l'API `geocode.xyz` retourne un code `404`.
-- ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement.
-- ajouter l'endpoint `/chat` (version avec mémoire, cf exercice 1.3) à votre application web, puis ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via cet endpoint est bien stockée dans `réponses.json`.
+## Exercice 4.2 - Ajout de tests automatisés
+
+### Objectifs
+
+La commande `npm test` exécutera le test réalisé dans l'exercice précédent ainsi que trois nouveaux tests définis ci-dessous.
+
+### Étapes proposées
+
+Dans le même dépôt:
+
+1. Ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas.
+2. Ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur dans le cas où l'API `geocode.xyz` retourne un code `404`.
+3. Ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement.
+4. Versionner le code avec `$ git tag v4.2` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
 Pro tip: Vous pouvez utiliser le module [`nock`](https://www.npmjs.com/package/nock) dans vos tests d'intégration pour intercepter et modifier les réponses de l'API externe `geocode.xyz`.
+
+### BONUS
+
+Dans l'application "chatbot" développée dans la partie 1 du cours, ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via l'endpoint `POST /chat` est bien stockée dans `réponses.json`.
+
+---
+
+## Exercice 4.3 - Mise en place d'intégration continue avec GitHub Actions
+
+L'intégration continue est un ensemble de pratiques permettant de développer de manière plus rapide et robuste. Elle vise notamment à prévenir les régressions, c'est à dire les modifications de code qui introduisent des défauts là où il n'y en avait pas.
+
+Pour prévenir ces régressions, nous allons mettre en place un processus qui exécutera automatiquement nos tests automatisés à chaque fois que nous enverrons des changements de code à notre dépôt distant. (c.a.d. `git commit` suivi de `git push`)
+
+Pour cela, nous allons configurer [GitHub Actions](https://github.com/features/actions), le système d'intégration continue mis à disposition gratuitement par GitHub.
+
+### Objectifs
+
+GitHub Actions exécutera les tests automatisés des exercices précédents et nous informera des résultats:
+
+- à chaque fois qu'un `commit` sera intégré à la branche `master` du dépôt distant (hébergé sur github.com),
+- et à chaque fois qu'un "pull request" sera créé (ou mis à jour) dans ce dépôt.
 
 ---
 

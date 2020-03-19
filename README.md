@@ -15,13 +15,9 @@
 - [Partie 1 - Chat-bot avec Express](01-chatbot/)
 - [Partie 2 - Connexion base de données MongoDB](02-db/)
 - [Partie 3 - Application Web simple](03-webapp/)
-<!--
-- [Partie 4 - Application Web avancée](04-solid/)
--->
+- [Partie 4 - Tests et intégration continue](04-tests/)
 
-Annexes:
-
-- Aide-mémoire: [Fonctions synchrones VS asynchrones](sync-vs-async)
+<!-- TODO: une partie à propos d'infrastructure (load balancer...) et de limitation de requêtes (rate limiter) -->
 
 ## Logiciels utilisés
 

@@ -19,10 +19,8 @@ Programme de la première partie:
 Afin de savoir développer et maintenir une application Web réaliste et pérenne, nous allons:
 
 - Écrire des tests automatisés: unitaires, d'intégration et fonctionnels
-- Initier et persister des sessions utilisateur avec le module “passport”
-- Identifier et corriger les failles de sécurité: injection et XSS
 
-Durée estimée: 3-6 heures.
+Durée estimée: TBD.
 
 ## Pré-requis
 

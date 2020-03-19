@@ -12,9 +12,10 @@ Programme:
 
 ## Objectifs de cette partie
 
-- Développer une application web avec server-side rendering (SSR) et interrogation d'APIs externes
+- Développer une application web avec server-side rendering (SSR)
 - Rendre du contenu HTML statique puis dynamique à l'aide de templates “mustache”
 - Interroger des APIs externes avec les modules “http” (fourni) et “request”
+- Initier et persister des sessions utilisateur avec le module “passport”
 
 Durée estimée: 3-6 heures.
 

@@ -164,7 +164,7 @@ Une **session utilisateur** est un ensemble d'informations conservées dans le b
 
 Dans cet exercice, nous allons intégrer la stratégie "passport-local" du module [Passport](https://www.npmjs.com/package/passport) dans notre application Express.js, afin de permettre aux visiteurs de s'identifier au travers d'un compte utilisateur.
 
-### Critères de validation
+### Objectifs
 
 - Fonctionnel: Après avoir lancé le serveur avec `$ npm start` et ouvert sa page d'accueil depuis un navigateur web, il devrait être possible d'y créer un compte à l'aide d'un identifiant et mot de passe, de s'y connecter avec ce compte pour accéder à une page privée, puis de s'y déconnecter.
 - Lisibilité: (cf exercice précédent)

@@ -161,6 +161,8 @@ Quelle solution préférez-vous ? Pourquoi ?
 
 Il existe de nombreuses alternatives à Express pour créer des applications Web avec Node.js:
 
+- [Nest](https://nestjs.com/)
+- [Next.js](https://nextjs.org/)
 - [Hapi](https://hapijs.com/)
 - [Koa](https://koajs.com/)
 - [Strapi](https://strapi.io/)

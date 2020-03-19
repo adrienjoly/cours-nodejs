@@ -128,7 +128,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 ### Objectifs
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
-- Lisibilité: 100 lignes de code max, utilisation de `async`/`await` pour tous les appels asynchrones.
+- Lisibilité: 140 lignes de code max, utilisation de `async`/`await` pour tous les appels asynchrones.
 - Structure: Le code source du projet doit être disponible dans un dépôt git public, et celui-ci ne doit pas contenir plus de 5 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.

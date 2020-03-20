@@ -89,7 +89,7 @@ Les documents stockés dans la collection `users` doivent contenir les propriét
 
 - `_id` (type: `ObjectID`): identifiant unique de l'utilisateur, généré automatiquement par MongoDB lors de l'insertion.
 - `username` (type: `string`): nom unique choisi par l'utilisateur lors de son inscription. Ce nom doit être constitué uniquement de lettres minuscules non accentuées (entre `a` et `z`) pour une longueur totale de 2 à 20 caractères max.
-- `password` (type: `string`): mot de passe choisi par l'utilisateur lors de son inscription. Ce mot de passe doit contenir au moins 4 caractères et être hashé avec l'algorithme `bcrypt` (alternative à MD5).
+- `password` (type: `string`): mot de passe choisi par l'utilisateur lors de son inscription. Ce mot de passe doit contenir au moins 4 caractères et être hashé avec l'algorithme [`bcrypt`](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/) (alternative à MD5).
 
 #### Authentification des utilisateurs
 

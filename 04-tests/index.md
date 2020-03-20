@@ -106,11 +106,15 @@ GitHub Actions exécutera les tests automatisés des exercices précédents et n
 
 - à chaque fois qu'un `commit` sera intégré à la branche `master` de votre dépôt distant hébergé sur github.com, (exemple: coches vertes sur [liste de commits](https://github.com/openwhyd/openwhyd/commits/master))
 
-![résultats d'intégration continue sur liste de commits](./assets/commits.png)
+<p align="center">
+  <img width="60%" src="./assets/commits.png" alt="résultats d'intégration continue sur liste de commits" />
+</p>
 
 - et à chaque fois qu'un "pull request" sera créé (ou mis à jour) dans ce dépôt. (exemple: cliquer sur "Show all checks", en bas de ce [pull request](https://github.com/openwhyd/openwhyd/pull/294))
 
-![résultats d'intégration continue sur pull request](./assets/pr.png)
+<p align="center">
+  <img width="60%" src="./assets/pr.png" alt="résultats d'intégration continue sur pull request" />
+</p>
 
 ---
 

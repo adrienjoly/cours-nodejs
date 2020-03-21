@@ -8,6 +8,7 @@
 
 - schémas capturés au tableau: https://github.com/adrienjoly/cours-nodejs/issues/8
 - correcteurs d'exercices: https://github.com/adrienjoly/cours-nodejs-exercise-testers
+- solutions d'exercices: https://github.com/adrienjoly/cours-nodejs-exercise-solutions
 - évals et exams: https://github.com/adrienjoly/cours-nodejs-student-evaluations
 - template pour projet: https://github.com/adrienjoly/cours-nodejs-project-tester
 - solution pour projet: https://github.com/adrienjoly/cours-nodejs-project-solution

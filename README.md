@@ -2,6 +2,18 @@
 
 # Cours Node.js
 
+<!--
+
+## Ressources pour l'enseignant
+
+- schémas capturés au tableau: https://github.com/adrienjoly/cours-nodejs/issues/8
+- correcteurs d'exercices: https://github.com/adrienjoly/cours-nodejs-exercise-testers
+- évals et exams: https://github.com/adrienjoly/cours-nodejs-student-evaluations
+- template pour projet: https://github.com/adrienjoly/cours-nodejs-project-tester
+- solution pour projet: https://github.com/adrienjoly/cours-nodejs-project-solution
+
+-->
+
 ## Objectifs pédagogiques
 
 - Découvrir la plateforme Node.js, comme alternative à PHP pour développer un back-end web moderne

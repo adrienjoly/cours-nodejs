@@ -4,7 +4,8 @@ layout: default
 ---
 
 <!--
-Programme: (cf schémas capturés au tableau, https://github.com/adrienjoly/cours-nodejs/issues/8)
+
+Programme:
 
 - bio
 - objectifs du cours:
@@ -26,6 +27,7 @@ Conseils pour favoriser l'entraide:
 
 - scinder la classe en 2 groupes: ceux qui ont déjà mis une app node.js en prod, et les autres
 - répartir les étudiants de manière à ce que chaque personne du groupe 1 soit assise à côté d'une personne du groupe 2, et que l'écran des personnes les plus débutantes me soient le plus accessible possible.
+
 -->
 
 ## Objectifs de cette partie

@@ -34,7 +34,7 @@ Pour cela, nous allons:
 
 ### Objectifs
 
-- Fonctionnel: Le programme doit se connecter à une base de données MongoDB, ajouter un document `{ date: (new Date()).toString() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
+- Fonctionnel: Le programme doit se connecter à une base de données MongoDB, ajouter un document `{ date: new Date() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
 - Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
 - Structure: Le code source du projet ne doit pas contenir plus de 5 fichiers. (dont `dates.js`, `package.json` et `README.md`)
 - Production: À ce stade, vous n'aurez pas besoin de déployer quoi que ce soit en production.

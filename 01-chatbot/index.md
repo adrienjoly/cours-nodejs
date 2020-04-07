@@ -247,6 +247,11 @@ Un serveur web doit être en permanence capable de recevoir des requêtes, et d'
 
 Modifier le code source produit à l'exercice précédent de manière à utiliser les fonctions asynchrones `readFile()` et `writeFile()` au lieu de `readFileSync()` et `writeFileSync()`.
 
+Gérer les cas d'erreurs suivants:
+
+- en cas d'erreur de lecture: afficher l'erreur dans la sortie d'erreurs (à l'aide de `console.error()`) puis terminer l'exécution du programme en retournant le code d'erreur `1` (à l'aide de `process.exit(1)`);
+- en cas d'erreur d'écriture: afficher l'erreur dans la sortie d'erreurs et envoyer la réponse suivante à la requête: "`Oops, je n'ai pas pu enregistrer cette information. Merci de rééssayer.`"
+
 Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.6`.
 
 ## Exercice 7 - Utilisation de Promesses
@@ -255,13 +260,17 @@ Le concept de Promesse (en anglais: `Promise`; cf [javascript.info](https://java
 
 Modifier le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent des Promesses au lieu de fonctions de `callback`.
 
+N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
+
 Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.7`.
 
 ## Exercice 8 - Utilisation de `async` et `await`
 
-Les mots clés `async` et `await` (cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) ont été intégrés au langage JavaScript pour simplifier rendre encore plus lisible la définition et l'usage de fonctions asynchrones à base de Promesses.
+Les mots clés `async` et `await` (voir les ressources fournies plus bas) ont été intégrés au langage JavaScript pour simplifier rendre encore plus lisible la définition et l'usage de fonctions asynchrones à base de Promesses.
 
 Modifier à nouveau le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent les mots clés `async` et `await` au lieu de `Promise`, `resolve`, `reject`, `.then()` et `.catch()`.
+
+N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
 
 Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.8`.
 

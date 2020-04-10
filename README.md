@@ -87,5 +87,6 @@ Enfin, depuis Mars 2020, Adrien propose des prestations de développement et de 
 
 ## Ressources annexes au cours
 
+- [When debugging, your attitude matters - Julia Evans](https://jvns.ca/blog/debugging-attitude-matters/)
 - [Apprendre à apprendre: deux modes d’apprentissage](http://www.internetactu.net/2015/09/08/apprendre-a-apprendre-14-deux-modes-dapprentissage/)
 - [Startup Noob Guide](http://bit.ly/startupnoob)

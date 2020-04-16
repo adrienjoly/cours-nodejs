@@ -36,7 +36,9 @@ Définition de wikipedia:
 > Un problème [...] est une situation dans laquelle **un obstacle empêche de progresser**, d'avancer ou de réaliser ce que l'on voulait faire.
 > Un problème naît lorsqu'il y a une **différence entre l'état des choses et celui souhaité**, ou lorsqu'il y a anormalité.
 
-La deuxième partie de cette définition est cruciale pour reconnaitre un problème. C'est aussi la clé de la méthodologie que nous allons voir ci-dessous: prendre le temps de comparer le **comportement effectif** de l'exécution d'un programme au **comportement attendu**.
+La première partie de cette définition implique que vous avez un objectif, et que quelque chose d'imprévu – le problème – vous empêche d'atteindre cet objectif. Par exemple, l'objectif visé peut être de démarrer un serveur web, en tapant `npm start`.
+
+La deuxième partie est cruciale pour définir la nature du problème. C'est aussi la clé de la méthodologie que nous allons voir ci-dessous: prendre le temps de comparer le **comportement effectif** de l'exécution d'un programme (ex: le serveur web ne répond pas aux requêtes, et je vois plein d'erreurs dans mon terminal) au **comportement attendu** (ex: je devrais voir ma page web en ouvrant http://localhost:3000, après avoir exécuté `npm start`).
 
 Cela sous-entend que, pour trouver une solution à un problème, réagir en se basant seulement sur la constatation de ce comportement effectif est contreproductif.
 
@@ -48,7 +50,6 @@ Voici quelques exemples de tentatives ratées (ou contre-productives) de résolu
 
 - "Monsieur, ça marche pas" => L'étudiant n'a pas formulé le problème de manière suffisante => L'intervenant va être contraint de l'aider à dérouller la méthode de résolution de problèmes depuis le début.
 - "J'ai une erreur ENOTFOUND" => Le problème est formulé en fournissant le code d'erreur. En revanche, cette formulation manque de précisions: quelle est l'instruction qui a causé cette erreur ? Quel est le nom du fichier en question ? Ce fichier existe-t'il ? => En se posant ces questions, l'étudiant aurait probablement pu trouver une solution de manière autonome.
-- Un étudiant partage un copier-coller de 50 lignes de logs + un code source de 80 lignes, priant ses camarades de l'aide à faire fonctionner son programme. => Il est probablement que
 - Un étudiant partage un copier-coller de 50 lignes de logs + un code source de 80 lignes, priant ses camarades de l'aide à faire fonctionner son programme. => Il y a peu de chance qu'il obtienne rapidement de l'aide sur la résolution de ce problème, car le-dit problème n'a pas été formulé de manière concise. Et, pour identifier la source du problème, la personne qui lui viendrait en aide devrait prendre le temps de lire et interpréter ces 130 lignes afin d'isoler l'origine probable du problème.
 - Enfin, le fait que la [méthode du canard en plastique](https://fr.wikipedia.org/wiki/M%C3%A9thode_du_canard_en_plastique) ait été testée et approuvée par nombreux développeurs prouve que l'effort de formulation suffit parfois pour régler soi-même son problème. D'où l'importance de cette étape.
 

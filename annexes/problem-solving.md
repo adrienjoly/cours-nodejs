@@ -50,6 +50,7 @@ Voici quelques exemples de tentatives ratées (ou contre-productives) de résolu
 - "J'ai une erreur ENOTFOUND" => Le problème est formulé en fournissant le code d'erreur. En revanche, cette formulation manque de précisions: quelle est l'instruction qui a causé cette erreur ? Quel est le nom du fichier en question ? Ce fichier existe-t'il ? => En se posant ces questions, l'étudiant aurait probablement pu trouver une solution de manière autonome.
 - Un étudiant partage un copier-coller de 50 lignes de logs + un code source de 80 lignes, priant ses camarades de l'aide à faire fonctionner son programme. => Il est probablement que
 - Un étudiant partage un copier-coller de 50 lignes de logs + un code source de 80 lignes, priant ses camarades de l'aide à faire fonctionner son programme. => Il y a peu de chance qu'il obtienne rapidement de l'aide sur la résolution de ce problème, car le-dit problème n'a pas été formulé de manière concise. Et, pour identifier la source du problème, la personne qui lui viendrait en aide devrait prendre le temps de lire et interpréter ces 130 lignes afin d'isoler l'origine probable du problème.
+- Enfin, le fait que la [méthode du canard en plastique](https://fr.wikipedia.org/wiki/M%C3%A9thode_du_canard_en_plastique) ait été testée et approuvée par nombreux développeurs prouve que l'effort de formulation suffit parfois pour régler soi-même son problème. D'où l'importance de cette étape.
 
 ## Méthode proposée
 
@@ -58,6 +59,8 @@ Afin de résoudre un problème de manière efficace, que ce soit en autonomie, o
 ### 1. Définir quel comportement était attendu
 
 Avant d'exécuter le programme, survolle le code puis décris ce qui devrait se passer quand on l'exécute, en supposant que le programme fonctionne comme prévu.
+
+Aussi, il est important d'avoir en tête quel objectif cette erreur nous empêche d'atteindre, car cet objectif nous permettra de relativiser l'importance de certaines erreurs, lors de la phase de formulation.
 
 ### 2. Exécuter et constater les effets
 
@@ -79,6 +82,8 @@ Si tu vois un message d'erreur, quel est-il ? et que signifie-t'il ?
 S'il y a plusieurs messages d'erreur, lequel parait le plus important à résoudre en premier ?
 
 Comment résumer ce problème en une seule phrase, à une personne n'ayant pas connaissance de mon programme, ni de mon environnement d'exécution ?
+
+Note: La définition de l'objectif et ses attentes d'exécution du programme (cf étape 1 de la méthode) vont probablement t'aider à mettre le message d'erreur dans son contexte, de mieux le comprendre, d'estimer à quel point il est bloquant, et donc d'adapter ta stratégie de résolution. (ex: trouver une solution VS appliquer un contournement, ce qu'on appelle un *workaround*)
 
 ### 4. Analyser l'origine, la cause du problème
 

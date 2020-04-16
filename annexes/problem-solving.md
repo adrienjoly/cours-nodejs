@@ -86,7 +86,7 @@ Comment résumer ce problème en une seule phrase, à une personne n'ayant pas c
 
 Note: La définition de l'objectif et ses attentes d'exécution du programme (cf étape 1 de la méthode) vont probablement t'aider à mettre le message d'erreur dans son contexte, de mieux le comprendre, d'estimer à quel point il est bloquant, et donc d'adapter ta stratégie de résolution. (ex: trouver une solution VS appliquer un contournement, ce qu'on appelle un *workaround*)
 
-### 4. Analyser l'origine, la cause du problème
+### 4. Hypothétiser sur l'origine et la cause du problème
 
 Avant de réflechir à comment diagnostiquer ou résoudre cette erreur, liste quelques hypothèses qui pourraient expliquer l'origine et/ou la cause de ce problème.
 

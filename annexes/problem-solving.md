@@ -124,3 +124,55 @@ Conseils sur le mode opératoire:
 - garder des traces du comportement effectif observé après chaque changement apporté;
 - une fois que le problème est résolu: conserver le code tel quel, même s'il est imparfait; (c.a.d. faire un commit)
 - enfin, refactoriser le code en vérifiant que ces modifications constituent toujours une résolution du problème, et qu'elles ne causent pas un autre problème.
+
+## Exercice d'application
+
+Copie le code source suivant dans un fichier `showTheSource.js`:
+
+```js
+// Nom du programme: showTheSource.js
+// Ce programme affiche son propre code source dans la sortie standard.
+
+const fs = require("fs");
+
+let readFile;
+
+(async() => {
+  // Fonction asynchrone pour retourner le contenu d'un fichier
+  readFile = (nomfichier, option) => {
+    return new Promise((resolve, reject) => {
+      fs.readFile(nomfichier, option, (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+    });
+  };
+});
+
+(async() => {
+  // Note: on appelle readFile() depuis une fonction async, pour avoir le droit d'utiliser await
+  const data = await readFile("showTheSource.js", "utf8");
+  if (data) {
+    console.log("contenu du fichier:", data);
+  } else {
+    console.error("pas de contenu");
+  }
+})();
+```
+
+Puis répond au questions suivantes:
+
+1. [Attentes] Avant d'exécuter le programme, survolle le code puis décris ce qui devrait se passer quand on l'exécute, en supposant que le programme fonctionne comme prévu.
+
+2. [Exécution] Copie le code de ce programme dans un fichier nommé `showTheSource.js`, sur ton disque dur. Depuis ton terminal, exécute ce programme en tapant `node showTheSource.js`, puis garde une copie du résultat de son exécution.
+
+3. [Formulation] Maintenant, décris le problème que tu observes, de manière la plus factuelle et concise possible. (Exemple: le message d'erreur, si tu en vois un)
+
+4. [Analyse] Avant de réflechir à comment diagnostiquer ou résoudre cette erreur, liste quelques hypothèses qui pourraient expliquer l'origine et/ou la cause de ce problème.
+
+5. [Diagnostic] Maintenant, liste les étapes que tu suivrais pour confirmer (ou infirmer) ces hypothèses. Et explique pourquoi ces étapes sont décisives.
+
+6. [Résolution] Enfin, en supposant que ta première hypothèse (la plus probable) soit confirmée, décris les modifications que tu ferais dans le code source pour corriger le problème.

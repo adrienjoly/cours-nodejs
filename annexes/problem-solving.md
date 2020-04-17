@@ -96,6 +96,8 @@ Par exemple: si mon problème est que j'obtiens une erreur ENOTENT à l'exécuti
 
 À ce stade, il n'est pas encore question de modifier le programme ou d'exécuter des commandes. Seulement réflechir à des hypothèses qui pourraient expliquer le problème que nous avons formulé à l'étape suivante.
 
+Note: Dans le cas où tu aurais une compréhension insuffisante du langage et/ou de la stack technologique sur laquelle repose le programme, tu peux tout de même chercher la source en retirant toutes les parties du code qui ne te paraissent pas liées à l'erreur. L'objectif est d'obtenir un programme de taille minimale pour reproduire le problème, en l'isolant du reste du code. Cette minimalisation permettra à d'autres développeurs de reproduire le problème dans leur environnement et donc de pouvoir aider à sa résolution.
+
 ### 5. Diagnostic par vérification d'hypothèses
 
 Maintenant, nous allons confirmer (ou infirmer) ces hypothèses, une par une. En commençant par la plus probable, la plus facile ou la plus rapide à confirmer.

@@ -32,6 +32,10 @@
 
 <!-- TODO: une partie à propos d'infrastructure (load balancer...) et de limitation de requêtes (rate limiter) -->
 
+## Annexes
+
+- [Méthode de résolution de problèmes](annexes/problem-solving.md)
+
 ## Logiciels utilisés
 
 - Node.js + npm

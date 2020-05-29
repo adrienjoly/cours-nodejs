@@ -178,3 +178,7 @@ Puis répond au questions suivantes:
 5. [Diagnostic] Maintenant, liste les étapes que tu suivrais pour confirmer (ou infirmer) ces hypothèses. Et explique pourquoi ces étapes sont décisives.
 
 6. [Résolution] Enfin, en supposant que ta première hypothèse (la plus probable) soit confirmée, décris les modifications que tu ferais dans le code source pour corriger le problème.
+
+## Quelques ressources pour aller plus loin
+
+- [Tools for better thinking | Untools](https://untools.co/)

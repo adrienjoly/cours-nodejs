@@ -296,6 +296,7 @@ Questions auxquelles savoir répondre:
 ### Ressources sur l'exécution de code asynchrone
 
 - [Apprendre les mécanismes de base de l'asynchrone en JavaScript,un tutoriel de Yahiko](https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/)
+- [⭐️🎀 JavaScript Visualized: Promises & Async/Await - DEV Community 👩‍💻👨‍💻](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
 - Aide-mémoire: [Fonctions synchrones VS asynchrones](../sync-vs-async)
 
 ### Modules: `module.exports` et `require()`

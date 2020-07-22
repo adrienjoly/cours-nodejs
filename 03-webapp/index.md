@@ -247,6 +247,7 @@ Quel framework essayerez-vous pour votre prochain projet Web ?
 ### Identification et authentification
 
 - Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
+- [Authorization and Authentication For Everyone](https://dev.to/kimmaida/authorization-and-authentication-for-everyone-27j3)
 - Sessions utilisateur depuis des services tiers: le protocole [OAuth](https://fr.wikipedia.org/wiki/OAuth)
 - Alternative aux sessions: [Securing Node.js RESTful APIs with JSON Web Tokens – freeCodeCamp.org](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52)
 - [The Beer Drinker’s Guide to SAML | Duo Security](https://duo.com/blog/the-beer-drinkers-guide-to-saml)

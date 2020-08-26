@@ -238,6 +238,10 @@ Bref, les possibilités sont quasi-illimitées !
 
 Quel framework essayerez-vous pour votre prochain projet Web ?
 
+### APIs ouvertes
+
+- [15 Fun APIs For Your Next Project - DEV Community](https://dev.to/biplov/15-fun-apis-for-your-next-project-5053)
+
 ### Sécurité
 
 - Exemple de faille de sécurité à prévenir: [injection par XSS](https://fr.wikipedia.org/wiki/Cross-site_scripting)
@@ -249,7 +253,7 @@ Quel framework essayerez-vous pour votre prochain projet Web ?
 - Utilisation de [cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique)#Gestion_des_sessions) pour gérer les sessions utilisateur
 - [Authorization and Authentication For Everyone](https://dev.to/kimmaida/authorization-and-authentication-for-everyone-27j3)
 - Sessions utilisateur depuis des services tiers: le protocole [OAuth](https://fr.wikipedia.org/wiki/OAuth)
-- Alternative aux sessions: [Securing Node.js RESTful APIs with JSON Web Tokens – freeCodeCamp.org](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52)
+- Alternative aux sessions: [Securing Node.js RESTful APIs with JSON Web Tokens – freeCodeCamp.org](https://medium.freecodecamp.org/securing-node-js-restful-apis-with-json-web-tokens-9f811a92bb52) et [JWT Authentication & Authorization in NodeJs/Express & MongoDB REST APIs(2019) | by Frank Atukunda](https://medium.com/swlh/jwt-authentication-authorization-in-nodejs-express-mongodb-rest-apis-2019-ad14ec818122)
 - [The Beer Drinker’s Guide to SAML | Duo Security](https://duo.com/blog/the-beer-drinkers-guide-to-saml)
 
 ### Architecture et passage d'applications Node.js à l'échelle

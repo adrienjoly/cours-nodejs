@@ -297,6 +297,7 @@ Questions auxquelles savoir répondre:
 
 - [Apprendre les mécanismes de base de l'asynchrone en JavaScript, un tutoriel de Yahiko](https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/)
 - [Callbacks - The Art of Node](https://github.com/maxogden/art-of-node#callbacks)
+- [Promises in 15 minutes - DEV Community](https://dev.to/marianesantana/promises-in-15-minutes-9l7)
 - [JavaScript Visualized: Promises & Async/Await - DEV Community](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
 - Aide-mémoire: [Fonctions synchrones VS asynchrones](../sync-vs-async)
 

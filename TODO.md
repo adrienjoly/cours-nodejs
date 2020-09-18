@@ -68,22 +68,26 @@ Exemple: [What is asynchronous in JavaScript - JavaScript promises, mastering th
 
 Doc & exemples:
 
-- [Create a playground - Tech.io Documentation]()
-- [Simple Node.js Template](https://tech.io/playgrounds/592edbe704777228a5728be463f6541548055/simple-node-js-template)
-- [Node.js Project](https://tech.io/playgrounds/0280090e8ef8fe17fade143cce51da5658055/node-js-project)
+- [Create a playground - Tech.io Documentation](https://tech.io/playgrounds/408/tech-io-documentation/create-a-playground)
+- Exemple perso: [Découverte de Node.js](https://tech.io/my-playgrounds/55085) + [code source](https://github.com/adrienjoly/playground-r8m63hre)
 
 Notes:
 
-- ✅ execution rapide de tests (jest ?) dans le cloud, avec retour précis et suggestions
+- ✅ execution rapide de tests dans le cloud, avec retour précis + suggestions
 - ✅ chaque exercice est écrit en Markdown, et spécifie la commande d'exécution des tests, via docker, cf:
   - https://tech.io/playgrounds/408/tech-io-documentation/create-a-playground
   - https://tech.io/playgrounds/408/tech-io-documentation/coding-exercise
   - https://tech.io/playgrounds/408/tech-io-documentation/runner-reference
   - ex: https://github.com/TechDotIO/advanced-nodejs-template/tree/master/nodejs-project
-- ✅ le test runner node.js est open source: https://github.com/TechDotIO/node-npm-runner
+- ✅ le test runner node.js est open source: https://github.com/TechDotIO/node-npm-runner. on peut créer son propre runner.
+- ✅ on peut étendre package.json pour inclure des dépendences supplémentaires
 - ❌ l'interface web de tech.io n'est pas open source => je ne peux pas la déployer sur ma propre infra
+- ❌ l'éditeur de code est minimaliste: pas de formatage, autocomplétion ni linter intégré. (en tout cas avant que l'étudiant n'exécute les tests)
+- ❌ l'embed n'est pas intégrable dans github pages => les étudiants devront aller et venir entre les deux pages.
 
-=> Pour l'instant, cette solution me parait pertinente. => TODO: À tester sur 2-3 exercices.
+### GitHub Classroom + GitHub Actions
+
+TODO: cf [GitHub Classroom Getting Started Guide - YouTube](https://www.youtube.com/playlist?list=PLIRjfNq867bewk3ZGV6Z7a16YDNRCpK3u)
 
 ### [Node TDD for VSCode](https://marketplace.visualstudio.com/items?itemName=prashaantt.node-tdd)
 

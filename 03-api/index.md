@@ -1,5 +1,5 @@
 ---
-title: Projet en groupe - API de gestion de notes personnelles
+title: Partie 3 - Réalisation d'une API pour un client
 layout: default
 ---
 

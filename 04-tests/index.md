@@ -1,5 +1,5 @@
 ---
-title: Partie 4 - Tests et intégration continue
+title: Partie 4 - Tests automatisés et intégration continue
 layout: default
 ---
 

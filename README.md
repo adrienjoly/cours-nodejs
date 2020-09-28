@@ -25,10 +25,12 @@
 
 ## Supports de cours et exercices
 
-- [Partie 1 - Chat-bot avec Express](01-chatbot/)
-- [Partie 2 - Connexion base de données MongoDB](02-db/)
-- [Partie 3 - Application Web simple](03-webapp/)
-- [Partie 4 - Tests et intégration continue](04-tests/)
+- [Partie 1 - Chat-bot en production avec Express et Heroku](01-chatbot/)
+- Partie 2 - Programmation asynchrone et usage d'autres APIs
+- Partie 3 - Réalisation d'une API pour un client
+- Partie 4 - Tests automatisés et intégration continue
+- Partie 5 - Persistence de données avec MongoDB
+- Partie 6 - Identification, autorisation et authentification
 
 <!-- TODO: une partie à propos d'infrastructure (load balancer...) et de limitation de requêtes (rate limiter) -->
 
@@ -59,7 +61,7 @@ Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur l
 
 Parallèlement, et depuis 2015, Adrien donne des cours de développement logiciel dans plusieurs écoles parisiennes.
 
-Enfin, depuis Mars 2020, Adrien propose des prestations de développement et de conseil via l'ESN "<a href="https://shodo.io/">SHODO</a>".
+Enfin, depuis Mars 2020, Adrien propose des prestations de développement et de conseil "craft" via l'ESN "<a href="https://shodo.io/">SHODO</a>".
 
 ## Références du cours
 

@@ -1,5 +1,5 @@
 ---
-title: Partie 3 - Application Web simple
+title: Partie 6 - Identification, autorisation et authentification
 layout: default
 ---
 
@@ -111,48 +111,6 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 6. Tester le serveur en production sur Heroku.
 
 7. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
-
----
-
-## Exercice 3 - Enrichissement de données à l'aide d'APIs externes
-
-Dans cet exercice, nous allons compléter l'application Web de l'exercice précédent, de manière à ce qu'elle récupère et affiche des informations supplémentaires sur la ville saisie par l'utilisateur.
-
-Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.xyz) pour chaque ville saisie par l'utilisateur puis générer une page HTML riche à partir de la réponse.
-
-> Exemple de requête: [geocode.xyz/new+york?json=1](https://geocode.xyz/new+york?json=1)
-
-### Objectifs
-
-- Fonctionnel: Le serveur doit faire fonctionner une application Web contenant un formulaire de saisie de ville et une page de destination affichant des données sur cette ville.
-- Structure: (cf exercice précédent)
-- Production: (cf exercice précédent)
-
-### Étapes proposées
-
-1. Modifier la route `/ville` de manière à ce que le serveur obtienne les coordonnées GPS de la ville saisie par l'utilisateur en effectuant une requête vers l'API [geocode.xyz](https://geocode.xyz), puis affiche ces coordonnées dans la page de destination.
-
-2. Modifier le modèle de la page de destination, afin qu'elle affiche un message d'erreur clair et esthétique dans le cas où aucune coordonnées n'auraient été trouvées pour la ville saisie.
-
-3. Modifier le modèle de manière à ce que la page de destination montre où se trouve la ville saisie sur une carte de type Google Maps ou OpenStreetMap, sans avoir à quitter l'application.
-
-4. Vérifier que l'application fonctionne aussi en production, en la déployant sur Heroku.
-
-5. Créer un `git tag v3.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
-
-### Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
-
-Il existe plusieurs moyens d'effectuer des requêtes HTTP depuis Node.js.
-
-Notamment:
-
-- les modules standard [http.get](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_http_get_options_callback) et [https.get](https://nodejs.org/dist/latest-v8.x/docs/api/https.html#https_https_get_options_callback)
-- le package npm le plus utilisé: [request](https://www.npmjs.com/package/request)
-- un package inspiré par l'API Fetch du W3C: [node-fetch](https://www.npmjs.com/package/node-fetch)
-- la solution isomorphique: [Axios](https://www.npmjs.com/package/axios)
-- un petit nouveau: [httpie](https://github.com/lukeed/httpie)
-
-Quelle solution préférez-vous ? Pourquoi ?
 
 ---
 

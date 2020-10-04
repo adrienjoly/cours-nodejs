@@ -3,47 +3,40 @@ title: Partie 2 - Programmation asynchrone et usage d'autres APIs
 layout: default
 ---
 
-<!-- TODO: numéroter exercices -->
+Dans la partie précédente, nous avons appris:
+- à développer une API simple en Node.js, répondant à des requêtes HTTP GET et POST;
+- à l'aide de la bibliothèque Express.js, installée à l'aide de `npm`;
+- à faire fonctionner et tester l'API en local, puis en production.
 
-## Exercice 3 - Enrichissement de données à l'aide d'APIs externes
+Jusqu'à présent, nous n'avons appelé et défini que des fonctions _synchrones_. C'est à dire que Node.js exécute ces fonctions de manière séquentielle.
 
-Dans cet exercice, nous allons compléter l'application Web de l'exercice précédent, de manière à ce qu'elle récupère et affiche des informations supplémentaires sur la ville saisie par l'utilisateur.
+L'appel à une fonction synchrone bloque l'exécution du programme jusqu'à la fin du traitement qu'elle effectue. Nous allons voir que, dans le cas de traitements ayant une durée indeterminée, il est inacceptable qu'un serveur attende la fin de ces traitements, car cela l'empêcherait de répondre à d'autres requêtes pendant ce temps là. C'est pour éviter cela que nous allons apprendre à utiliser des fonctions _asynchrones_.
 
-Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.xyz) pour chaque ville saisie par l'utilisateur puis générer une page HTML riche à partir de la réponse.
+## Objectifs de cette partie
 
-> Exemple de requête: [geocode.xyz/new+york?json=1](https://geocode.xyz/new+york?json=1)
+- Savoir **appeler** une fonction asynchrone à base de callback ou `Promise`
+- Savoir **définir** une fonction asynchrone à base de callback ou `Promise`
+- Intégrer des appels asynchrones aux routes de notre chat-bot
 
-### Objectifs
+Prérequis: création de test de points d'entrée HTTP GET et POST avec Node.js et Express.js
 
-- Fonctionnel: Le serveur doit faire fonctionner une application Web contenant un formulaire de saisie de ville et une page de destination affichant des données sur cette ville.
-- Structure: (cf exercice précédent)
-- Production: (cf exercice précédent)
-
-### Étapes proposées
-
-1. Modifier la route `/ville` de manière à ce que le serveur obtienne les coordonnées GPS de la ville saisie par l'utilisateur en effectuant une requête vers l'API [geocode.xyz](https://geocode.xyz), puis affiche ces coordonnées dans la page de destination.
-
-2. Modifier le modèle de la page de destination, afin qu'elle affiche un message d'erreur clair et esthétique dans le cas où aucune coordonnées n'auraient été trouvées pour la ville saisie.
-
-3. Modifier le modèle de manière à ce que la page de destination montre où se trouve la ville saisie sur une carte de type Google Maps ou OpenStreetMap, sans avoir à quitter l'application.
-
-### Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
-
-Il existe plusieurs moyens d'effectuer des requêtes HTTP depuis Node.js.
-
-Notamment:
-
-- les modules standard [http.get](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_http_get_options_callback) et [https.get](https://nodejs.org/dist/latest-v8.x/docs/api/https.html#https_https_get_options_callback)
-- le package npm le plus utilisé: [request](https://www.npmjs.com/package/request)
-- un package inspiré par l'API Fetch du W3C: [node-fetch](https://www.npmjs.com/package/node-fetch)
-- la solution isomorphique: [Axios](https://www.npmjs.com/package/axios)
-- un petit nouveau: [httpie](https://github.com/lukeed/httpie)
-
-Quelle solution préférez-vous ? Pourquoi ?
+Durée estimée: 4 heures.
 
 ---
 
-## Exercice 5 - Chat-bot avec mémoire
+## Exercice 1 - Envoi de requête à une API externe
+
+Dans la partie précédente, nous avons développé un serveur d'API HTTP: un programme qui répond à des requêtes. Dans cet exercice, nous allons écrire un programme qui émet une requête vers l'API HTTP de quelqu'un d'autre. Nous allons donc développer un _client_ d'API, afin de découvrir le concept d'appel de fonction _asynchrone_.
+
+L'API que notre programme va interroger est [geocode.xyz](https://geocode.xyz/api). Cette API permet de récupérer – à la demande – les coordonnées géographique n'importe quelle ville du monde.
+
+> Exemple de requête: [geocode.xyz/new+york?json=1](https://geocode.xyz/new+york?json=1) (requête HTTP GET → vous pouvez obtenir la réponse en y accédant avec un client HTTP comme `curl` ou votre navigateur web)
+
+👉 Exerciseur en ligne: [Envoi de requête à une API externe](https://tech.io/playgrounds/55085/premiers-pas-avec-node-js/une-api-simple-mais-polie)
+
+---
+
+## Exercice 2 - Chat-bot avec mémoire
 
 Nous avons à présent un serveur web dont l'API contient les points d'entrée (*endpoints*) suivants:
 - `GET /` retourne systématiquement "Hello World".
@@ -80,7 +73,9 @@ Note: Le serveur doit pouvoir s'exécuter même si le fichier `réponses.json` n
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 
-## Exercice 6 - Utilisation d'appels asynchrones
+---
+
+## Exercice 3 - Utilisation d'appels asynchrones
 
 L'utilisation de fonctions d'entrées-sorties synchrones (comme [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options) et [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), par exemple) est à proscrire dans les programmes Node.js, et particulièrement dans l'implémentation de serveurs.
 
@@ -95,8 +90,9 @@ Gérer les cas d'erreurs suivants:
 - en cas d'erreur de lecture: afficher l'erreur dans la sortie d'erreurs (à l'aide de `console.error()`) puis terminer l'exécution du programme en retournant le code d'erreur `1` (à l'aide de `process.exit(1)`);
 - en cas d'erreur d'écriture: afficher l'erreur dans la sortie d'erreurs et envoyer la réponse suivante à la requête: "`Oops, je n'ai pas pu enregistrer cette information. Merci de rééssayer.`"
 
+---
 
-## Exercice 7 - Utilisation de Promesses
+## Exercice 4 - Utilisation de Promesses
 
 Le concept de Promesse (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le "callback hell".
 
@@ -104,8 +100,9 @@ Modifier le code source produit à l'exercice précédent de manière à ce que 
 
 N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
 
+---
 
-## Exercice 8 - Utilisation de `async` et `await`
+## Exercice 5 - Utilisation de `async` et `await`
 
 Les mots clés `async` et `await` (voir les ressources fournies plus bas) ont été intégrés au langage JavaScript pour simplifier rendre encore plus lisible la définition et l'usage de fonctions asynchrones à base de Promesses.
 
@@ -139,3 +136,18 @@ Questions auxquelles savoir répondre:
 - [Promises in 15 minutes - DEV Community](https://dev.to/marianesantana/promises-in-15-minutes-9l7)
 - [JavaScript Visualized: Promises & Async/Await - DEV Community](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
 - Aide-mémoire: [Fonctions synchrones VS asynchrones](../sync-vs-async)
+
+### Manières d'effectuer une requête HTTP depuis Node.js
+
+Il existe plusieurs manières d'effectuer des requêtes HTTP depuis Node.js.
+
+Notamment:
+
+- les fonctions fournies par Node.js dans les moduldes `http` et `https`, ex: [`https.get()`](https://nodejs.org/api/https.html#https_https_get_options_callback)
+- le package npm le plus utilisé: [request](https://www.npmjs.com/package/request)
+- un package inspiré par l'API Fetch du W3C: [node-fetch](https://www.npmjs.com/package/node-fetch)
+- la solution isomorphique: [Axios](https://www.npmjs.com/package/axios)
+- un petit nouveau: [httpie](https://github.com/lukeed/httpie)
+- autres: [HTTP GET Request in Node.js - Stack Overflow](https://stackoverflow.com/questions/9577611/http-get-request-in-node-js-express)
+
+Quelle solution préférez-vous ? Pourquoi ?

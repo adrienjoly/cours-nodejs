@@ -3,7 +3,6 @@ title: Partie 2 - Programmation asynchrone et usage d'autres APIs
 layout: default
 ---
 
-<!-- TODO: utiliser firebase ? -->
 <!-- TODO: numéroter exercices -->
 
 ## Exercice 3 - Enrichissement de données à l'aide d'APIs externes

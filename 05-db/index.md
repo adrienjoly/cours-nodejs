@@ -9,6 +9,8 @@ Programme:
 - s'assurer que tout le monde a compris comment se connecter à MongoDB
 -->
 
+<!-- TODO: utiliser firebase ? -->
+
 ## Objectifs de cette partie
 
 - Étendre le chat-bot pour retrouver l'historique des conversations

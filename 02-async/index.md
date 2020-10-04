@@ -28,10 +28,6 @@ Pour cela, notre application va interroger l'API [geocode.xyz](https://geocode.x
 
 3. Modifier le modèle de manière à ce que la page de destination montre où se trouve la ville saisie sur une carte de type Google Maps ou OpenStreetMap, sans avoir à quitter l'application.
 
-4. Vérifier que l'application fonctionne aussi en production, en la déployant sur Heroku.
-
-5. Créer un `git tag v3.3` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
-
 ### Prise de recul: comment effectuer une requête HTTP depuis Node.js ?
 
 Il existe plusieurs moyens d'effectuer des requêtes HTTP depuis Node.js.
@@ -74,7 +70,7 @@ Pour cela, nous allons:
 - Accessibilité: (mêmes exigences que pour l'exercice précédent)
 - Production: (mêmes exigences que pour l'exercice précédent)
 
-Note: Le serveur doit pouvoir s'exécuter même si le fichier `réponses.json` n'existe pas. Vous pouvez demander à `git` d'ignorer ce fichier, afin de ne pas le stocker dans votre dépot.
+Note: Le serveur doit pouvoir s'exécuter même si le fichier `réponses.json` n'existe pas.
 
 ### Étapes proposées
 
@@ -82,8 +78,6 @@ Note: Le serveur doit pouvoir s'exécuter même si le fichier `réponses.json` n
 2. Faire en sorte que, après avoir fourni une information, l'utilisateur puisse retrouver cette information en formulant une requête (cf étape 3 du cas d'usage), grâce au fichier `réponses.json`.
 3. Faire en sorte que toutes les étapes du cas d'usage fonctionne, plusieurs fois d'affilée, y compris avec d'autres mots que "demain" et d'autres valeurs que "Mercredi". S'assurer que les nouvelles informations sont encore exploitables même après avoir redémarré le serveur.
 4. Faites en sorte que le fichier `réponses.json` puisse retenir plus d'une information à la fois.
-5. Déployer une mise à jour de votre serveur en production.
-6. Créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.5`.
 
 > Références Node.js et JavaScript: [readFileSync()](https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options), [writeFileSync()](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options), [JSON.parse()](https://devdocs.io/javascript/global_objects/json/parse), [JSON.stringify()](https://devdocs.io/javascript/global_objects/json/stringify), [String.split()](https://devdocs.io/javascript/global_objects/string/split), [Manipulations de tableaux](http://adrienjoly.com/cours-javascript/tp05.html#recherche-d%C3%A9l%C3%A9ment-par-valeur).
 
@@ -102,7 +96,6 @@ Gérer les cas d'erreurs suivants:
 - en cas d'erreur de lecture: afficher l'erreur dans la sortie d'erreurs (à l'aide de `console.error()`) puis terminer l'exécution du programme en retournant le code d'erreur `1` (à l'aide de `process.exit(1)`);
 - en cas d'erreur d'écriture: afficher l'erreur dans la sortie d'erreurs et envoyer la réponse suivante à la requête: "`Oops, je n'ai pas pu enregistrer cette information. Merci de rééssayer.`"
 
-Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.6`.
 
 ## Exercice 7 - Utilisation de Promesses
 
@@ -112,7 +105,6 @@ Modifier le code source produit à l'exercice précédent de manière à ce que 
 
 N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
 
-Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.7`.
 
 ## Exercice 8 - Utilisation de `async` et `await`
 
@@ -121,8 +113,6 @@ Les mots clés `async` et `await` (voir les ressources fournies plus bas) ont é
 Modifier à nouveau le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent les mots clés `async` et `await` au lieu de `Promise`, `resolve`, `reject`, `.then()` et `.catch()`.
 
 N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
-
-Ensuite, créer une nouvelle "release" pour garder une trace de cette version du serveur dans votre dépôt: `$ git tag v1.8`.
 
 ## BONUS
 

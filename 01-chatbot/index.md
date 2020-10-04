@@ -28,8 +28,6 @@ Conseils pour favoriser l'entraide:
 
 -->
 
----
-
 ## Objectifs de cette partie
 
 - Développer un chat-bot simple en Node.js à l'aide de Express
@@ -205,6 +203,17 @@ En plus des pré-requis listés dans l'exercice précédent, vous allez égaleme
     $ git remote add heroku <URL GIT RETOURNÉE PAR HEROKU>
     $ git push heroku master
   ```
+
+---
+
+## Exercice 7 (BONUS) - Création d'un véritable chat-bot
+
+Toujours à l'aide de Node.js et Express, écrire un chat-bot contactable depuis Facebook Messenger ou autre application mobile de messagerie instantanée (ex: Telegram).
+
+Liens:
+- [Build a Personal Facebook Messenger Bot in 10 minutes with Nodejs and Standard Library](https://hackernoon.com/build-a-personal-facebook-messenger-bot-in-10-minutes-a7a237f3f018)
+- [How to Deploy Express on Now.sh - DEV Community](https://dev.to/warenix/how-to-deploy-express-on-nowsh-414i)
+- [Serverless Telegram Bot with Firebase - Francisco Gutiérrez - Medium](https://medium.com/@pikilon/serverless-telegram-bot-with-firebase-d11d07579d8a)
 
 ---
 

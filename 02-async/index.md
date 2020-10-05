@@ -131,6 +131,26 @@ node get.js https://serveur-inexistant.xyz # affichera un message d'erreur
 
 ---
 
+## Exercice 8 - Requête complète, en local
+
+Dans les exercices précédents, votre serveur était exécuté et testé _dans le cloud_, pour vous aider à focaliser votre attention sur l'écriture du code asynchrone.
+
+Vous allez maintenant re-créer, exécuter et tester le programme de l'exercice 7 sur votre propre ordinateur, en créant un fichier `get.js` et en ajoutant ses dépendences dans `package.json` à l'aide de `npm`.
+
+L'objectif est de pouvoir tester votre programme depuis votre terminal bash, comme montré à la fin de l'énoncé précédent.
+
+---
+
+## Exercice 9 - Requête complète, sur Heroku
+
+Maintenant que votre programme fonctionne localement, déployez le en production, sur Heroku.
+
+Comment pouvons-nous tester que la requête fonctionne ?
+
+À l'aide d'Express, ajoutez une route qui effectuera la requête _à la demande_ et retournera le résultat (réponse ou message d'erreur) en réponse de toute requête adressée à cette route.
+
+---
+
 ## Prise de recul: appels synchrones et asynchrones
 
 Questions auxquelles savoir répondre:

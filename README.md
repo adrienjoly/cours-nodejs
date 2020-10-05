@@ -32,6 +32,8 @@
 - Partie 5 - Persistence de données avec MongoDB
 - Partie 6 - Identification, autorisation et authentification
 
+<!-- TODO: expliquer comment écrire des fonctions asynchrones (suite de partie 2) -->
+<!-- TODO: amener typescript -->
 <!-- TODO: une partie à propos d'infrastructure (load balancer...) et de limitation de requêtes (rate limiter) -->
 
 ## Annexes

@@ -1,4 +1,4 @@
-# Idées évolution du cours
+# Idées évolution du cou
 
 ## Objectifs
 
@@ -8,12 +8,12 @@
 
 ## Pistes
 
-- Employer TDD pour rendre très clair l'objectif et les attentes de chaque étape
-- Donner un feedback clair sur les solutions proposées, afin que l'étudiant puisse prendre du recul ce qu'il a fait et trouver une autre piste
-- Améliorer la qualité des messages d'erreurs et des suggestions par l'usage de TypeScript et de ESLint
-- Ne plus utiliser git, afin de réduire la charge mentale des étudiants pendant leur apprentissage de Node.js
-- Fournir une trace structurée de la réponse donnée à chaque étape de chaque exercice, pour que l'étudiant puisse les retrouver et réviser efficacement.
-- Forcer l'usage de VSCode, pour assurer une bonne DX à tous les étudiants, ex: coloration syntaxique, formattage automatique, affichage des erreurs et auto-complétion.
+- [x] Ne plus utiliser git, afin de réduire la charge mentale des étudiants pendant leur apprentissage de Node.js
+- [x] Employer TDD pour rendre très clair l'objectif et les attentes de chaque étape
+- [x] Donner un feedback clair sur les solutions proposées, afin que l'étudiant puisse prendre du recul ce qu'il a fait et trouver une autre piste
+- [x] Fournir une trace structurée de la réponse donnée à chaque étape de chaque exercice, pour que l'étudiant puisse les retrouver et réviser efficacement.
+- [ ] Forcer l'usage de VSCode, pour assurer une bonne DX à tous les étudiants, ex: coloration syntaxique, formattage automatique, affichage des erreurs et auto-complétion.
+- [ ] Améliorer la qualité des messages d'erreurs et des suggestions par l'usage de TypeScript et de ESLint
 
 ## Solutions testées
 

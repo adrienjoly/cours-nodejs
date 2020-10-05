@@ -10,7 +10,7 @@ Dans la partie précédente, nous avons appris:
 
 Jusqu'à présent, nous n'avons appelé et défini que des fonctions _synchrones_. C'est à dire que Node.js exécute ces fonctions de manière séquentielle.
 
-L'appel à une fonction synchrone bloque l'exécution du programme jusqu'à la fin du traitement qu'elle effectue. Nous allons voir que, dans le cas de traitements ayant une durée indeterminée, il est inacceptable qu'un serveur attende la fin de ces traitements, car cela l'empêcherait de répondre à d'autres requêtes pendant ce temps là. C'est pour éviter cela que nous allons apprendre à utiliser des fonctions _asynchrones_.
+L'appel à une fonction synchrone bloque l'exécution du programme jusqu'à la fin du traitement qu'elle effectue. Lorsqu'un traitement a une durée indeterminée, il est inacceptable qu'un serveur attende la fin de ce traitement, car cela l'empêcherait de répondre à d'autres requêtes pendant ce temps là. C'est pour éviter cela que nous allons apprendre à utiliser des fonctions _asynchrones_.
 
 ## Objectifs de cette partie
 
@@ -29,11 +29,13 @@ Durée estimée: 4 heures.
 
 ## Exercice 1 - Envoi de requête à une API externe
 
-Dans la partie précédente, nous avons développé un serveur d'API HTTP: un programme qui répond à des requêtes. Dans cet exercice, nous allons écrire un programme qui émet une requête vers l'API HTTP de quelqu'un d'autre. Nous allons donc développer un _client_ d'API, afin de découvrir le concept d'appel de fonction _asynchrone_.
+Dans la partie précédente, nous avons développé un serveur d'API HTTP: un programme qui répond à des requêtes.
+
+Dans cet exercice, nous allons écrire un programme qui émet une requête vers l'API HTTP d'un autre serveur. Nous allons donc développer un _client_ d'API, afin de découvrir le concept d'appel de fonction _asynchrone_.
 
 👉 Exerciseur en ligne: [Envoi de requête à une API externe](https://tech.io/playgrounds/55084/node-js-partie-2/envoi-de-requete-a-une-api-externe)
 
-> Indice: consulter la documentation de la fonction [`http.get()`](https://nodejs.org/api/http.html#http_http_get_options_callback).
+> Indice: consulter la documentation de la fonction [`https.get()`](https://nodejs.org/api/https.html#https_https_get_options_callback).
 
 ---
 
@@ -59,7 +61,7 @@ Les fonctions fournies par la bibliothèque standard de Node.js s'appuient gén�
 
 Le concept de _promesse_ (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le "callback hell".
 
-Dans cet exercice, nous allons utiliser une _promesse_ pour récupérer les résultats d'un appel à une fonction asynchrone. Pour cela, nous allons utiliser la bibliothèque [`node-fetch`](https://www.npmjs.com/package/node-fetch).
+Dans cet exercice, nous allons utiliser une _promesse_ pour récupérer le résultat d'un appel à une fonction asynchrone. Pour cela, nous allons utiliser la bibliothèque [`node-fetch`](https://www.npmjs.com/package/node-fetch).
 
 👉 Exerciseur en ligne: [Requête à l'aide de `Promise`](https://tech.io/playgrounds/55084/node-js-partie-2/requete-a-laide-de-promise)
 
@@ -71,7 +73,7 @@ Dans cet exercice, nous allons utiliser une _promesse_ pour récupérer les rés
 
 Encore une fois, nous avons implémenté une version naïve de notre requête, en partant du principe que celle-ci se passerait comme prévu.
 
-Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, et afficher l'erreur (aussi appelée _exception_) retournée par la promesse de `fetch()` dans la sortie standard.
+Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, et afficher dans la sortie standard l'erreur (aussi appelée _exception_) retournée par la promesse de `fetch()`.
 
 👉 Exerciseur en ligne: [Gestion d'erreurs de `Promise`](https://tech.io/playgrounds/55084/node-js-partie-2/gestion-derreurs-de-promise)
 

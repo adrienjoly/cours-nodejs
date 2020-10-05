@@ -26,7 +26,7 @@
 ## Supports de cours et exercices
 
 - [Partie 1 - Chat-bot en production avec Express et Heroku](01-chatbot/)
-- Partie 2 - Programmation asynchrone et usage d'autres APIs
+- [Partie 2 - Programmation asynchrone et requête à d'autres APIs](02-async/)
 - Partie 3 - Réalisation d'une API pour un client
 - Partie 4 - Tests automatisés et intégration continue
 - Partie 5 - Persistence de données avec MongoDB

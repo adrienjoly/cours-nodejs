@@ -3,7 +3,15 @@ title: Partie 3 - Utilisation du système de fichiers
 layout: default
 ---
 
-Objectif: pratiquer la définition et appel de fonctions asynchrones en améliorant notre chat-bot de la partie 1.
+## Objectifs de cette partie
+
+- Lire et modifier des fichiers avec Node.js.
+- Pratiquer la définition et appel de fonctions asynchrones.
+- Application: améliorer notre chat-bot de la partie 1.
+
+Prérequis: création et test de points d'entrée HTTP GET et POST avec Node.js et Express.js.
+
+Durée estimée: 4 heures.
 
 ---
 

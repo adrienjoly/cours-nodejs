@@ -16,9 +16,12 @@ L'appel à une fonction synchrone bloque l'exécution du programme jusqu'à la f
 
 - Savoir **appeler** une fonction asynchrone à base de callback ou `Promise`
 - Savoir **définir** une fonction asynchrone à base de callback ou `Promise`
-- Intégrer des appels asynchrones aux routes de notre chat-bot
+- Application: envoyer une requête vers une autre API, puis traiter sa réponse
 
-Prérequis: création de test de points d'entrée HTTP GET et POST avec Node.js et Express.js
+Prérequis:
+- définition et appel de fonctions synchrones en JavaScript
+- écriture et exécution de programmes JavaScript avec Node.js
+- compréhension basique du fonctionnement des requêtes HTTP
 
 Durée estimée: 4 heures.
 

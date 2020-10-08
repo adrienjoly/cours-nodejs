@@ -133,8 +133,6 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 
 Cet exercice s'appuie à la fois sur le code écrit lors de la partie précédente, et sur le code écrit dans l'exercice 1 (ci-dessus).
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la partie précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
-
 ### Étapes proposées
 
 1. Modifier `server.js` pour qu'il se connecte à la base de données "`chat-bot`".
@@ -156,8 +154,6 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus en pro
 
 ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
 
-Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, ou de compléter le dépôt de la partie précédente (à condition que vous ayez bien créé un `tag` pour garder une trace de la version précédente de votre serveur).
-
 ### Étapes proposées
 
 1. Enregistrer l'URL d'accès à votre base de données MongoDB dans une variable d'environnement de votre application sur Heroku: `MONGODB_URI`.
@@ -165,8 +161,6 @@ Libre à vous d'enregistrer vos modifications dans un nouveau dépôt distant, o
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
 
 ### Bonus
-
-Important : assurez-vous d'avoir bien créé un `tag` et que celui-ci soit visible depuis votre dépôt distant avant d'effectuer les exercices bonus.
 
 - Utiliser OpenAPI pour documenter votre API => ajouter le modèle au format YAML dans votre dépôt.
 - Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.

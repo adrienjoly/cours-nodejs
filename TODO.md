@@ -85,6 +85,12 @@ Notes:
 - ❌ l'éditeur de code est minimaliste: pas de formatage, autocomplétion ni linter intégré. (en tout cas avant que l'étudiant n'exécute les tests)
 - ❌ l'embed n'est pas intégrable dans github pages => les étudiants devront aller et venir entre les deux pages.
 
+### Repl.it / CodeSandbox / Glitch + mes propres templates TDD ?
+
+Comme le fait freeCodeCamp: https://repl.it/github/freeCodeCamp/boilerplate-express
+
+TODO: à tester pour partie sur les tests automatisés ? ou pour saisir le code pendant les interros, avec formattage ?
+
 ### GitHub Classroom + GitHub Actions
 
 TODO: cf [GitHub Classroom Getting Started Guide - YouTube](https://www.youtube.com/playlist?list=PLIRjfNq867bewk3ZGV6Z7a16YDNRCpK3u)
@@ -94,11 +100,5 @@ TODO: cf [GitHub Classroom Getting Started Guide - YouTube](https://www.youtube.
 TODO
 
 ### [Node Koans](https://github.com/rfines/NodeKoans)
-
-TODO
-
-### Repl.it / CodeSandbox / Glitch + mes propres templates TDD ?
-
-Comme le fait freeCodeCamp: https://repl.it/github/freeCodeCamp/boilerplate-express
 
 TODO

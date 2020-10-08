@@ -73,6 +73,17 @@ Puis répondez aux questions suivantes:
 - Que veut dire `.to.eql()` ? Pourquoi l'a-t-on utilisé à la place de `.to.equal()` ?
 - Aurait-on pu se passer de `expect.js` / utiliser un autre module ? Dans quel intérêt ?
 
+Après avoir répondu aux questions ci-dessus, consultez le code source du projet [Openwhyd](https://github.com/openwhyd/openwhyd) puis répondez aux questions suivantes:
+- Citez un exemple de test unitaire inclus dans ce projet.
+  - Quels indices permettent de reconnaitre qu'il s'agit d'un test unitaire ?
+  - Quel modules sont utilisés pour écrire et exécuter ce test ?
+- Citez un exemple de test d'intégration inclus dans ce projet.
+  - Quels indices permettent de reconnaitre qu'il s'agit d'un test d'intégration ?
+  - Quel modules sont utilisés pour écrire et exécuter ce test ?
+- Citez un exemple de test de bout en bout inclus dans ce projet.
+  - Quels indices permettent de reconnaitre qu'il s'agit d'un test de bout en bout ?
+  - Quel modules sont utilisés pour écrire et exécuter ce test ?
+
 ---
 
 ## Exercice 1 - Premier test automatisé avec Ava

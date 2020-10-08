@@ -74,8 +74,6 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 6. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
 
-7. Créer un `git tag v3.1` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
-
 ---
 
 ## Exercice 2 - Formulaire avec page de destination
@@ -109,8 +107,6 @@ Le contenu de cette nouvelle page dépendra de ce que l'utilisateur aura tapé d
 5. Modifier l'application de manière à ce que le nom de la ville saisi par l'utilisateur soit transmis via HTTP POST au lieu de HTTP GET. Et s'assurer que les espaces et caractères accentués sont respectés sur la page de destination.
 
 6. Tester le serveur en production sur Heroku.
-
-7. Créer un `git tag v3.2` puis le pousser ainsi que vos *commits* dans votre dépôt distant.
 
 ---
 
@@ -164,8 +160,6 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
 4. Actuellement, les sessions sont perdues si on redémarre notre serveur, car elles sont stockées en mémoire. Pour qu'elles soient conservées, nous allons les faire **persister en base de données**.
   - À l'aide de la documentation de passport.js et de ce que nous avons appris lors de la séance 2, modifier notre code pour maintenir la liste des utilisateurs et de leurs sessions dans une base de données MongoDB.
   - Conservez vos modifications: `$ git commit -m "users and sessions are persisted in mongodb"`
-
-5. Versionner le code avec `$ git tag v3.4` puis le pousser vers le dépôt distant que vous avez créé pendant la séance précédente.
 
 ## Bonus
 

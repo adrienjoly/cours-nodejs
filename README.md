@@ -28,12 +28,12 @@
 - [Partie 1 - Chat-bot en production avec Express et Heroku](01-chatbot/)
 - [Partie 2 - Programmation asynchrone et requête à d'autres APIs](02-async/)
 - [Partie 3 - Utilisation du système de fichiers](03-fs/)
-- Partie 4 - Tests automatisés et intégration continue
+- [Partie 4 - Validation, tests automatisés et intégration continue](04-valid/)
 - Partie 5 - Persistence de données avec MongoDB
 - Partie 6 - Identification, autorisation et authentification
 
-<!-- TODO: amener typescript -->
-<!-- TODO: une partie à propos d'infrastructure (load balancer...) et de limitation de requêtes (rate limiter) -->
+<!-- TODO: utiliser Firebase au lieu de MongoDB -->
+<!-- Idée: une partie à propos d'infrastructure (load balancer...) et de limitation de requêtes (rate limiter) -->
 
 ## Annexes
 

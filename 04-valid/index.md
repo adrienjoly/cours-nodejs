@@ -1,5 +1,5 @@
 ---
-title: Partie 4 - Tests automatisés et intégration continue
+title: Partie 4 - Validation, tests automatisés et intégration continue
 layout: default
 ---
 
@@ -18,6 +18,7 @@ Programme de la première partie:
 
 Afin de savoir développer et maintenir une application Node.js de manière pérenne, nous allons:
 - Écrire des tests automatisés: unitaires, d'intégration et de bout en bout
+- Utiliser des outils pour formater et nous aider à améliorer notre code
 - Mettre en place un processus d'intégration continue avec GitHub Actions
 
 <!-- TODO: inclure formatteur de code, analyseur typescript et linter ? -->
@@ -52,7 +53,7 @@ Il existe trois grandes catégories de tests:
 
 ---
 
-## Exercice 0 - Un test familier
+## Exercice 1 - Des tests pour vérifier la conformité
 
 Consultez le fichier [7-complete.spec.js](https://github.com/adrienjoly/cours-nodejs-techio-2/blob/master/nodejs-project/7-complete.spec.js). (en cliquant sur le lien)
 
@@ -73,7 +74,16 @@ Puis répondez aux questions suivantes:
 - Que veut dire `.to.eql()` ? Pourquoi l'a-t-on utilisé à la place de `.to.equal()` ?
 - Aurait-on pu se passer de `expect.js` / utiliser un autre module ? Dans quel intérêt ?
 
-Après avoir répondu aux questions ci-dessus, consultez le code source du projet [Openwhyd](https://github.com/openwhyd/openwhyd) puis répondez aux questions suivantes:
+---
+
+## Exercice 2 - Des tests pour éviter les régressions
+
+Dans l'exercice 1, nous avons vu un premier exemple de suite de tests automatisés permettant de vérifier la conformité de programmes avec des exigences fonctionnelles et techniques. Dans cet exemple, les tests ont été conçus pour être les plus agnostiques possibles quant à la manière d'écrire le code testé.
+
+Nous allons maintenant voir d'autres exemples de tests automatisés, pour une finalité différente: éviter les régressions qui pourraient être apportées par les contributeurs d'un projet open source.
+
+Consultez le code source du projet [Openwhyd](https://github.com/openwhyd/openwhyd) puis répondez aux questions suivantes:
+
 - Citez un exemple de test unitaire inclus dans ce projet.
   - Quels indices permettent de reconnaitre qu'il s'agit d'un test unitaire ?
   - Quel modules sont utilisés pour écrire et exécuter ce test ?
@@ -86,53 +96,78 @@ Après avoir répondu aux questions ci-dessus, consultez le code source du proje
 
 ---
 
-## Exercice 1 - Premier test automatisé avec Ava
+## Exercice 3 - Écrire des tests unitaires
 
-Le but de cet exercice est de compléter le site dynamique que nous avons créé dans la partie précédente, afin d'y intégrer des tests automatisés.
+Dans cet exercice, vous allez définir puis implémenter quelques tests unitaires, afin de vérifier le fonctionnement attendu de la fonction JavaScript suivante:
 
-### Objectifs
+```js
+// La fonction somme() retourne la somme des nombres passés en paramètre.
+// Tout paramètre manquant aura 0 comme valeur par défaut.
+// Si un des paramètre n'est pas de type `number`, la fonction lèvera une
+// exception avec le message d'erreur "paramètre invalide".
+function somme(nombre1, nombre2) {
+  // (implémentation de la fonction: non nécéssaire pour cet exercice)
+}
+```
 
-- Fonctionnel: La commande `npm test` doit permettre d'exécuter notre test fonctionnel, et celui-ci doit seulement "passer" si la route `/ville` de notre serveur web fonctionne comme défini dans les exercices 3.x.
-- Lisibilité: Suivre les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
-- Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `test.js` qui contiendra notre test fonctionnel.
-- Production: (non nécessaire à ce stade)
+Étapes:
 
-### Étapes proposées
+1. En vous appuyant sur la signature de la fonction et de sa documentation fournie en commentaires, proposer 3 intitulés de tests selon la forme suivante: _Avec les valeurs de paramètres `A` et `B`, la fonction somme() est sensée `C`_ (`C` décrivant le résultat obtenu en appelant la fonction en lui passant les paramètre `A` et `B`, sous forme d'un verbe + d'un complément. exemples: `retourner la valeur X de type Y` ou `lever une exception intitulée Z`)
 
-Ces étapes sont décrites moins précisément que celles fournies dans les exercices précédents. Utilisez les ressources disponibles sur Internet pour vous aider: documentation de Node.js, des modules npm utilisés, examples, tutos, etc...
+2. Après avoir formulé en français ces trois intitulés, implémenter les tests correspondants en JavaScript, dans un fichier `test.js`, de manière à ce qu'ils soient compréhensibles par [Mocha](https://mochajs.org/).
 
-1. Ajouter le moteur de tests "[Ava](https://www.npmjs.com/package/ava)" à notre projet Node.js.
-2. Créer `test.js` et y définir un test fonctionnel qui vérifiera que la page d'index du site comprend bien un formulaire HTML.
-3. Compléter `package.json` et `README.md` afin d'expliquer comment exécuter ce test.
-4. Ajouter à `test.js` un test fonctionnel ou d'intégration qui vérifiera que la page "ville" contient bien le nom de la ville qui lui a été passé en paramètre POST.
+3. Dans le même fichier, ajouter la fonction `somme()` fournie ci-dessus, telle quelle. Exécuter la suite de tests avec Mocha. Tous les tests devraient échouer, car la fonction n'est pas implémentée.
 
----
+4. Compléter l'implémentation de la fonction `somme()` de manière à ce qu'elle fonctionne comme prévu. Vérifier que tous les tests passent, désormais.
 
-## Exercice 2 - Ajout de tests automatisés
-
-### Objectifs
-
-La commande `npm test` exécutera le test réalisé dans l'exercice précédent ainsi que trois nouveaux tests définis ci-dessous.
-
-### Étapes proposées
-
-Dans le même dépôt:
-
-1. Ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur quand on cherche une ville qui n'existe pas.
-2. Ajouter un test fonctionnel ou d'intégration pour vérifier que la page de destination affiche bien un message d'erreur dans le cas où l'API `geocode.xyz` retourne un code `404`.
-3. Ajouter une fonction `cleanCityName()` dans le module `ville.js` et quelques tests unitaires pour vérifier son bon fonctionnement.
-
-Pro tip: Vous pouvez utiliser le module [`nock`](https://www.npmjs.com/package/nock) dans vos tests d'intégration pour intercepter et modifier les réponses de l'API externe `geocode.xyz`.
-
-### BONUS
-
-Dans l'application "chatbot" développée dans la partie 1 du cours, ajouter un test d'intégration pour vérifier que toute nouvelle information fournie par l'utilisateur via l'endpoint `POST /chat` est bien stockée dans `réponses.json`.
+5. Initialiser puis compléter le fichier `package.json` pour que n'importe quel autre développeur puisse lancer vos tests depuis sa machine, en tapant seulement les commandes `npm install` et `npm test`.
 
 ---
 
-## Exercice 3 - Mise en place d'intégration continue avec GitHub Actions
+## Exercice 4 - Écrire un test de bout en bout
 
-L'intégration continue est un ensemble de pratiques permettant de développer de manière plus rapide et robuste. Elle vise notamment à prévenir les régressions, c'est à dire les modifications de code qui introduisent des défauts là où il n'y en avait pas.
+Dans cet exercice, vous allez définir puis implémenter un test de bout en bout pour vérifier le bon fonctionnement d'une des routes du chatbot que nous avons développé dans la partie 1 du cours.
+
+Dans ce contexte, il est approprié d'employer un test de bout en bout car ce test pourrait très bien être effectué manuellement par n'importe quel utilisateur de votre API, sans nécéssiter d'accès au code source de cette API. Par contre, pour que votre test puisse fonctionner, il faudra que l'API soit active, prête à répondre aux requêtes.
+
+Voici l'intitulé du test que vous allez implémenter: _Quand le chatbot reçoit une requête HTTP GET à la racine (/), il répond "Bonjour !"_.
+
+Implémenter ce test, le lancer avec Mocha et vérifier qu'il passe quand votre serveur de chatbot est actif.
+
+---
+
+## Exercice 5 - Outils pour améliorer la qualité du code
+
+Plus le code est simple et lisible, plus il sera facile à maintenir. Plus le code est facile à maintenir, moins il sera vulnérable aux bugs, dans la durée.
+
+Dans cet exercice, vous allez installer 3 outils qui vont vous aider à améliorer la qualité de votre code:
+- [ESLint](https://eslint.org/) permet de prévenir les erreurs courantes (ex: utiliser un simple égal dans l'expression d'une condition `if`);
+- [Prettier](https://prettier.io/) permet de formater et indenter votre code automatiquement;
+- et [TypeScript](https://www.typescriptlang.org/) permet (dans un premier temps) de réduire le risque que vous fassiez des erreurs de typage.
+
+Étapes à effectuer dans le répertoire de l'exercice précédent:
+
+1. Installez ESLint à l'aide de la commande `$ npx eslint --init`
+
+2. Exécutez ESLint sur vos fichiers JS (`$ npx eslint *.js`) puis appliquez 2 ou 3 modifications suggérées pour améliorer votre code
+
+3. Installez Prettier: `$ npm install --save-dev prettier`
+
+4. Demandez à Prettier de lister les lignes qui mériteraient d'être mises en forme: `$ npx prettier --check *.js`
+
+5. Demandez à Prettier de mettre en forme (reformater) vos fichiers JS: `$ npx prettier --write *.js`
+
+6. Pour éviter que les règles de ESLint n'entrent en conflit avec celles de Prettier, installez la configuration `eslint-config-prettier` en suivant [ces instructions](https://github.com/prettier/eslint-config-prettier#installation)
+
+7. Installez TypeScript: `$ npm install --save-dev typescript` puis `$ $(npm bin)/tsc --init`
+
+8. Exécutez TypeScript (`$ $(npm bin)/tsc`) pour voir s'il y a quelques améliorations à apporter à votre code JavaScript
+
+---
+
+## Exercice 6 - Mise en place d'intégration continue avec GitHub Actions
+
+L'intégration continue est un ensemble de pratiques permettant de développer de manière plus rapide et robuste. Elle vise notamment à prévenir les régressions – c'est à dire les modifications de code qui introduisent des défauts là où il n'y en avait pas – de manière continue.
 
 Pour prévenir ces régressions, nous allons mettre en place un processus qui exécutera automatiquement nos tests automatisés à chaque fois que nous enverrons des changements de code à notre dépôt distant. (c.a.d. `git commit` suivi de `git push`)
 
@@ -140,7 +175,7 @@ Pour cela, nous allons configurer [GitHub Actions](https://github.com/features/a
 
 ### Objectifs
 
-GitHub Actions exécutera les tests automatisés des exercices précédents et nous informera des résultats:
+GitHub Actions exécutera la suite de tests automatisés de l'exercice 3 et nous informera des résultats:
 
 - à chaque fois qu'un `commit` sera intégré à la branche `master` de votre dépôt distant hébergé sur github.com, (exemple: coches vertes sur [liste de commits](https://github.com/openwhyd/openwhyd/commits/master))
 
@@ -164,3 +199,9 @@ Ressources sur la maintenabilité, les tests et l'Artisanat Logiciel (_Software 
 - [Integration Continue](https://fr.wikipedia.org/wiki/Int%C3%A9gration_continue): exécuter ses tests automatisés dans le cloud. Exemples de services: [Circle CI](https://circleci.com/).
 - Vidéo: [The #1 way to improve your code](https://www.youtube.com/watch?v=0czUk0j6zLg) (une bonne introduction à la méthode TDD - Test-Driven Development)
 - Vidéo: [L’Artisanat Logiciel, par Yannick Grenzinger](https://www.youtube.com/watch?v=FzIuAImNcis)
+
+Références sur les outils de qualité de code:
+
+- [How to setup ESLint and Prettier on Node – SourceLevel](https://sourcelevel.io/blog/how-to-setup-eslint-and-prettier-on-node)
+- [Setting up efficient workflows with ESLint, Prettier and TypeScript - JavaScript inDepth](https://indepth.dev/setting-up-efficient-workflows-with-eslint-prettier-and-typescript/)
+- [TypeScript: Handbook - Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)

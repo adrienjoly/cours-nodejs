@@ -6,7 +6,7 @@ layout: default
 ## Objectifs de cette partie
 
 - Savoir lire et modifier des fichiers avec Node.js.
-- Pratiquer la définition et l'appel de fonctions asynchrones.
+- Savoir **définir** des fonctions asynchrones.
 - Application: améliorer notre chat-bot de la partie 1.
 
 Prérequis: création et test de points d'entrée HTTP GET et POST avec Node.js et Express.js.
@@ -65,26 +65,48 @@ Gérer les cas d'erreurs suivants:
 
 ---
 
-## Exercice 3 - Utilisation de Promesses
+## Exercice 3 - Création d'une fonction intermédiaire avec callback
 
-Le concept de Promesse (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le "callback hell".
+Modifiez votre solution de l'exercice précédent de manière à ce que la fonction `writeFile()` ne soit pas appelée _directement_ depuis le code de vos routes Express.
 
-Modifier le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent des Promesses au lieu de fonctions de `callback`.
+Pour cela, définissez la fonction `enregistrerRéponses()` qui appelera `writeFile()`, puis appelez cette fonction à la place de `writeFile()` dans le code de vos routes Express.
 
-N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans les exercices précédents.
+Après cette modification, votre chatbot doit continuer de fonctionner comme d'habitude.
 
 ---
 
-## Exercice 4 - Utilisation de `async` et `await`
+## Exercice 4 - Utilisation de Promesses
+
+Le concept de Promesse (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le "callback hell".
+
+Modifier le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent des Promesses au lieu de fonctions de `callback`. Comme dans l'exercice précédent, l'enregistrement des réponses doit être effectué par la fonction `enregistrerRéponses()`.
+
+N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans les exercices précédents.
+
+Conseil: Commencez par transformer seulement l'appel à `readFile()` dans un premier temps, puis celui à `enregistrerRéponses()` dans un deuxième temps.
+
+---
+
+## Exercice 5 - Utilisation de `async` et `await`
 
 Les mots clés `async` et `await` (voir les ressources fournies plus bas) ont été intégrés au langage JavaScript pour simplifier rendre encore plus lisible la définition et l'usage de fonctions asynchrones à base de Promesses.
 
 Modifier à nouveau le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent les mots clés `async` et `await` au lieu de `Promise`, `resolve`, `reject`, `.then()` et `.catch()`.
 
+Comme dans l'exercice précédent, l'enregistrement des réponses doit être effectué par la fonction `enregistrerRéponses()`.
+
 N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans les exercices précédents.
+
+Conseil: Commencez par transformer seulement l'appel à `readFile()` dans un premier temps, puis celui à `enregistrerRéponses()` dans un deuxième temps.
 
 ---
 
 ## Exercices bonus
 
 - Archivage des conversations dans plusieurs fichiers (un par interlocuteur)
+
+---
+
+## Références
+
+- cf [Aide-mémoire](../sync-vs-async) et autres [ressources sur l'exécution de code asynchrone](../02-async/#ressources-sur-lexcution-de-code-asynchrone) fournies dans la partie 2.

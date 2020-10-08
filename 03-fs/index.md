@@ -5,8 +5,8 @@ layout: default
 
 ## Objectifs de cette partie
 
-- Lire et modifier des fichiers avec Node.js.
-- Pratiquer la définition et appel de fonctions asynchrones.
+- Savoir lire et modifier des fichiers avec Node.js.
+- Pratiquer la définition et l'appel de fonctions asynchrones.
 - Application: améliorer notre chat-bot de la partie 1.
 
 Prérequis: création et test de points d'entrée HTTP GET et POST avec Node.js et Express.js.
@@ -71,7 +71,7 @@ Le concept de Promesse (en anglais: `Promise`; cf [javascript.info](https://java
 
 Modifier le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent des Promesses au lieu de fonctions de `callback`.
 
-N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
+N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans les exercices précédents.
 
 ---
 
@@ -81,8 +81,10 @@ Les mots clés `async` et `await` (voir les ressources fournies plus bas) ont é
 
 Modifier à nouveau le code source produit à l'exercice précédent de manière à ce que tous les appels de fonctions asynchrones utilisent les mots clés `async` et `await` au lieu de `Promise`, `resolve`, `reject`, `.then()` et `.catch()`.
 
-N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans l'exercice 6.
+N'oubliez pas de couvrir les cas d'erreurs tel que décrit dans les exercices précédents.
 
-## BONUS
+---
+
+## Exercices bonus
 
 - Archivage des conversations dans plusieurs fichiers (un par interlocuteur)

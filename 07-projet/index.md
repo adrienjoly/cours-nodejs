@@ -1,5 +1,5 @@
 ---
-title: Partie 3 - Réalisation d'une API pour un client
+title: Réalisation d'une API pour un client
 layout: default
 ---
 

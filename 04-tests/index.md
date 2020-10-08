@@ -17,7 +17,7 @@ Programme de la première partie:
 ## Objectifs de cette partie
 
 Afin de savoir développer et maintenir une application Node.js de manière pérenne, nous allons:
-- Écrire des tests automatisés: unitaires, d'intégration et fonctionnels
+- Écrire des tests automatisés: unitaires, d'intégration et de bout en bout
 - Mettre en place un processus d'intégration continue avec GitHub Actions
 
 <!-- TODO: inclure formatteur de code, analyseur typescript et linter ? -->
@@ -47,8 +47,31 @@ L'écriture de **tests automatisés** permet de définir une fois pour toutes ce
 
 Il existe trois grandes catégories de tests:
 - les **tests unitaires** permettent de vérifier les fonctions définies dans le code source;
-- les **tests fonctionnels** permettent de vérifier le bon fonctionnement du site (ou programme) dans son ensemble, comme un utilisateur pourrait le faire manuellement;
+- les **tests de bout en bout** permettent de vérifier le bon fonctionnement du site (ou programme) dans son ensemble, comme un utilisateur pourrait le faire manuellement;
 - enfin, les **tests d'intégration** permettent de vérifier le bon comportement de plusieurs composants définis à l'intérieur du programme.
+
+---
+
+## Exercice 0 - Un test familier
+
+Consultez le fichier [7-complete.spec.js](https://github.com/adrienjoly/cours-nodejs-techio-2/blob/master/nodejs-project/7-complete.spec.js). (en cliquant sur le lien)
+
+Il s'agit d'une suite de tests conçue pour être exécutée par le framework de tests "[Mocha](https://mochajs.org/)". (on peut également le qualifier de _test runner_ ou _test driver_)
+
+Commencez par observer attentivement le titre donné à chaque test, et la manière dont ces titres ont été formulés.
+
+Puis répondez aux questions suivantes:
+
+- Reconnaissez-vous ces tests ?
+- Déterminez le type de chaque test (unitaire, intégration ou de bout en bout), et expliquez pourquoi.
+- Dans cette suite de tests, qu'est-ce qui nous permet de reconnaitre les tests de bout en bout ?
+- Est-ce que un ou plusieurs types de tests manquent ? Pourquoi, d'après vous ?
+- Quel aurait été l'intérêt de regrouper toutes les assertions dans un même test ?
+- Inversement, quel est l'intérêt d'avoir écrit des tests séparés ?
+- A quoi sert le module `expect.js` ?
+- Quelles fonctions sont fournies par `expect.js` ?
+- Que veut dire `.to.eql()` ? Pourquoi l'a-t-on utilisé à la place de `.to.equal()` ?
+- Aurait-on pu se passer de `expect.js` / utiliser un autre module ? Dans quel intérêt ?
 
 ---
 

@@ -147,13 +147,23 @@ Dans cet exercice, vous allez installer 3 outils qui vont vous aider à amélior
 
 Étapes à effectuer dans le répertoire de l'exercice précédent:
 
-1. Installez ESLint à l'aide de la commande `$ npx eslint --init`
+1. Installez ESLint à l'aide de la commande `$ npx eslint --init`, en choisissant les options suivantes:
 
-2. Exécutez ESLint sur vos fichiers JS (`$ npx eslint *.js`) puis appliquez 2 ou 3 modifications suggérées pour améliorer votre code
+  - How would you like to use ESLint? **To check syntax and find problems**
+  - What type of modules does your project use? **CommonJS (require/exports)**
+  - Which framework does your project use? **None of these**
+  - Does your project use TypeScript? **No**
+  - Where does your code run? **Node**
+  - What format do you want your config file to be in? **JavaScript**
+  - Would you like to install them now with npm? **Yes**
+
+2. Exécutez ESLint sur vos fichiers JS (`$ npx eslint *.js`) puis appliquez les modifications suggérées pour améliorer votre code.
+
+  > Si ESLint ne suggère aucune modification dans votre code, causez volontairement un problème: utilisez un `=` au lieu de l'opérateur d'égalité `===` employé dans une des conditions `if` de `server.js`, sauvegardez puis relancez la commande.
 
 3. Installez Prettier: `$ npm install --save-dev prettier`
 
-4. Demandez à Prettier de lister les lignes qui mériteraient d'être mises en forme: `$ npx prettier --check *.js`
+4. Demandez à Prettier de lister les lignes qui mériteraient d'être mises en forme: `$ npx prettier server.js | diff server.js -`
 
 5. Demandez à Prettier de mettre en forme (reformater) vos fichiers JS: `$ npx prettier --write *.js`
 
@@ -161,7 +171,19 @@ Dans cet exercice, vous allez installer 3 outils qui vont vous aider à amélior
 
 7. Installez TypeScript: `$ npm install --save-dev typescript` puis `$ $(npm bin)/tsc --init`
 
-8. Exécutez TypeScript (`$ $(npm bin)/tsc`) pour voir s'il y a quelques améliorations à apporter à votre code JavaScript
+8. Exécutez TypeScript (`$ $(npm bin)/tsc`) pour voir s'il y a erreurs de types à corriger dans votre code JavaScript
+
+  > Vous devrez paramétrer les [options](https://www.typescriptlang.org/docs/handbook/compiler-options.html) suivantes dans `tsconfig.json`:
+  > - `allowJs: true` et `checkJs: true`, pour que `tsc` valide vos fichiers JS
+  > - `noEmit: true`, pour que `tsc` liste les anomalies dans la sortie standard
+  > - `noImplicitAny: false`, pour que `tsc` ne s'attende pas à ce que vous spécifiez le type des paramètres de vos fonctions. 
+
+9. Modifiez `package.json` de manière à ce qu'il suffise de taper `npm run check` pour afficher les suggestions de ESLint, Prettier et TypeScript
+
+10. BONUS: Installez l'éditeur de code [Visual Studio Code](https://code.visualstudio.com/), ouvrez le répertoire de l'exercice, puis configurez le _workspace_ de votre projet de manière à ce que:
+
+  - les erreurs ESLint et TypeScript soient visibles directement depuis la fenêtre d'édition du code de `server.js`,
+  - et que le fichier `server.js` soit automatiquement mis en forme par Prettier à chaque fois que vous le sauvegardez.
 
 ---
 

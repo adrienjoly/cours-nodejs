@@ -21,8 +21,6 @@ Afin de savoir développer et maintenir une application Node.js de manière pér
 - Utiliser des outils pour formater et nous aider à améliorer notre code
 - Mettre en place un processus d'intégration continue avec GitHub Actions
 
-<!-- TODO: inclure formatteur de code, analyseur typescript et linter ? -->
-
 Prérequis:
 - Définition et appel de fonctions synchrones et asynchrones
 - Importation et installation de modules internes et externes

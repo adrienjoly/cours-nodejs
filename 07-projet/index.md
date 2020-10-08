@@ -34,7 +34,7 @@ Le travail du groupe et de chacune des personnes du groupe sera évalué selon l
 
 Dans cette section, nous décrivons les fonctionnalités attendues dans l'API à produire.
 
-Attention: Sachant que ces fonctionnalités seront vérifiés par des tests automatisés, merci de respecter ces spécifications **à la lettre**. Ceci inclut notamment: le nom des routes, la structure des objets JSON à produire, les chaines de caractères fournies... (liste non exhaustive)
+Attention: Sachant que ces fonctionnalités seront vérifiés par des tests automatisés, merci de respecter ces spécifications **à la lettre**. Ceci inclut notamment: le nom des routes, la structure des objets JSON à produire, les chaînes de caractères fournies... (liste non exhaustive)
 
 > Le saviez-vous: Le cahier des charges est un document habituellement produit par le client (ou co-écrit avec lui) pour exprimer ses besoins de la manière la plus précise possible. En effet, lors de la recette, le client vérifiera le produit livré remplit bien les attentes listées dans ce document.
 
@@ -89,7 +89,7 @@ Les documents stockés dans la collection `users` doivent contenir les propriét
 
 - `_id` (type: `ObjectID`): identifiant unique de l'utilisateur, généré automatiquement par MongoDB lors de l'insertion.
 - `username` (type: `string`): nom unique choisi par l'utilisateur lors de son inscription. Ce nom doit être constitué uniquement de lettres minuscules non accentuées (entre `a` et `z`) pour une longueur totale de 2 à 20 caractères max.
-- `password` (type: `string`): mot de passe choisi par l'utilisateur lors de son inscription. Ce mot de passe doit contenir au moins 4 caractères et être hashé avec l'algorithme [`bcrypt`](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/) (alternative à MD5).
+- `password` (type: `string`): mot de passe choisi par l'utilisateur lors de son inscription. Ce mot de passe doit contenir au moins 4 caractères et être haché avec l'algorithme [`bcrypt`](https://auth0.com/blog/hashing-in-action-understanding-bcrypt/) (alternative à MD5).
 
 #### Authentification des utilisateurs
 

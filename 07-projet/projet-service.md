@@ -32,7 +32,7 @@ Le travail du groupe et de ses collaborateurs sera évalué selon les critères 
 
 Dans cette section, nous décrivons les fonctionnalités attendues dans l'application Web à produire.
 
-Attention: Sachant que ces fonctionnalités seront vérifiés par des tests automatisés, merci de respecter ces spécifications **à la lettre**. Ceci inclue notamment: le nom des routes, la structure des objets JSON à produire, les chaines de caractères fournies... (liste non exhaustive)
+Attention: Sachant que ces fonctionnalités seront vérifiés par des tests automatisés, merci de respecter ces spécifications **à la lettre**. Ceci inclue notamment: le nom des routes, la structure des objets JSON à produire, les chaînes de caractères fournies... (liste non exhaustive)
 
 > Le saviez-vous: Le cahier des charges est un document habituellement produit par le client (ou co-écrit avec lui) pour exprimer ses besoins de la manière la plus précise possible. En effet, lors de la recette, le client vérifiera le produit livré remplit bien les attentes listées dans ce document.
 

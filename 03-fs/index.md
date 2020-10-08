@@ -61,7 +61,7 @@ Modifier le code source produit à l'exercice précédent de manière à utilise
 Gérer les cas d'erreurs suivants:
 
 - en cas d'erreur de lecture: afficher l'erreur dans la sortie d'erreurs (à l'aide de `console.error()`) puis terminer l'exécution du programme en retournant le code d'erreur `1` (à l'aide de `process.exit(1)`);
-- en cas d'erreur d'écriture: afficher l'erreur dans la sortie d'erreurs et envoyer la réponse suivante à la requête: "`Oops, je n'ai pas pu enregistrer cette information. Merci de rééssayer.`"
+- en cas d'erreur d'écriture: afficher l'erreur dans la sortie d'erreurs et envoyer la réponse suivante à la requête: "`Oops, je n'ai pas pu enregistrer cette information. Merci de réessayer.`"
 
 ---
 
@@ -69,7 +69,7 @@ Gérer les cas d'erreurs suivants:
 
 Modifiez votre solution de l'exercice précédent de manière à ce que la fonction `writeFile()` ne soit pas appelée _directement_ depuis le code de vos routes Express.
 
-Pour cela, définissez la fonction `enregistrerRéponses()` qui appelera `writeFile()`, puis appelez cette fonction à la place de `writeFile()` dans le code de vos routes Express.
+Pour cela, définissez la fonction `enregistrerRéponses()` qui appellera `writeFile()`, puis appelez cette fonction à la place de `writeFile()` dans le code de vos routes Express.
 
 Après cette modification, votre chatbot doit continuer de fonctionner comme d'habitude.
 

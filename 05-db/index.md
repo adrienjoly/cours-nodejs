@@ -1,5 +1,5 @@
 ---
-title: Partie 5 - Persistence de données avec MongoDB
+title: Partie 5 - Persistance de données avec MongoDB
 layout: default
 ---
 
@@ -49,7 +49,7 @@ Pour cela, nous allons:
     >
     > (B) Sinon -- si Docker fonctionne bien sur votre machine -- lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
     >
-    > 1. Téléchager et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
+    > 1. Télécharger et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
     >    ```sh
     >    $ docker run --rm --publish 27017:27017 --name mongodb-pour-nodejs mongo:4
     >    ```
@@ -62,7 +62,7 @@ Pour cela, nous allons:
     >
     > 1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine,
     > 2. Après avoir redémarré votre terminal, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
-    > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécéssaires: `$ sudo chmod 777 /data/db`.
+    > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécessaires: `$ sudo chmod 777 /data/db`.
     > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de terminal. (cf étape suivante de l'exercice)
 
 

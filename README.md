@@ -29,7 +29,7 @@
 - [Partie 2 - Programmation asynchrone et requête à d'autres APIs](02-async/)
 - [Partie 3 - Utilisation du système de fichiers](03-fs/)
 - [Partie 4 - Validation, tests automatisés et intégration continue](04-valid/)
-- Partie 5 - Persistence de données avec MongoDB
+- Partie 5 - Persistance de données avec MongoDB
 - Partie 6 - Identification, autorisation et authentification
 
 <!-- TODO: utiliser Firebase au lieu de MongoDB -->

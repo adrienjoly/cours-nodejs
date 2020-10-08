@@ -65,7 +65,7 @@ Puis répondez aux questions suivantes:
 
 - Reconnaissez-vous ces tests ?
 - Déterminez le type de chaque test (unitaire, intégration ou de bout en bout), et expliquez pourquoi.
-- Dans cette suite de tests, qu'est-ce qui nous permet de reconnaitre les tests de bout en bout ?
+- Dans cette suite de tests, qu'est-ce qui nous permet de reconnaître les tests de bout en bout ?
 - Est-ce que un ou plusieurs types de tests manquent ? Pourquoi, d'après vous ?
 - Quel aurait été l'intérêt de regrouper toutes les assertions dans un même test ?
 - Inversement, quel est l'intérêt d'avoir écrit des tests séparés ?
@@ -85,13 +85,13 @@ Nous allons maintenant voir d'autres exemples de tests automatisés, pour une fi
 Consultez le code source du projet [Openwhyd](https://github.com/openwhyd/openwhyd) puis répondez aux questions suivantes:
 
 - Citez un exemple de test unitaire inclus dans ce projet.
-  - Quels indices permettent de reconnaitre qu'il s'agit d'un test unitaire ?
+  - Quels indices permettent de reconnaître qu'il s'agit d'un test unitaire ?
   - Quel modules sont utilisés pour écrire et exécuter ce test ?
 - Citez un exemple de test d'intégration inclus dans ce projet.
-  - Quels indices permettent de reconnaitre qu'il s'agit d'un test d'intégration ?
+  - Quels indices permettent de reconnaître qu'il s'agit d'un test d'intégration ?
   - Quel modules sont utilisés pour écrire et exécuter ce test ?
 - Citez un exemple de test de bout en bout inclus dans ce projet.
-  - Quels indices permettent de reconnaitre qu'il s'agit d'un test de bout en bout ?
+  - Quels indices permettent de reconnaître qu'il s'agit d'un test de bout en bout ?
   - Quel modules sont utilisés pour écrire et exécuter ce test ?
 
 ---
@@ -106,7 +106,7 @@ Dans cet exercice, vous allez définir puis implémenter quelques tests unitaire
 // Si un des paramètre n'est pas de type `number`, la fonction lèvera une
 // exception avec le message d'erreur "paramètre invalide".
 function somme(nombre1, nombre2) {
-  // (implémentation de la fonction: non nécéssaire pour cet exercice)
+  // (implémentation de la fonction: non nécessaire pour cet exercice)
 }
 ```
 
@@ -128,7 +128,7 @@ function somme(nombre1, nombre2) {
 
 Dans cet exercice, vous allez définir puis implémenter un test de bout en bout pour vérifier le bon fonctionnement d'une des routes du chatbot que nous avons développé dans la partie 1 du cours.
 
-Dans ce contexte, il est approprié d'employer un test de bout en bout car ce test pourrait très bien être effectué manuellement par n'importe quel utilisateur de votre API, sans nécéssiter d'accès au code source de cette API. Par contre, pour que votre test puisse fonctionner, il faudra que l'API soit active, prête à répondre aux requêtes.
+Dans ce contexte, il est approprié d'employer un test de bout en bout car ce test pourrait très bien être effectué manuellement par n'importe quel utilisateur de votre API, sans nécessiter d'accès au code source de cette API. Par contre, pour que votre test puisse fonctionner, il faudra que l'API soit active, prête à répondre aux requêtes.
 
 Voici l'intitulé du test que vous allez implémenter: _Quand le chatbot reçoit une requête HTTP GET à la racine (/), il répond "Bonjour !"_.
 

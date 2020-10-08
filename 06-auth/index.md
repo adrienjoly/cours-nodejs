@@ -127,7 +127,7 @@ Dans cet exercice, nous allons intégrer la stratégie "passport-local" du modul
 
 ### Étapes proposées
 
-Ces étapes sont décrites moins précisément que celles fournies dans les exercices précédents. Utilisez les ressources disponibles sur Internet pour vous aider: documentation de Node.js, des modules npm utilisés, examples, tutos, etc...
+Ces étapes sont décrites moins précisément que celles fournies dans les exercices précédents. Utilisez les ressources disponibles sur Internet pour vous aider: documentation de Node.js, des modules npm utilisés, exemples, tutos, etc...
 
 1. Dans un premier temps, nous allons permettre à **un seul utilisateur** de se connecter à l'aide d'un identifiant et mot de passe **stockés en dur** dans le code.
   - Suivre le guide "[Username & Password](http://www.passportjs.org/docs/username-password/)" pour installer le module "passport-local" dans notre projet, le configurer et l'intégrer dans l'application Express.js. 
@@ -146,8 +146,8 @@ Ces étapes sont décrites moins précisément que celles fournies dans les exer
   }
   ```
   - Déplacez les identifiants que vous avez défini en dur, dans cet objet `users`.
-  - Pour réduire le risque de fuite de ce mot de passe, le hasher à l'aide de l'algorithme [MD5](https://www.md5.fr/), dans la propriété `hashedPassword`.
-  - Enfin, modifier la fonction de vérification des identifiants (cf étape précédente) de manière à ce qu'elle hashe le mot de passe saisi par l'utilisateur avec MD5, afin de pouvoir le comparer avec le hash stocké dans notre objet.
+  - Pour réduire le risque de fuite de ce mot de passe, le hacher à l'aide de l'algorithme [MD5](https://www.md5.fr/), dans la propriété `hashedPassword`.
+  - Enfin, modifier la fonction de vérification des identifiants (cf étape précédente) de manière à ce qu'elle hache le mot de passe saisi par l'utilisateur avec MD5, afin de pouvoir le comparer avec le hash stocké dans notre objet.
   - Ajouter et implémenter une route `/signup` pour permettre aux visiteurs de créer leur propre compte depuis un formulaire Web. Après cela, ils devraient être en mesure de s'identifier.
   - Conservez vos modifications: `$ git commit -m "user can create an account"`
 

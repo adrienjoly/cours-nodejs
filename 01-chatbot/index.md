@@ -56,7 +56,7 @@ Le but est de développer un serveur Web/API basique qui répondra systématique
 
 Attentes fonctionnelles: Une fois le serveur lancé, l'envoi d'une requête HTTP GET à la racine du serveur web retourne bien le texte "Bonjour !".
 
-Attentes techniques: Le prgramme ne doit pas dépasser 15 lignes de code, et doit avoir `express` comme seule dépendance externe.
+Attentes techniques: Le programme ne doit pas dépasser 15 lignes de code, et doit avoir `express` comme seule dépendance externe.
 
 👉 Exerciseur en ligne: [Une API simple mais polie](https://tech.io/playgrounds/55085/premiers-pas-avec-node-js/une-api-simple-mais-polie)
 
@@ -144,7 +144,7 @@ Pour effectuer cet exercice, assurez-vous que les pré-requis suivants sont bien
 
 2. Dans le répertoire `nodejs-chatbot`, créez un fichier `server.js` puis collez-y le contenu de l'exercice précédent.
 
-    > Note: si vous essayez d'exécuter `$ node server.js`, vous verrez que le serveur ne peut pas se lancer car il faut d'abord installer la dépendence `express`.
+    > Note: si vous essayez d'exécuter `$ node server.js`, vous verrez que le serveur ne peut pas se lancer car il faut d'abord installer la dépendance `express`.
 
 3. Toujours depuis `nodejs-chatbot`, exécutez `$ npm init` pour initialiser le fichier de projet Node.js: `package.json`.
 
@@ -182,7 +182,7 @@ En plus des pré-requis listés dans l'exercice précédent, vous allez égaleme
 
     > En cas de problème pour installer la commande `heroku`, vous pouvez l'installer comme dépendance locale à votre projet: `$ sudo npm install -g heroku`.
 
-    > Soyez attenti•f•ve: vous avez dejà effectué certaines des étapes fournies par Heroku. Évitez donc de répéter deux fois la même étape.
+    > Soyez attenti•f•ve: vous avez déjà effectué certaines des étapes fournies par Heroku. Évitez donc de répéter deux fois la même étape.
 
     > La commande `$ git push heroku master` vous dira à quelle URL votre application a été déployée. Il est probable que votre serveur ne fonctionne pas en production, même si le déploiement s'est bien passé. (voir étape suivante)
 

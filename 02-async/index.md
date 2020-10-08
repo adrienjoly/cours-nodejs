@@ -10,7 +10,7 @@ Dans la partie précédente, nous avons appris:
 
 Jusqu'à présent, nous n'avons appelé et défini que des fonctions _synchrones_. C'est à dire que Node.js exécute ces fonctions de manière séquentielle.
 
-L'appel à une fonction synchrone bloque l'exécution du programme jusqu'à la fin du traitement qu'elle effectue. Lorsqu'un traitement a une durée indeterminée, il est inacceptable qu'un serveur attende la fin de ce traitement, car cela l'empêcherait de répondre à d'autres requêtes pendant ce temps là. C'est pour éviter cela que nous allons apprendre à utiliser des fonctions _asynchrones_.
+L'appel à une fonction synchrone bloque l'exécution du programme jusqu'à la fin du traitement qu'elle effectue. Lorsqu'un traitement a une durée indéterminée, il est inacceptable qu'un serveur attende la fin de ce traitement, car cela l'empêcherait de répondre à d'autres requêtes pendant ce temps là. C'est pour éviter cela que nous allons apprendre à utiliser des fonctions _asynchrones_.
 
 ## Objectifs de cette partie
 
@@ -57,7 +57,7 @@ Dans les exercices 1 et 2, nous avons envoyé une requête HTTP GET à l'aide de
 
 Ces deux fonctions que nous avons définies s'appellent des _callbacks_, car nous les avons conçues pour qu'elles soient _rappelées_ (c'est la traduction française de l'expression _call back_) par les fonctions auxquelles nous les avons passé en paramètre.
 
-Les fonctions fournies par la bibliothèque standard de Node.js s'appuient généralement sur ce principe de _callback_ pour être informé d'événements asynchrones. Dans l'exercice précédent, l'événement asynchrone qui nous intéressait était la récéption d'une réponse à notre requête.
+Les fonctions fournies par la bibliothèque standard de Node.js s'appuient généralement sur ce principe de _callback_ pour être informé d'événements asynchrones. Dans l'exercice précédent, l'événement asynchrone qui nous intéressait était la réception d'une réponse à notre requête.
 
 Le concept de _promesse_ (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le "callback hell".
 
@@ -135,7 +135,7 @@ node get.js https://serveur-inexistant.xyz # affichera un message d'erreur
 
 Dans les exercices précédents, votre serveur était exécuté et testé _dans le cloud_, pour vous aider à focaliser votre attention sur l'écriture du code asynchrone.
 
-Vous allez maintenant re-créer, exécuter et tester le programme de l'exercice 7 sur votre propre ordinateur, en créant un fichier `get.js` et en ajoutant ses dépendences dans `package.json` à l'aide de `npm`.
+Vous allez maintenant re-créer, exécuter et tester le programme de l'exercice 7 sur votre propre ordinateur, en créant un fichier `get.js` et en ajoutant ses dépendances dans `package.json` à l'aide de `npm`.
 
 L'objectif est de pouvoir tester votre programme depuis votre terminal bash, comme montré à la fin de l'énoncé précédent.
 

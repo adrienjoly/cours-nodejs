@@ -182,7 +182,7 @@ En plus des pré-requis listés dans l'exercice précédent, vous allez égaleme
 
     > En cas de problème pour installer la commande `heroku`, vous pouvez l'installer comme dépendance locale à votre projet: `$ sudo npm install -g heroku`.
 
-    > Soyez attenti•f•ve: vous avez déjà effectué certaines des étapes fournies par Heroku. Évitez donc de répéter deux fois la même étape.
+    > Soyez attenti·f·ve: vous avez déjà effectué certaines des étapes fournies par Heroku. Évitez donc de répéter deux fois la même étape.
 
     > La commande `$ git push heroku master` vous dira à quelle URL votre application a été déployée. Il est probable que votre serveur ne fonctionne pas en production, même si le déploiement s'est bien passé. (voir étape suivante)
 

@@ -20,6 +20,7 @@ Dans cette version initiale, le but est que votre chat-bot réponde "damn it !" 
 
 <details>
   <summary>Besoin d'un indice ?</summary>  
+
   Depuis la page Glitch liée ci-dessus, cliquez sur "View Source" puis suivez les instructions fournies dans le fichier `README.md`.
 </details>
 
@@ -31,6 +32,7 @@ Maintenant, vous allez modifier le code de votre chat-bot de manière à ce qu'i
 
 <details>
   <summary>Besoin d'un indice ?</summary>
+
   Il suffit de modifier 2 lignes de code du fichier `server.js`, toujours depuis votre projet Glitch.
 </details>
 
@@ -42,6 +44,7 @@ Maintenant, faites en sorte que chaque réponse de votre chat-bot soit illustré
 
 <details>
   <summary>Besoin d'un indice ?</summary>
+
   Comme on peut le voir dans [cet exemple trouvé sur le site de Eris](https://github.com/abalabahaha/eris/blob/master/examples/embed.js), vous allez devoir passer le paramètre `embed` lors de l'appel à la fonction `createMessage()`.
 
   Consultez les ressources suivantes:
@@ -57,6 +60,7 @@ Maintenant, faites en sorte que, quand vous tapez votre prénom, le bot vous sug
 
 <details>
   <summary>Besoin d'un indice ?</summary>
+  
   Inspirez-vous du code de [cet exemple trouvé sur le site de Eris](https://github.com/abalabahaha/eris/blob/master/examples/reactionButtons.js).
 
   Et référez-vous à la documentation de Eris.

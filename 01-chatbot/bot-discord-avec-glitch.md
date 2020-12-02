@@ -18,11 +18,13 @@ Dans cette première partie, nous allons:
 
 Dans cette version initiale, le but est que votre chat-bot réponde "damn it !" à chaque fois que quelqu'un écrit "1337" dans le canal _#général_ du serveur Discord de la classe.
 
+<!--
 <details>
   <summary>Besoin d'un indice ?</summary>  
 
   Depuis la page Glitch liée ci-dessus, cliquez sur "View Source" puis suivez les instructions fournies dans le fichier `README.md`.
 </details>
+-->
 
 ---
 
@@ -30,11 +32,13 @@ Dans cette version initiale, le but est que votre chat-bot réponde "damn it !" 
 
 Maintenant, vous allez modifier le code de votre chat-bot de manière à ce qu'il réponde "C'est mon maître !" à chaque fois que quelqu'un tapera votre prénom dans le canal _#général_ du serveur Discord de la classe.
 
+<!--
 <details>
   <summary>Besoin d'un indice ?</summary>
 
   Il suffit de modifier 2 lignes de code du fichier `server.js`, toujours depuis votre projet Glitch.
 </details>
+-->
 
 ---
 
@@ -42,6 +46,7 @@ Maintenant, vous allez modifier le code de votre chat-bot de manière à ce qu'i
 
 Maintenant, faites en sorte que chaque réponse de votre chat-bot soit illustrée par un GIF animé visible directement par tou·te·s les participant·e·s du canal _#général_.
 
+<!--
 <details>
   <summary>Besoin d'un indice ?</summary>
 
@@ -51,6 +56,7 @@ Maintenant, faites en sorte que chaque réponse de votre chat-bot soit illustré
   - Documentation de la [fonction `createMessage()`](https://abal.moe/Eris/docs/Client#function-createMessage) de Eris
   - Documentation de l'[API d'intégration de contenus](https://discord.com/developers/docs/resources/channel#embed-object) de Discord
 </details>
+-->
 
 ---
 
@@ -58,6 +64,7 @@ Maintenant, faites en sorte que chaque réponse de votre chat-bot soit illustré
 
 Maintenant, faites en sorte que, quand vous tapez votre prénom, le bot vous suggère le prénom de 3 de vos camarades ayant un chat-bot dans le même canal. Et qu'il vous suffise de cliquer sur un des 3 boutons pour que le bot écrive le nom de ce camarade dans le canal.
 
+<!--
 <details>
   <summary>Besoin d'un indice ?</summary>
   
@@ -65,3 +72,4 @@ Maintenant, faites en sorte que, quand vous tapez votre prénom, le bot vous sug
 
   Et référez-vous à la documentation de Eris.
 </details>
+-->

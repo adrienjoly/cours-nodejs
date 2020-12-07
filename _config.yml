@@ -1,4 +1,4 @@
-url: "https://adrienjoly.com/cours-nodejs" # force HTTPS in references to `absolute_url`, cf https://github.com/jekyll/jekyll/issues/5590#issuecomment-261778241
+url: "https://adrienjoly.com" # force HTTPS in references to `absolute_url`, cf https://github.com/jekyll/jekyll/issues/5590#issuecomment-261778241
 
 title: # Name of your blog (this will show up at the top of your page and in the RSS feed)
   Cours Node.js

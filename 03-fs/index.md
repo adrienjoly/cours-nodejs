@@ -33,21 +33,19 @@ Pour nous familiariser avec les fonctions de lecture et d'écriture de fichiers 
 
 Écrivez un programme Node.js nommé `minuscules.js` qui:
 
-- récupère dans une variable le contenu d'un fichier dont le chemin d'accès est fourni par la variable d'environnement `process.env.FILE`;
+- récupère dans une variable le contenu d'un fichier dont le chemin d'accès est fourni en argument de ligne de commande;
 - remplace toutes les lettres majuscules de ce contenu par des minuscules, en modifiant cette variable;
 - affiche le contenu de cette variable, après l'avoir modifiée;
 - puis écrit ce contenu modifié dans le fichier `résultat.txt`.
 
-Gérer les cas d'erreurs suivants:
+👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/lecture-et-ecriture-synchrone)
 
-- en cas d'erreur de lecture de fichier: afficher le message d'erreur dans la sortie d'erreurs (à l'aide de `console.error()`) puis terminer l'exécution du programme en retournant le code d'erreur `1` (à l'aide de `process.exit(1)`);
-- en cas d'erreur d'écriture de fichier: afficher le message d'erreur dans la sortie d'erreurs puis terminer l'exécution du programme en retournant le code d'erreur `1` (à l'aide de `process.exit(1)`);
-
-Fonctions Node.js et JavaScript à utiliser:
+Références Node.js et JavaScript utiles:
 
 - [`fs.readFileSync()`](https://devdocs.io/node/fs#fs_fs_readfilesync_path_options),
 - [`fs.writeFileSync()`](https://devdocs.io/node/fs#fs_fs_writefilesync_file_data_options),
 - [`<string>.toLowerCase()`](https://devdocs.io/javascript/global_objects/string/tolowercase)
+- [How to parse command line arguments | Node.js](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/).
 
 ---
 
@@ -55,7 +53,11 @@ Fonctions Node.js et JavaScript à utiliser:
 
 Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent, en utilisant cette fois les fonctions asynchrones `readFile()` et `writeFile()` au lieu de `readFileSync()` et `writeFileSync()`.
 
-Fonctions Node.js et JavaScript à utiliser:
+Intercepter les erreurs qui pourraient survenir lors de l'écriture ou de la lecture de fichiers, et les afficher dans la sortie d'erreurs.
+
+👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/utilisation-dappels-asynchrones)
+
+Références Node.js et JavaScript utiles:
 
 - [`fs.readFile()`](https://devdocs.io/node/fs#fs_fs_readfile_path_options_callback)
 - [`fs.writeFile()`](https://devdocs.io/node/fs#fs_fs_writefile_file_data_options_callback)
@@ -64,9 +66,12 @@ Fonctions Node.js et JavaScript à utiliser:
 
 ## Exercice 3 - Création d'une fonction intermédiaire avec _callback_
 
-Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent, en encapsulant la lecture du fichier dans une fonction `lireFichier()` qui acceptera deux paramètres: le nom de fichier à lire et une fonction _callback_.
+Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent.
+
+Définir une fonction `lireFichier()` qui acceptera deux paramètres: le nom de fichier à lire et une fonction _callback_. Cette fonction intermédiaire sera responsable de lire le fichier passé en paramètre, puis de transmettre son contenu à la fonction _callback_.
 
 Faites en sorte que:
+- la transformation du contenu ainsi que l'écriture du fichier `résultat.txt` soit effectués en dehors de la fonction `lireFichier()`;
 - la fonction `readFile()` ne soit appelée **que** par votre fonction `lireFichier()`;
 - votre fonction `lireFichier()` appelle la fonction `callback` qui lui aura été passée en paramètre, dès que la lecture sera terminée;
 - si la lecture a échoué, appeler `callback(err)`, où le paramètre `err` représente l'erreur en question;
@@ -74,13 +79,19 @@ Faites en sorte que:
 
 Après ces modifications, le programme doit fonctionner de manière identique à celui de l'exercice précédent.
 
+👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/creation-dune-fonction-intermediaire-avec-_callback_)
+
 ---
 
 ## Exercice 4 - Utilisation de Promesses
 
-Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent, en utilisant des _Promesses_ au lieu des _callback_ dans tous les appels et définitions de fonctions asynchrones. Comme dans l'exercice précédent, la lecture du fichier doit être assurée par une fonction `lireFichier()` que vous devrez définir.
+Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent, en utilisant des _Promesses_ au lieu des _callback_ dans tous les appels et définitions de fonctions asynchrones. Vous devrez implémenter la lecture du fichier en définissant la fonction `lireFichier(nomFichier)`.
 
-Après ces modifications, le programme doit fonctionner de manière identique à celui de l'exercice précédent.
+Après ces modifications:
+- votre programme ne doit donc plus employer de _callback_;
+- et il doit fonctionner de manière identique à celui de l'exercice précédent.
+
+👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/utilisation-de-promesses)
 
 Conseil: Commencez par transformer seulement l'appel à `writeFile()` dans un premier temps, puis celui à `lireFichier()` dans un deuxième temps.
 
@@ -94,11 +105,13 @@ Références Node.js et JavaScript utiles:
 
 ## Exercice 5 - Utilisation de `async` et `await`
 
-Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent, en utilisant des `async` et `await` au lieu des _Promesses_ dans tous les appels et définitions de fonctions asynchrones. Comme dans l'exercice précédent, la lecture du fichier doit être assurée par une fonction `lireFichier()` que vous devrez définir.
+Dupliquer puis modifier le programme `minuscules.js` de l'exercice précédent, en utilisant des `async` et `await` au lieu des _Promesses_ dans tous les appels et définitions de fonctions asynchrones. Vous devrez implémenter la lecture du fichier en définissant la fonction `lireFichier(nomFichier)`.
 
 Après ces modifications:
 - votre programme ne doit donc plus employer `Promise`, `resolve`, `reject`, `.then()`, `.catch()` ni de _callback_;
 - et il doit fonctionner de manière identique à celui de l'exercice précédent.
+
+👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/utilisation-de-async-et-await)
 
 Conseil: Commencez par transformer seulement l'appel à `writeFile()` dans un premier temps, puis celui à `lireFichier()` dans un deuxième temps.
 

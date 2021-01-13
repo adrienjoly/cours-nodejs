@@ -9,12 +9,10 @@ Programme:
 - s'assurer que tout le monde a compris comment se connecter à MongoDB
 -->
 
-<!-- TODO: utiliser firebase ? -->
-
 ## Objectifs de cette partie
 
+- Apprendre à stocker et récupérer des données dans une base de données MongoDB
 - Étendre le chat-bot pour retrouver l'historique des conversations
-- Persistance de données dans une base de données MongoDB
 - Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
 Durée estimée: 3-6 heures.
@@ -24,7 +22,6 @@ Durée estimée: 3-6 heures.
 Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
 - `node`; (tester avec `$ node --version`)
 - `curl`; (tester avec `$ curl --version`)
-- et `git`; (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e).
 
 ## Exercice 1 - Lecture et écriture dans MongoDB
 
@@ -64,9 +61,6 @@ Pour cela, nous allons:
     > 2. Après avoir redémarré votre terminal, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
     > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécessaires: `$ sudo chmod 777 /data/db`.
     > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de terminal. (cf étape suivante de l'exercice)
-
-
-
 
 <!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
 
@@ -127,7 +121,7 @@ Voici ce que devrait retourner le serveur si on requête `GET /messages/all` apr
 
 - Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
 - Lisibilité: 140 lignes de code max, utilisation de `async`/`await` pour tous les appels asynchrones.
-- Structure: Le code source du projet doit être disponible dans un dépôt git public, et celui-ci ne doit pas contenir plus de 7 fichiers. (dont `server.js`, `package.json` et `README.md`)
+- Structure: Le code source du projet ne doit pas contenir plus de 7 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.
 
@@ -148,7 +142,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus en pro
 
 - Fonctionnel: Même fonctionnalités que l'exercice précédent.
 - Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
-- Structure: Le code source du projet doit être disponible dans un dépôt git public, et celui-ci ne doit pas contenir plus de 7 fichiers. (dont `server.js`, `package.json` et `README.md`)
+- Structure: Le code source du projet ne doit pas contenir plus de 7 fichiers. (dont `server.js`, `package.json` et `README.md`)
 - Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
 - Production: Le serveur et sa base de données sont accessible sur Internet.
 

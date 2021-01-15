@@ -21,6 +21,7 @@
 - Savoir développer, tester et mettre en production un serveur Node.js
 - Maîtriser la programmation asynchrone (callbacks, promises et async/await) et quelques fonctions incontournables fournies par Node.js: console, fs (filesystem)...
 - Installer et utiliser des modules npm: express.js, node-fetch et mongo
+- Savoir résoudre des problèmes techniques de manière autonome, en pratiquant une méthodologie structurante par petits groupes de travail ([_mob programming_](annexes/mob-programming.md))
 - Applications: création d’un chatbot, d'une API et d’une application web connectée à une base de données NoSQL
 
 ## Supports de cours et exercices
@@ -38,6 +39,7 @@
 ## Annexes
 
 - [Méthode de résolution de problèmes](annexes/problem-solving.md)
+- [Pratiquer en groupe, grâce au _Mob Programming_](annexes/mob-programming.md)
 
 ## Logiciels utilisés
 
@@ -52,7 +54,7 @@ Ce cours a été conçu pour des étudiants ayant déjà écrit des programmes e
 
 ## Notes sur la conception et méthode pédagogique
 
-Centrées sur la pratique, les séances sont majoritairement constituées d'exercices à effectuer seul·e ou en binôme, entrecoupés d'explications données par l'intervenant. Le but est de faire vivre chaque problème aux étudiants avant de donner des explications, pour les encourager à chercher par eux-mêmes, et rendre les explications plus motivantes à suivre.
+Centrées sur la pratique, les séances sont majoritairement constituées d'exercices à effectuer à plusieurs (cf [_Mob Programming_](annexes/mob-programming.md)), entrecoupés d'explications données par l'intervenant. Le but est de faire vivre chaque problème aux étudiants avant de donner des explications, pour les encourager à chercher par eux-mêmes, et rendre les explications plus motivantes à suivre.
 
 Les étudiants sont encouragés à s'entraider par l'usage d'un canal de communication partagé (ex: Slack, Mattermost ou autre). Outre l'intérêt de ne pas rester bloqué pendant des heures sur un problème, ce type de communication permet aux étudiants d'apprendre à observer la situation problématique à laquelle ils font face, de prendre le temps d'en chercher les causes potentielles, et de décrire le problème de manière synthétique mais précise. Et donc de développer à la fois leur autonomie et leur esprit d'entraide, compétences indispensables pour des développeurs professionnels.
 
@@ -63,6 +65,8 @@ Passionné par la programmation depuis son enfance, Adrien Joly est ingénieur l
 Parallèlement, et depuis 2015, Adrien donne des cours de développement logiciel dans plusieurs écoles parisiennes.
 
 Enfin, depuis Mars 2020, Adrien propose des prestations de développement et de conseil "craft" via l'ESN "<a href="https://shodo.io/">SHODO</a>".
+
+Pour plus d'infos, consulter ma [page pro](/pro).
 
 ## Références du cours
 

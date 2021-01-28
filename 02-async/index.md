@@ -137,7 +137,7 @@ Dans les exercices précédents, votre serveur était exécuté et testé _dans 
 
 Vous allez maintenant re-créer, exécuter et tester le programme de l'exercice 7 sur votre propre ordinateur, en créant un fichier `get.js` et en ajoutant ses dépendances dans `package.json` à l'aide de `npm`.
 
-L'objectif est de pouvoir tester votre programme depuis votre terminal bash, comme montré à la fin de l'énoncé précédent.
+L'objectif est de pouvoir tester votre programme depuis votre shell Linux, comme montré à la fin de l'énoncé précédent.
 
 ---
 

@@ -34,7 +34,7 @@ Conseils pour favoriser l'entraide:
 - Savoir écrire une API avec des points d'entrée synchrones
 - Mettre le serveur en production, avec Heroku et Git
 
-Prérequis: expérience en programmation JavaScript, usage du terminal
+Prérequis: expérience en programmation JavaScript, usage du shell Linux
 
 Durée estimée: 4 heures.
 
@@ -117,7 +117,7 @@ L'objectif est que, une fois lancé, votre serveur répondra comme prévu aux re
 
 ### Tests: vérifier si le serveur répond comme prévu
 
-Commandes à exécuter (dans un terminal bash séparé de celui depuis lequel votre serveur est exécuté), pour tester la réponse du serveur aux requêtes:
+Commandes à exécuter (dans une session de shell Linux séparée de celle depuis laquelle votre serveur est exécuté), pour tester la réponse du serveur aux requêtes:
 
 - `$ curl "http://localhost:3000/"` doit obtenir la réponse "Bonjour !"
 - `$ curl "http://localhost:3000/hello?nom=Sasha"` doit obtenir la réponse "Bonjour, Sasha !""
@@ -128,9 +128,9 @@ Commandes à exécuter (dans un terminal bash séparé de celui depuis lequel vo
 
 ### Pré-requis
 
-Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le terminal bash [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) installé après avoir activé [Windows Subsystem for Linux](https://docs.microsoft.com/fr-fr/windows/wsl/install-win10), [CMDER](http://cmder.net/) ou d'utiliser Linux depuis une machine virtuelle. Sous Mac ou Linux, vous serez en mesure d'utiliser votre terminal par défaut.
+Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le shell Linux [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) installé après avoir activé [Windows Subsystem for Linux](https://docs.microsoft.com/fr-fr/windows/wsl/install-win10), [CMDER](http://cmder.net/) ou d'utiliser Linux depuis une machine virtuelle. Sous Mac ou Linux, vous serez en mesure d'utiliser votre shell Linux par défaut.
 
-Pour effectuer cet exercice, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal bash (ou compatible):
+Pour effectuer cet exercice, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre shell Linux:
 - `node`, version 10 ou supérieure; (vérifier avec `$ node --version`)
 - et `curl`; (vérifier avec `$ curl --version`)
 
@@ -138,9 +138,9 @@ Pour effectuer cet exercice, assurez-vous que les pré-requis suivants sont bien
 
 ### Étapes proposées
 
-À chaque étape, assurez-vous de (re)démarrer votre serveur (`$ node server.js`), de lui envoyer les requêtes listées ci-dessus (depuis un terminal séparé) puis d'observer la réaction du serveur à cette requête, jusqu'à ce que l'objectif de l'exercice soit atteint:
+À chaque étape, assurez-vous de (re)démarrer votre serveur (`$ node server.js`), de lui envoyer les requêtes listées ci-dessus (depuis un shell Linux séparé) puis d'observer la réaction du serveur à cette requête, jusqu'à ce que l'objectif de l'exercice soit atteint:
 
-1. Depuis votre terminal bash, positionnez-vous dans votre répertoire personnel (`home`) puis créez un répertoire `nodejs-chatbot` dans ce dernier.
+1. Depuis votre shell Linux, positionnez-vous dans votre répertoire personnel (`home`) puis créez un répertoire `nodejs-chatbot` dans ce dernier.
 
 2. Dans le répertoire `nodejs-chatbot`, créez un fichier `server.js` puis collez-y le contenu de l'exercice précédent.
 
@@ -170,7 +170,7 @@ Objectif de l'exercice: Déployez votre serveur sur heroku.com, puis vérifiez q
 
 ### Pré-requis
 
-En plus des pré-requis listés dans l'exercice précédent, vous allez également devoir utiliser la commande `git` depuis votre terminal bash. Vérifiez que `$ git config --global user.email` retourne bien votre adresse email. Sinon, configurez votre commande `git` locale. Vous pouvez suivre [ces étapes](https://adrienjoly.com/cours-git/tutos/creer-depot-gitlab-eemi.html#%C3%A9tapes) ou le tutoriel de votre choix.
+En plus des pré-requis listés dans l'exercice précédent, vous allez également devoir utiliser la commande `git` depuis votre shell Linux. Vérifiez que `$ git config --global user.email` retourne bien votre adresse email. Sinon, configurez votre commande `git` locale. Vous pouvez suivre [ces étapes](https://adrienjoly.com/cours-git/tutos/creer-depot-gitlab-eemi.html#%C3%A9tapes) ou le tutoriel de votre choix.
 
 ### Étapes proposées
 

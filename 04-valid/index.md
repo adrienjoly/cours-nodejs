@@ -30,7 +30,7 @@ Durée estimée: 4 heures.
 
 ## Pré-requis
 
-Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
+Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre shell Linux:
 - `node` version 10 ou plus; (tester avec `$ node --version`)
 - et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 

@@ -19,7 +19,7 @@ Durée estimée: 3-6 heures.
 
 ## Pré-requis
 
-Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
+Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre shell Linux:
 - `node`; (tester avec `$ node --version`)
 - `curl`; (tester avec `$ curl --version`)
 
@@ -58,13 +58,13 @@ Pour cela, nous allons:
     > (C) Sinon: installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
     >
     > 1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine,
-    > 2. Après avoir redémarré votre terminal, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
+    > 2. Après avoir redémarré votre shell Linux, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
     > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécessaires: `$ sudo chmod 777 /data/db`.
-    > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de terminal. (cf étape suivante de l'exercice)
+    > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de shell Linux. (cf étape suivante de l'exercice)
 
 <!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
 
-2. Dans une session de terminal, utiliser le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)" pour vérifier que la base de données est bien accessible. La commande `show dbs` devrait afficher une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
+2. Dans une session de shell Linux, utiliser le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)" pour vérifier que la base de données est bien accessible. La commande `show dbs` devrait afficher une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
 
 3. De retour dans votre projet Node.js, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
 

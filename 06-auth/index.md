@@ -21,7 +21,7 @@ Durée estimée: 3-6 heures.
 
 ## Pré-requis
 
-Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre terminal Bash (ou compatible):
+Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre shell Linux:
 - `node`; (tester avec `$ node --version`)
 - et `git`. (vérifier que `$ git config --global user.email` retourne bien votre adresse email d'étudiant·e)
 
@@ -36,7 +36,7 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 ### Objectifs
 
 - Fonctionnel: Le serveur doit faire fonctionner une application Web contenant une page d'accueil (index) modifiée.
-- Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `README.md` pour expliquer comment télécharger et faire fonctionner ce serveur depuis un terminal.
+- Structure: Respecter la structure de fichiers générée par `express-generator` + ajouter un fichier `README.md` pour expliquer comment télécharger et faire fonctionner ce serveur depuis un shell Linux.
 - Production: Le serveur devra être mis en production à l'aide de Heroku.
 
 ### Étapes proposées
@@ -72,7 +72,7 @@ Dans cet exercice, nous allons créer un nouveau serveur Web avec Node.js et Exp
 
 5. Mettre le serveur en production sur Heroku.
 
-6. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel terminal Bash. Enregistrer ces modifications dans un *commit git*.
+6. Compléter `README.md` pour expliquer comment cloner, installer, exécuter et déployer ce serveur depuis n'importe quel shell Linux. Enregistrer ces modifications dans un *commit git*.
 
 ---
 

@@ -38,7 +38,7 @@ Définition de wikipedia:
 
 La première partie de cette définition implique que vous avez un objectif, et que quelque chose d'imprévu – le problème – vous empêche d'atteindre cet objectif. Par exemple, l'objectif visé peut être de démarrer un serveur web, en tapant `npm start`.
 
-La deuxième partie est cruciale pour définir la nature du problème. C'est aussi la clé de la méthodologie que nous allons voir ci-dessous: prendre le temps de comparer le **comportement effectif** de l'exécution d'un programme (ex: le serveur web ne répond pas aux requêtes, et je vois plein d'erreurs dans mon terminal) au **comportement attendu** (ex: je devrais voir ma page web en ouvrant http://localhost:3000, après avoir exécuté `npm start`).
+La deuxième partie est cruciale pour définir la nature du problème. C'est aussi la clé de la méthodologie que nous allons voir ci-dessous: prendre le temps de comparer le **comportement effectif** de l'exécution d'un programme (ex: le serveur web ne répond pas aux requêtes, et je vois plein d'erreurs dans mon shell Linux) au **comportement attendu** (ex: je devrais voir ma page web en ouvrant http://localhost:3000, après avoir exécuté `npm start`).
 
 Cela sous-entend que, pour trouver une solution à un problème, réagir en se basant seulement sur la constatation de ce comportement effectif est contre-productif.
 
@@ -169,7 +169,7 @@ Puis répond au questions suivantes:
 
 1. [Attentes] Avant d'exécuter le programme, survole le code puis décris ce qui devrait se passer quand on l'exécute, en supposant que le programme fonctionne comme prévu.
 
-2. [Exécution] Copie le code de ce programme dans un fichier nommé `showTheSource.js`, sur ton disque dur. Depuis ton terminal, exécute ce programme en tapant `node showTheSource.js`, puis garde une copie du résultat de son exécution.
+2. [Exécution] Copie le code de ce programme dans un fichier nommé `showTheSource.js`, sur ton disque dur. Depuis ton shell Linux, exécute ce programme en tapant `node showTheSource.js`, puis garde une copie du résultat de son exécution.
 
 3. [Formulation] Maintenant, décris le problème que tu observes, de manière la plus factuelle et concise possible. (Exemple: le message d'erreur, si tu en vois un)
 

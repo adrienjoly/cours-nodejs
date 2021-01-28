@@ -88,9 +88,9 @@ et de leurs réponses, dans une collection MongoDB,
 - et de donner accès à cet historique via deux nouveaux points d'accès: `GET /messages/all` et `DELETE /messages/last`.
 
 Exemples de conversation / cas d'usage:
-1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` répondra "Nous sommes à Paris" (comme dans le dernier exercice de la partie précédente)
-2. `$ curl -X GET http://localhost:3000/messages/all` affichera l'historique des conversations (messages de l'utilisateur et réponses du chat-bot), tel que décrit ci-dessous, y compris après redémarrage du serveur
-3. `$ curl -X DELETE http://localhost:3000/messages/last` supprimera le dernier échange de l'historique (message de l'utilisateur + réponse du chat-bot)
+1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" "http://localhost:3000/chat"` répondra "Nous sommes à Paris" (comme dans le dernier exercice de la partie précédente)
+2. `$ curl -X GET "http://localhost:3000/messages/all"` affichera l'historique des conversations (messages de l'utilisateur et réponses du chat-bot), tel que décrit ci-dessous, y compris après redémarrage du serveur
+3. `$ curl -X DELETE "http://localhost:3000/messages/last"` supprimera le dernier échange de l'historique (message de l'utilisateur + réponse du chat-bot)
 
 Pour cela, nous allons:
 - nous connecter à la collection "`messages`" de la base de données "`chat-bot`", puis y lire et écrire des documents JSON possédant trois propriétés:

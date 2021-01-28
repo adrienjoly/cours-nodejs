@@ -119,12 +119,12 @@ L'objectif est que, une fois lancé, votre serveur répondra comme prévu aux re
 
 Commandes à exécuter (dans un terminal bash séparé de celui depuis lequel votre serveur est exécuté), pour tester la réponse du serveur aux requêtes:
 
-- `$ curl http://localhost:3000/` doit obtenir la réponse "Bonjour !"
-- `$ curl http://localhost:3000/hello?nom=Sasha` doit obtenir la réponse "Bonjour, Sasha !"
-- `$ curl http://localhost:3000/hello?nom=Michel` doit obtenir la réponse "Bonjour, Michel !"
-- `$ curl http://localhost:3000/hello` doit obtenir la réponse "Quel est votre nom ?"
-- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" http://localhost:3000/chat` doit obtenir la réponse "Nous sommes à Paris"
-- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" http://localhost:3000/chat` doit obtenir la réponse "Il fait beau"
+- `$ curl "http://localhost:3000/"` doit obtenir la réponse "Bonjour !"
+- `$ curl "http://localhost:3000/hello?nom=Sasha"` doit obtenir la réponse "Bonjour, Sasha !""
+- `$ curl "http://localhost:3000/hello?nom=Michel"` doit obtenir la réponse "Bonjour, Michel !""
+- `$ curl "http://localhost:3000/hello"` doit obtenir la réponse "Quel est votre nom ?"
+- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" "http://localhost:3000/chat"` doit obtenir la réponse "Nous sommes à Paris"
+- `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" "http://localhost:3000/chat"` doit obtenir la réponse "Il fait beau"
 
 ### Pré-requis
 

@@ -127,9 +127,9 @@ Dans [la partie 1 du cours](../01-chatbot), nous avons créé un serveur web don
 Nous voulons désormais que notre chat-bot soit capable d'apprendre de nouvelles informations lors des échanges avec les utilisateurs, et d'exploiter ces informations pour mieux répondre lors des prochains échanges.
 
 Exemples de conversation / cas d'usage:
-1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat` répondra "Je ne connais pas demain..."
-2. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain = Mercredi\"}" http://localhost:3000/chat` répondra "Merci pour cette information !"
-3. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat` répondra "demain: Mercredi" (y compris après redémarrage du serveur)
+1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" "http://localhost:3000/chat"` répondra "Je ne connais pas demain..."
+2. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain = Mercredi\"}" "http://localhost:3000/chat"` répondra "Merci pour cette information !"
+3. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" "http://localhost:3000/chat"` répondra "demain: Mercredi" (y compris après redémarrage du serveur)
 
 Pour cela, nous allons:
 - enregistrer toute nouvelle information dans un fichier `réponses.json`,

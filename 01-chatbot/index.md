@@ -128,13 +128,13 @@ Commandes à exécuter (dans une session de shell Linux séparée de celle depui
 
 ### Pré-requis
 
-Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le shell Linux [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) installé après avoir activé [Windows Subsystem for Linux](https://docs.microsoft.com/fr-fr/windows/wsl/install-win10), [CMDER](http://cmder.net/) ou d'utiliser Linux depuis une machine virtuelle. Sous Mac ou Linux, vous serez en mesure d'utiliser votre shell Linux par défaut.
+Important: Si vous êtes sous Windows, merci d'utiliser **exclusivement** le shell Linux [Ubuntu](https://www.numerama.com/tech/158150-le-shell-bash-sous-windows-10-ce-quil-faut-savoir.html) installé après avoir activé [Windows Subsystem for Linux](https://docs.microsoft.com/fr-fr/windows/wsl/install-win10) <!--, [CMDER](http://cmder.net/)--> ou d'utiliser Linux depuis une machine virtuelle. Sous Mac ou Linux, vous serez en mesure d'utiliser votre shell Linux (ou "terminal") par défaut.
 
 Pour effectuer cet exercice, assurez-vous que les pré-requis suivants sont bien installés et accessibles depuis votre shell Linux:
 - `node`, version 10 ou supérieure; (vérifier avec `$ node --version`)
 - et `curl`; (vérifier avec `$ curl --version`)
 
-> Note: si vous avez installé Node.js sous Windows, il se peut que `node` ou `npm` ne fonctionnent pas depuis Ubuntu for Windows. Dans ce cas: désinstallez Node.js, installez-le depuis Ubuntu (cf [procédure](https://github.com/Microsoft/WSL/issues/3111#issuecomment-382713543)), puis redémarrez Ubuntu.
+> Note: si vous avez installé Node.js sous Windows, il est probable que `node` et/ou `npm` ne fonctionnent pas depuis Ubuntu for Windows. Dans ce cas: installez-le depuis Ubuntu (cf [procédure](https://github.com/Microsoft/WSL/issues/3111#issuecomment-382713543)), puis redémarrez Ubuntu.
 
 ### Étapes proposées
 

@@ -43,11 +43,11 @@ Dans cet exercice, nous allons écrire un programme qui émet une requête HTTP 
 
 Dans l'exercice précédent, nous sommes naïvement partis du principe que la requête fonctionnerait systématiquement. Cela revient à espérer que l'API interrogée ne sera jamais indisponible et que l'utilisateur de notre programme sera connecté à Internet de manière fiable. En réalité, un programme n'est jamais à l'abri de traitements qui ne se passent pas comme prévu, et c'est au développeur de prévoir et traiter correctement ces cas d'erreur, afin de ne pas laisser l'utilisateur dans l'embarras face à un problème qu'il ne saura pas résoudre.
 
-Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, et afficher l'erreur retournée par `https.get()` dans la sortie standard.
+Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, et afficher l'erreur retournée par l'appel à `request()` dans la sortie standard.
 
 👉 Exerciseur en ligne: [Gestion d'erreurs de callback](https://tech.io/playgrounds/55084/node-js-partie-2/gestion-derreurs-de-callback)
 
-> Indice: renseignez-vous sur la manière dont Node.js retourne les erreurs dans ses fonctions de requêtes HTTP/HTTPS: [référence de http.request()](https://nodejs.org/api/http.html#http_http_request_url_options_callback).
+> Indice: [exemple d'usage de `request`](https://github.com/request/request#super-simple-to-use).
 
 ---
 

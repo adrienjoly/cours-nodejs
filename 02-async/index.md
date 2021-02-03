@@ -27,15 +27,15 @@ Durée estimée: 4 heures.
 
 ---
 
-## Exercice 1 - Envoi de requête à une API externe
+## Exercice 1 - Envoi de requête à l'aide d'un _callback_
 
 Dans la partie précédente, nous avons développé un serveur d'API HTTP: un programme qui répond à des requêtes.
 
-Dans cet exercice, nous allons écrire un programme qui émet une requête vers l'API HTTP d'un autre serveur. Nous allons donc développer un _client_ d'API, afin de découvrir le concept d'appel de fonction _asynchrone_.
+Dans cet exercice, nous allons écrire un programme qui émet une requête HTTP GET vers l'API d'un autre serveur. Nous allons donc développer un _client_ d'API, afin de découvrir le concept d'appel de fonction _asynchrone avec callback_. (cf aide-mémoire: [Fonctions synchrones VS asynchrones](../sync-vs-async))
 
-👉 Exerciseur en ligne: [Envoi de requête à une API externe](https://tech.io/playgrounds/55084/node-js-partie-2/envoi-de-requete-a-une-api-externe)
+👉 Exerciseur en ligne: [Envoi de requête à l'aide d'un _callback_](https://tech.io/playgrounds/55084/node-js-partie-2/envoi-de-requete-a-une-api-externe)
 
-> Indice: consulter la documentation de la fonction [`https.get()`](https://nodejs.org/api/https.html#https_https_get_options_callback).
+> Indice: [exemple d'usage de `request`](https://github.com/request/request#super-simple-to-use).
 
 ---
 

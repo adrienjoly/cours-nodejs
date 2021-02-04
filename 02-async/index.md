@@ -37,6 +37,8 @@ Dans cet exercice, nous allons écrire un programme qui émet une requête HTTP 
 
 > Indice: [exemple d'usage de `request`](https://github.com/request/request#super-simple-to-use).
 
+Note: En dehors de ce cours, n'utilisez pas le module `request`, car il est déprécié.
+
 ---
 
 ## Exercice 2 - Gestion d'erreurs de callback
@@ -53,9 +55,7 @@ Dans cet exercice, nous allons volontairement envoyer une requête sur un serveu
 
 ## Exercice 3 - Requête à l'aide de `Promise`
 
-Dans les exercices 1 et 2, nous avons envoyé une requête HTTP GET à l'aide de la fonction `https.get()` fournie par Node.js. Pour définir le traitement de la réponse à cette requête, nous avons du définir deux fonctions. Passée en paramètre de l'appel à `https.get()`, la première fonction permet de récupérer un objet `res`. Nous avons défini une deuxième fonction et l'avons passée en paramètre de l'appel de fonction `res.on('data', ...)`, afin de décrire que faire des données qui sont récupérées progressivement depuis le serveur, en réponse à la requête que nous lui avons envoyée.
-
-Ces deux fonctions que nous avons définies s'appellent des _callbacks_, car nous les avons conçues pour qu'elles soient _rappelées_ (c'est la traduction française de l'expression _call back_) par les fonctions auxquelles nous les avons passé en paramètre.
+Dans les exercices 1 et 2, nous avons envoyé une requête HTTP GET à l'aide de la fonction `request()`. Pour définir le traitement de la réponse (ou erreur) à cette requête, nous avons passé une fonction de _callback_ en paramètre de l'appel à `request()`. Cette fonction de _callbacks_ sera _rappelée_ (c'est la traduction française de l'expression _call back_) par la fonction `request()` une fois que la requête aura réussi ou échoué.
 
 Les fonctions fournies par la bibliothèque standard de Node.js s'appuient généralement sur ce principe de _callback_ pour être informé d'événements asynchrones. Dans l'exercice précédent, l'événement asynchrone qui nous intéressait était la réception d'une réponse à notre requête.
 

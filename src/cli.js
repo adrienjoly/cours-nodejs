@@ -7,11 +7,18 @@ const fetch = require("node-fetch");
 
 const USAGE = `$ npx github:adrienjoly/cours-nodejs <command> <parameter>`;
 
+const getBody = async (url) => await (await fetch(url)).text();
+
 const download = async (destFile, url) => {
   const destPath = path.dirname(destFile);
   await fs.promises.mkdir(destPath, { recursive: true });
-  await fs.promises.writeFile(destFile, await (await fetch(url)).text(), "utf8");
+  await fs.promises.writeFile(destFile, await getBody(url), "utf8");
 }
+
+const findTestName = (exo, statements) => {
+  const regex = new RegExp(`statement\\:[^\\/]+\\/(${exo}-.*)\\.md`)
+  return (statements.match(regex) || [])[1];
+};
 
 const COMMANDS = {
   // Run automated tests of an exercise from a tech-io repo, on a .js file
@@ -20,11 +27,13 @@ const COMMANDS = {
     const tmpDir = `robot`;
     await fs.promises.mkdir(tmpDir, { recursive: true });
     try {
-      const partUrl = `https://raw.githubusercontent.com/adrienjoly/cours-nodejs-techio-3/master`; // TODO: determine file name based on `exercise`
+      const [ partie, exo ] = exercise.split('-');
+      const partUrl = `https://raw.githubusercontent.com/adrienjoly/cours-nodejs-techio-${partie}/master`;
       await download(`${tmpDir}/common/techio.js`, `${partUrl}/nodejs-project/common/techio.js`);
+      const testName = findTestName(exo, await getBody(`${partUrl}/techio.yml`));
       const mocha = new Mocha({ bail: true });
       const testFile = `${tmpDir}/test-${exercise}.js`;
-      await download(testFile, `${partUrl}/nodejs-project/1-fs-base.spec.js`); // TODO: determine file name based on `exercise`
+      await download(testFile, `${partUrl}/nodejs-project/${testName}.spec.js`);
       mocha.addFile(testFile);
       process.env.HIDE_TECHIO_MESSAGES = 1;
       process.env.CODE_FILE = jsFile;

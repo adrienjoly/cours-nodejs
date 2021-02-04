@@ -65,6 +65,12 @@ Intercepter les erreurs qui pourraient survenir lors de l'écriture ou de la lec
 
 👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/utilisation-dappels-asynchrones)
 
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 3-2 minuscules.js
+```
+
 Références Node.js et JavaScript utiles:
 
 - [`fs.readFile()`](https://devdocs.io/node/fs#fs_fs_readfile_path_options_callback)
@@ -89,6 +95,12 @@ Après ces modifications, le programme doit fonctionner de manière identique à
 
 👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/creation-dune-fonction-intermediaire-avec-_callback_)
 
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 3-3 minuscules.js
+```
+
 ---
 
 ## Exercice 4 - Utilisation de Promesses
@@ -100,6 +112,12 @@ Après ces modifications:
 - et il doit fonctionner de manière identique à celui de l'exercice précédent.
 
 👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/utilisation-de-promesses)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 3-4 minuscules.js
+```
 
 Conseil: Commencez par transformer seulement l'appel à `writeFile()` dans un premier temps, puis celui à `lireFichier()` dans un deuxième temps.
 
@@ -120,6 +138,12 @@ Après ces modifications:
 - et il doit fonctionner de manière identique à celui de l'exercice précédent.
 
 👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/utilisation-de-async-et-await)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 3-5 minuscules.js
+```
 
 Conseil: Commencez par transformer seulement l'appel à `writeFile()` dans un premier temps, puis celui à `lireFichier()` dans un deuxième temps.
 

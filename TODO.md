@@ -12,6 +12,7 @@
 - [x] Employer TDD pour rendre très clair l'objectif et les attentes de chaque étape
 - [x] Donner un feedback clair sur les solutions proposées, afin que l'étudiant puisse prendre du recul ce qu'il a fait et trouver une autre piste
 - [x] Fournir une trace structurée de la réponse donnée à chaque étape de chaque exercice, pour que l'étudiant puisse les retrouver et réviser efficacement.
+- [ ] Fournir les instructions pour exécuter le robot de correction en local, pour tous les exercices autres que le 3-1
 - [ ] Améliorer la qualité des messages d'erreurs et des suggestions par l'usage de TypeScript et de ESLint
 - [ ] Forcer l'usage de VSCode, pour assurer une bonne DX à tous les étudiants, ex: coloration syntaxique, formattage automatique, affichage des erreurs et auto-complétion.
 

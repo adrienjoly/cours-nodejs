@@ -17,16 +17,22 @@ const COMMANDS = {
   // Run automated tests of an exercise from a tech-io repo, on a .js file
   // Usage: $ npx github:adrienjoly/cours-nodejs test 3-1 minuscules.js
   "test": async (exercise, jsFile) => {
-    const testFile = `test-${exercise}.js`;
-    const partUrl = `https://raw.githubusercontent.com/adrienjoly/cours-nodejs-techio-3/master`; // TODO: determine file name based on `exercise`
-    await download('common/techio.js', `${partUrl}/nodejs-project/common/techio.js`);
-    await download(testFile, `${partUrl}/nodejs-project/1-fs-base.spec.js`); // TODO: determine file name based on `exercise`
-    const mocha = new Mocha({ bail: true });
-    mocha.addFile(testFile);
-    process.env.HIDE_TECHIO_MESSAGES = 1;
-    process.env.CODE_FILE = jsFile;
-    const failures = await new Promise((resolve) => mocha.run(resolve));
-    if (failures > 0) throw new Error("Certains tests ne sont pas passés.");
+    const tmpDir = `robot`;
+    await fs.promises.mkdir(tmpDir, { recursive: true });
+    try {
+      const partUrl = `https://raw.githubusercontent.com/adrienjoly/cours-nodejs-techio-3/master`; // TODO: determine file name based on `exercise`
+      await download(`${tmpDir}/common/techio.js`, `${partUrl}/nodejs-project/common/techio.js`);
+      const mocha = new Mocha({ bail: true });
+      const testFile = `${tmpDir}/test-${exercise}.js`;
+      await download(testFile, `${partUrl}/nodejs-project/1-fs-base.spec.js`); // TODO: determine file name based on `exercise`
+      mocha.addFile(testFile);
+      process.env.HIDE_TECHIO_MESSAGES = 1;
+      process.env.CODE_FILE = jsFile;
+      const failures = await new Promise((resolve) => mocha.run(resolve));
+      if (failures > 0) throw new Error("Certains tests ne sont pas passés.");
+    } finally {
+      await fs.promises.rmdir(tmpDir, { recursive: true });
+    }
   },
 };
 

@@ -41,6 +41,8 @@ Pour nous familiariser avec les fonctions de lecture et d'écriture de fichiers 
 
 👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/lecture-et-ecriture-synchrone)
 
+🛣 Execution du robot de correction en local: `$ npx github:adrienjoly/cours-nodejs test 3-1 minuscules.js`
+
 Références Node.js et JavaScript utiles:
 
 - [`fs.readFileSync()`](https://devdocs.io/node/fs#fs_fs_readfilesync_path_options),

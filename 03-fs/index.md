@@ -5,13 +5,14 @@ layout: default
 
 ## Objectifs de cette partie
 
-- Savoir lire et modifier des fichiers avec Node.js.
-- Savoir **définir** des fonctions asynchrones.
+- Lire et modifier des fichiers avec Node.js.
+- **Définir** des fonctions asynchrones.
 - Application: améliorer notre chat-bot de la partie 1.
 
 Prérequis:
 - savoir appeler des fonctions asynchrones à l'aide de _callback_, `Promise` et `async` + `await`.
 - savoir créer et tester des routes d'API HTTP GET et POST avec Node.js et Express.js.
+- savoir exécuter un programme Node.js depuis un shell, à l'aide de la commande `node`. (car les sites "repl.it" et "glitch.com" ne donnent pas accès au système de fichiers)
 
 Durée estimée: 4 heures.
 

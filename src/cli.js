@@ -30,6 +30,7 @@ const COMMANDS = {
       const [ partie, exo ] = exercise.split('-');
       const partUrl = `https://raw.githubusercontent.com/adrienjoly/cours-nodejs-techio-${partie}/master`;
       await download(`${tmpDir}/common/techio.js`, `${partUrl}/nodejs-project/common/techio.js`);
+      await download(`${tmpDir}/common/expected-response.js`, `${partUrl}/nodejs-project/common/expected-response.js`); // pour exercices de la partie 2
       const testName = findTestName(exo, await getBody(`${partUrl}/techio.yml`));
       const mocha = new Mocha({ bail: true });
       const testFile = `${tmpDir}/test-${exercise}.js`;

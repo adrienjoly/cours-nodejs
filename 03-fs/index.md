@@ -41,7 +41,12 @@ Pour nous familiariser avec les fonctions de lecture et d'écriture de fichiers 
 
 👉 Exerciseur en ligne: [ici](https://tech.io/playgrounds/55996/node-js-partie-3/lecture-et-ecriture-synchrone)
 
-🛣 Execution du robot de correction en local: `$ npx github:adrienjoly/cours-nodejs test 3-1 minuscules.js`
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npm install github:adrienjoly/cours-nodejs # une fois pour toutes, pour installer le robot
+$ npx cours-nodejs test 3-1 minuscules.js # pour faire tester minuscules.js au robot de l'exercice 1 de la partie 3
+```
 
 Références Node.js et JavaScript utiles:
 

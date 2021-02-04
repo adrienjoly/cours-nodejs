@@ -48,6 +48,13 @@ Attentes techniques: Le programme doit être constitué d'une seule ligne de cod
 
 👉 Exerciseur en ligne: [Afficher Hello World dans la sortie standard](https://tech.io/playgrounds/55085/premiers-pas-avec-node-js/afficher-hello-world-dans-la-sortie-standard)
 
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npm install github:adrienjoly/cours-nodejs # une fois pour toutes, pour installer le robot
+$ npx cours-nodejs test 1-1 bonjour.js # pour faire tester bonjour.js au robot de l'exercice 1 de la partie 1
+```
+
 ---
 
 ## Exercice 2 - Une API simple mais polie
@@ -59,6 +66,12 @@ Attentes fonctionnelles: Une fois le serveur lancé, l'envoi d'une requête HTTP
 Attentes techniques: Le programme ne doit pas dépasser 15 lignes de code, et doit avoir `express` comme seule dépendance externe.
 
 👉 Exerciseur en ligne: [Une API simple mais polie](https://tech.io/playgrounds/55085/premiers-pas-avec-node-js/une-api-simple-mais-polie)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 1-2 server.js
+```
 
 > Indice: Utiliser les différentes sections de la partie "Mise en route" de la [documentation de Express.js](https://expressjs.com/fr/) pour comprendre son fonctionnement et trouver (puis adapter) les exemples d'usage fournis.
 
@@ -78,6 +91,12 @@ Nous allons ajouter un point d'entrée `GET /hello` qui acceptera un paramètre 
 Attentes techniques: Le fichier ne doit pas dépasser 30 lignes de code, et doit avoir `express` comme seule dépendance externe.
 
 👉 Exerciseur en ligne: [Paramètres `GET`](https://tech.io/playgrounds/55085/premiers-pas-avec-node-js/parametres-get)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 1-3 server.js
+```
 
 > Conseil: en cherchant une solution dans la [documentation de Express.js](https://expressjs.com/fr/), veillez à ce que la syntaxe résultante des URLs fournies ci-dessous soit respectée à la lettre.
 
@@ -100,6 +119,12 @@ Exemples / cas d'usage:
 Attentes techniques: Le fichier ne doit pas dépasser 40 lignes de code, et doit avoir `express` comme seule dépendance externe.
 
 👉 Exerciseur en ligne: [Envoi de message en `POST`](https://tech.io/playgrounds/55085/premiers-pas-avec-node-js/envoi-de-message-en-post)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 1-4 server.js
+```
 
 > Indice: vous allez devoir intégrer un *middleware* à votre application Express, afin qu'elle soit en mesure d'extraire les données au format JSON.
 

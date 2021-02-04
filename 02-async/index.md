@@ -35,6 +35,13 @@ Dans cet exercice, nous allons écrire un programme qui émet une requête HTTP 
 
 👉 Exerciseur en ligne: [Envoi de requête à l'aide d'un _callback_](https://tech.io/playgrounds/55084/node-js-partie-2/envoi-de-requete-a-une-api-externe)
 
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npm install github:adrienjoly/cours-nodejs # une fois pour toutes, pour installer le robot
+$ npx cours-nodejs test 2-1 get.js # pour faire tester get.js au robot de l'exercice 1 de la partie 2
+```
+
 > Indice: [exemple d'usage de `request`](https://github.com/request/request#super-simple-to-use).
 
 Note: En dehors de ce cours, n'utilisez pas le module `request`, car il est déprécié.
@@ -48,6 +55,12 @@ Dans l'exercice précédent, nous sommes naïvement partis du principe que la re
 Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, et afficher l'erreur retournée par l'appel à `request()` dans la sortie standard.
 
 👉 Exerciseur en ligne: [Gestion d'erreurs de callback](https://tech.io/playgrounds/55084/node-js-partie-2/gestion-derreurs-de-callback)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 2-2 get.js
+```
 
 > Indice: [exemple d'usage de `request`](https://github.com/request/request#super-simple-to-use).
 
@@ -65,6 +78,12 @@ Dans cet exercice, nous allons utiliser une _promesse_ pour récupérer le résu
 
 👉 Exerciseur en ligne: [Requête à l'aide de `Promise`](https://tech.io/playgrounds/55084/node-js-partie-2/requete-a-laide-de-promise)
 
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 2-3 get.js
+```
+
 > Indice: consulter la documentation de `node-fetch` pour savoir comment l'utiliser. (cf lien fourni ci-dessus)
 
 ---
@@ -76,6 +95,12 @@ Encore une fois, nous avons implémenté une version naïve de notre requête, e
 Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, et afficher dans la sortie standard l'erreur (aussi appelée _exception_) retournée par la promesse de `fetch()`.
 
 👉 Exerciseur en ligne: [Gestion d'erreurs de `Promise`](https://tech.io/playgrounds/55084/node-js-partie-2/gestion-derreurs-de-promise)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 2-4 get.js
+```
 
 > Indice: consulter les références fournies en fin de page, pour savoir comment récupérer les erreurs lorsqu'on appelle une fonction qui retourne une `Promise`.
 
@@ -89,6 +114,12 @@ Dans cet exercice, nous allons utiliser `await` au lieu de `.then()` pour affich
 
 👉 Exerciseur en ligne: [Requête à l'aide de `await`](https://tech.io/playgrounds/55084/node-js-partie-2/requete-a-laide-de-await)
 
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 2-5 get.js
+```
+
 > Indice: Sachant que `await` ne peut être employé qu'au sein d'une fonction `async`, vous allez devoir définir une fonction `async` et l'appeler dans la foulée pour que la requête soit envoyée. Cf l'exemple fourni dans l'annexe suivante: [Fonctions synchrones VS asynchrones](../sync-vs-async).
 
 ---
@@ -100,6 +131,12 @@ Encore une fois, nous avons implémenté une version naïve de notre requête, e
 Dans cet exercice, nous allons volontairement envoyer une requête sur un serveur qui n'existe pas, intercepter l'erreur renvoyée par `await fetch()` et afficher cette erreur dans la sortie standard.
 
 👉 Exerciseur en ligne: [Gestion d'erreurs de `await`](https://tech.io/playgrounds/55084/node-js-partie-2/gestion-derreurs-de-await)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 2-6 get.js
+```
 
 > Indice: Lorsqu'une fonction asynchrone est appelée avec `await`, les erreurs sont interceptées de la même manière que lorsqu'on appelle une fonction synchrone: à l'aide d'un bloc `try`-`catch`. Cf l'exemple fourni dans l'annexe suivante: [Fonctions synchrones VS asynchrones](../sync-vs-async).
 
@@ -126,6 +163,12 @@ node get.js https://serveur-inexistant.xyz # affichera un message d'erreur
 ```
 
 👉 Exerciseur en ligne: [Requête complète](https://tech.io/playgrounds/55084/node-js-partie-2/requete-complete)
+
+🤖 Execution du robot de correction en local:
+
+```sh
+$ npx cours-nodejs test 2-7 get.js
+```
 
 > Indice: [How to parse command line arguments | Node.js](https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/).
 

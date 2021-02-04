@@ -7,7 +7,7 @@ const fetch = require("node-fetch");
 
 const USAGE = `$ npx github:adrienjoly/cours-nodejs <command> <parameter>`;
 
-const getBody = async (url) => await (await fetch(url)).text();
+const getBody = async (url) => await (await fetch(url + `?_t=${Date.now()}`)).text();
 
 const download = async (destFile, url) => {
   const destPath = path.dirname(destFile);

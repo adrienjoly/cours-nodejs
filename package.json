@@ -9,12 +9,11 @@
     "node-fetch": "^2.6.1"
   },
   "scripts": {
-    "start-http": "python -m SimpleHTTPServer",
-    "install": "gem install bundler && bundle install # requires ruby-lang.org",
-    "update-deps": "bundle update",
-    "build": "bundle exec jekyll build",
-    "start": "bundle exec jekyll serve --incremental"
+    "jekyll:install": "gem install bundler && bundle install # requires ruby-lang.org",
+    "jekyll:update": "bundle update",
+    "jekyll:build": "bundle exec jekyll build",
+    "start": "bundle exec jekyll serve --incremental",
+    "start:http": "python -m SimpleHTTPServer"
   },
-  "author": "Adrien Joly",
-  "devDependencies": {}
+  "author": "Adrien Joly"
 }

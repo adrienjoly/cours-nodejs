@@ -22,6 +22,54 @@ Pour effectuer ces exercices, assurez-vous que les pré-requis suivants sont bie
 - `node`; (tester avec `$ node --version`)
 - `curl`; (tester avec `$ curl --version`)
 
+## Comment disposer d'un serveur MongoDB ?
+
+Il existe (au moins) trois manières de procéder:
+
+### A. Utilisation d'un serveur MongoDB dans le cloud
+
+Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure".
+
+  > À vérifier en cas de difficultés: il est possible que cette connexion soit rendue impossible par votre pare-feu ou par le réseau de votre école.
+  
+  <!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
+
+### B. Exécution d'une image Docker
+
+Si [Docker](https://www.docker.com/products/docker-desktop) fonctionne bien sur votre machine, lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
+
+  1. Télécharger et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
+
+    ```sh
+    $ docker run --rm --publish 27017:27017 --name mongodb-pour-nodejs mongo:4
+    ```
+
+  2. Tester la connection au serveur MongoDB en exécutant cette commande:
+
+    ```sh
+    $ docker run --rm -it --link mongodb-pour-nodejs:mongo mongo:4 mongo --host mongo test
+    ```
+
+### C. Installer MongoDB localement
+
+Sinon: installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
+
+  1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine, et de manière à ce qu'il soit accessible depuis votre shell Linux.
+
+  2. Après avoir redémarré votre shell Linux, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1).
+
+  3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécessaires: `$ sudo chmod 777 /data/db`.
+
+  4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de shell Linux. (cf étapes ci-dessous)
+
+## Comment tester la connection à un serveur MongoDB ?
+
+Dans une session de shell Linux, utiliser le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)" pour vérifier que la base de données est bien accessible. Il suffit de taper `mongo` suivi de l'URL du serveur.
+
+Une fois connecté au serveur via l'invite de commandes du client `mongo`, la commande `show dbs` devrait afficher une liste de bases de données.
+
+Pressez Ctrl-C pour quitter le client et retourner à l'invite de commandes du shell Linux.
+
 ## Exercice 1 - Lecture et écriture dans MongoDB
 
 Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
@@ -39,33 +87,11 @@ Pour cela, nous allons:
 
 ### Étapes proposées
 
-1. Initialiser un serveur de base de données MongoDB. Il existe (au moins) trois manières de procéder:
+1. Initialiser un serveur de base de données MongoDB. (cf __Comment disposer d'un serveur MongoDB ?__, plus haut)
 
-    > (A) Utilisation d'un serveur MongoDB dans le cloud: Il suffit de créer un compte sur [MongoDB Atlas](https://mongodb.com/cloud/atlas) puis de suivre les étapes proposées pour créer (puis tester) une base de données basée sur la plateforme "Azure". ⚠ Vérifier que vous parvenez bien à vous connecter via le réseau WiFi de votre école, ce n'est pas toujours le cas.
-    >
-    > (B) Sinon -- si Docker fonctionne bien sur votre machine -- lancer le serveur MongoDB via une image Docker, en suivant ces étapes:
-    >
-    > 1. Télécharger et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
-    >    ```sh
-    >    $ docker run --rm --publish 27017:27017 --name mongodb-pour-nodejs mongo:4
-    >    ```
-    > 2. Tester la connection au serveur MongoDB en exécutant cette commande:
-    >    ```sh
-    >    $ docker run --rm -it --link mongodb-pour-nodejs:mongo mongo:4 mongo --host mongo test
-    >    ```
-    >
-    > (C) Sinon: installer, configurer et lancer un serveur MongoDB sur votre machine, en suivant ces étapes:
-    >
-    > 1. Installer [MongoDB Server, community edition](https://www.mongodb.com/download-center/community) sur votre machine,
-    > 2. Après avoir redémarré votre shell Linux, si la commande `mongod` est introuvable, ajoutez le répertoire créé dans la variable `PATH` de votre système d'exploitation, en suivant les instructions de [Install MongoDB](https://docs.mongodb.com/guides/server/install/#id1),
-    > 3. Comme indiqué dans les instructions de [Run MongoDB](https://docs.mongodb.com/guides/server/install/#run-mongodb), créez un répertoire `/data/db` et assurez-vous qu'il sera accessible à `mongod` en donnant les permissions nécessaires: `$ sudo chmod 777 /data/db`.
-    > 4. Ensuite, vous devriez être en mesure de lancer le serveur `mongod`, et de vous y connecter à l'aide du client `mongo`, depuis une autre session de shell Linux. (cf étape suivante de l'exercice)
+2. Vérifier que vous parvenez bien à vous connecter à ce serveur depuis votre shell Linux. (cf __Comment tester la connection à un serveur MongoDB ?__, plus haut)
 
-<!-- Notes about MongoDB Cloud Atlas @ ESGI: https://github.com/adrienjoly/cours-nodejs/issues/2#issuecomment-473357714 -->
-
-2. Dans une session de shell Linux, utiliser le client "[`mongo` Shell](https://docs.mongodb.com/manual/mongo/)" pour vérifier que la base de données est bien accessible. La commande `show dbs` devrait afficher une liste de bases de données, puis pressez Ctrl-C pour quitter le client.
-
-3. De retour dans votre projet Node.js, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
+3. Initialiser un projet Node.js dans un répertoire vide, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
 
 4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données créée à l'étape 1. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
 
@@ -75,11 +101,13 @@ Pour cela, nous allons:
 
     > Note: Sachant que nous n'avons pas encore ajouté de documents dans cette collection, la liste de documents doit être un tableau vide.
 
-6. Modifier `dates.js` à nouveau pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
+6. Ajouter dans `dates.js` les instructions nécéssaires pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
 ## Exercice 2 - Stockage de l'historique dans MongoDB
+
+Dans cet exercice, nous allons compléter le serveur "chat-bot" que nous avons développé jusqu'à l'exercice 5 de la partie 1 du cours.
 
 Le but est:
 - de tenir un historique des messages envoyés au point d'accès `POST /chat` (cf dernier exercice de la partie précédente)
@@ -153,7 +181,7 @@ Le but de cet exercice est de mettre le serveur API développé ci-dessus en pro
 2. Modifier `server.js` pour qu'il parvienne à se connecter à cette base de données, que celui-ci s'exécute en production ou en local, grâce à cette variable d'environnement.
 3. Documenter les points d'accès de votre API dans `README.md`, afin que d'autres utilisateurs comprennent rapidement comment l'utiliser, que ce soit en production ou localement.
 
-### Bonus
+## Exercices Bonus
 
 - Utiliser OpenAPI pour documenter votre API => ajouter le modèle au format YAML dans votre dépôt.
 - Utiliser l'ORM/ODM "Mongoose" pour manipuler la base de données, au lieu du package `mongodb`. => Expliquez l'impact de ce changement: avantages et inconvénients, en supposant que votre application soit destinée à se développer.

@@ -1,5 +1,5 @@
 ---
-title: Partie 5 - Persistance de données avec MongoDB
+title: Partie 4 - Persistance de données avec MongoDB
 layout: default
 ---
 
@@ -13,7 +13,6 @@ Programme:
 
 - Apprendre à stocker et récupérer des données dans une base de données MongoDB
 - Étendre le chat-bot pour retrouver l'historique des conversations
-- Comprendre les différentes manières d'utiliser et définir des fonctions asynchrones en Node.js
 
 Durée estimée: 3-6 heures.
 

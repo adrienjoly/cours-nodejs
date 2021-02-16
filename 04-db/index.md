@@ -40,15 +40,15 @@ Si [Docker](https://www.docker.com/products/docker-desktop) fonctionne bien sur 
 
   1. Télécharger et exécuter l'image Docker du serveur de MongoDB avec la commande suivante:
 
-    ```sh
-    $ docker run --rm --publish 27017:27017 --name mongodb-pour-nodejs mongo:4
-    ```
+  ```sh
+  $ docker run --rm --publish 27017:27017 --name mongodb-pour-nodejs mongo:4
+  ```
 
   2. Tester la connection au serveur MongoDB en exécutant cette commande:
 
-    ```sh
-    $ docker run --rm -it --link mongodb-pour-nodejs:mongo mongo:4 mongo --host mongo test
-    ```
+  ```sh
+  $ docker run --rm -it --link mongodb-pour-nodejs:mongo mongo:4 mongo --host mongo test
+  ```
 
 ### C. Installer MongoDB localement
 

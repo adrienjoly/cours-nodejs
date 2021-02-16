@@ -11,7 +11,7 @@ Programme:
 
 ## Objectifs de cette partie
 
-- Apprendre à stocker et récupérer des données dans une base de données MongoDB
+- Apprendre à stocker et récupérer des données dans une base de données [MongoDB](https://www.mongodb.com/)
 - Étendre le chat-bot pour retrouver l'historique des conversations
 
 Durée estimée: 3-6 heures.
@@ -72,18 +72,16 @@ Pressez Ctrl-C pour quitter le client et retourner à l'invite de commandes du s
 
 ## Exercice 1 - Lecture et écriture dans MongoDB
 
-Le but est de découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
+Dans cet exercice, nous allons découvrir comment manipuler une base de données MongoDB depuis un programme Node.js, à l'aide du package [`mongodb`](https://www.npmjs.com/package/mongodb). (anciennement connu sous le nom de "MongoDB Native Driver for Node.js")
 
-Pour cela, nous allons:
-- créer une collection MongoDB "`dates`";
-- découvrir comment lire et écrire des données dans cette collection depuis un programme Node.js, à l'aide du package `mongodb`.
+Nous allons écrire un programme Node.js qui va:
+- se connecter à une base de données MongoDB;
+- afficher tous les documents stockés dans la collection "`dates`";
+- ajouter un document `{ date: new Date() }` dans cette collection.
 
-### Objectifs
+Utiliser `await` pour tous les appels asynchrones à la base de données.
 
-- Fonctionnel: Le programme doit se connecter à une base de données MongoDB, ajouter un document `{ date: new Date() }` dans la collection `dates`, puis afficher tous les documents actuellement stockés dans cette collection.
-- Lisibilité: 40 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones à la base de données.
-- Structure: Le code source du projet ne doit pas contenir plus de 7 fichiers. (dont `dates.js`, `package.json` et `README.md`)
-- Production: À ce stade, vous n'aurez pas besoin de déployer quoi que ce soit en production.
+Le code source devrait tenir sur une quarantaine de lignes.
 
 ### Étapes proposées
 
@@ -93,87 +91,77 @@ Pour cela, nous allons:
 
 3. Initialiser un projet Node.js dans un répertoire vide, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
 
-4. Créer un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données créée à l'étape 1. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
+4. Créer et faire fonctionner un programme `dates.js` qui se sert du package `mongodb` pour se connecter à la base de données créée à l'étape 1. (cf [Connecting](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/connecting/))
 
     > Note: Vous pouvez ignorer le message disant que la méthode de connexion est dépréciée. Par contre, votre programme devrait pouvoir s'exécuter sans erreur.
 
-5. Après avoir vérifié que `$ node dates.js` s'exécute sans erreur, modifier `dates.js` pour qu'il affiche la liste des documents de la collection `dates` dans la sortie standard. (cf [Read methods](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#read-methods))
+5. Modifier `dates.js` pour qu'il affiche la liste des documents de la collection `dates` dans la sortie standard. Initialement, cette liste sera un tableau vide.
 
-    > Note: Sachant que nous n'avons pas encore ajouté de documents dans cette collection, la liste de documents doit être un tableau vide.
+    > Documentation: [Read methods](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#read-methods)
 
-6. Ajouter dans `dates.js` les instructions nécéssaires pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents. (cf [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents))
+6. Ajouter dans `dates.js` les instructions nécéssaires pour ajouter un document `{ date: new Date() }` dans la collection `dates`, avant l'affichage des documents de cette même collection.
+
+    > Documentation: [Inserting documents](http://mongodb.github.io/node-mongodb-native/3.1/reference/ecmascriptnext/crud/#inserting-documents)
 
 Une fois que vous aurez terminé cet exercice, merci d'aider vos camarades qui auraient des difficultés.
 
 ## Exercice 2 - Stockage de l'historique dans MongoDB
 
-Dans cet exercice, nous allons compléter le serveur "chat-bot" que nous avons développé jusqu'à l'exercice 5 de la partie 1 du cours.
+Dans cet exercice, nous allons compléter le serveur "chat-bot" que nous avons développé jusqu'à l'exercice 5 de la partie 1 du cours, de manière à:
 
-Le but est:
-- de tenir un historique des messages envoyés au point d'accès `POST /chat` (cf dernier exercice de la partie précédente)
-et de leurs réponses, dans une collection MongoDB,
-- et de donner accès à cet historique via deux nouveaux points d'accès: `GET /messages/all` et `DELETE /messages/last`.
+- tenir un historique des messages envoyés au point d'accès `POST /chat` et de leurs réponses, dans une collection MongoDB;
+- et donner accès à cet historique via deux nouveaux points d'accès: `GET /messages/all` et `DELETE /messages/last`.
 
-Exemples de conversation / cas d'usage:
-1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" "http://localhost:3000/chat"` répondra "Nous sommes à Paris" (comme dans le dernier exercice de la partie précédente)
+Utiliser `await` pour tous les appels asynchrones.
+
+Le code source devrait tenir sur une centaine de lignes.
+
+Fournir un fichier `README.md` décrivant les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
+
+### Exemples de conversation / cas d'usage:
+
+1. `$ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"ville\"}" "http://localhost:3000/chat"` répondra "Nous sommes à Paris" (comme précedemment)
 2. `$ curl -X GET "http://localhost:3000/messages/all"` affichera l'historique des conversations (messages de l'utilisateur et réponses du chat-bot), tel que décrit ci-dessous, y compris après redémarrage du serveur
 3. `$ curl -X DELETE "http://localhost:3000/messages/last"` supprimera le dernier échange de l'historique (message de l'utilisateur + réponse du chat-bot)
 
-Pour cela, nous allons:
-- nous connecter à la collection "`messages`" de la base de données "`chat-bot`", puis y lire et écrire des documents JSON possédant trois propriétés:
-  - `_id` (type: `ObjectId`) contiendra un identifiant généré automatiquement par MongoDB pour chaque message,
-  - `from` (type: `string`) contiendra le nom de l'émetteur du message, (ex: `bot` ou `user`)
-  - `msg` (type: `string`) contiendra le contenu du message. (ex: `demain = Mercredi`)
-- enregistrer chaque message de l'utilisateur et du chat-bot dans la collection "`messages`" de notre base de données MongoDB;
-- ajouter les points d'accès (routes) `GET /messages/all` et `DELETE /messages/last`, permettant respectivement de retourner un tableau JavaScript contenant tous les messages dans l'ordre chronologique, et de supprimer le dernier échange (message de l'utilisateur + réponse du chat-bot) de l'historique.
+### Modèle de réponse à `GET /messages/all`
 
-### Description de l'affichage de l'historique des conversations
+Notre serveur doit retourner l'historique sous forme d'un tableau JavaScript contenant tous les messages echangés, dans l'ordre chronologique.
 
-Voici ce que devrait retourner le serveur si on requête `GET /messages/all` après avoir suivi le cas d'usage ci-dessus:
+En guise d'exemple, voici ce que devrait retourner le serveur si on requête `GET /messages/all` après avoir suivi le cas d'usage ci-dessus:
 
-```
+```json
 [
   {
-    from: 'user'
-    msg: 'demain',
+    "from": "user",
+    "msg": "demain"
   },
   {
-    from: 'bot'
-    msg: 'Demain: Mercredi',
+    "from": "bot",
+    "msg": "Demain: Mercredi"
   }
 ]
 ```
 
-### Objectifs
+## Format des documents d'historique de la collection `messages`
 
-- Fonctionnel: Le serveur implémente bien le cas d'usage fourni et respecte le format d'affichage décrits ci-dessus.
-- Lisibilité: 140 lignes de code max, utilisation de `async`/`await` pour tous les appels asynchrones.
-- Structure: Le code source du projet ne doit pas contenir plus de 7 fichiers. (dont `server.js`, `package.json` et `README.md`)
-- Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
-- Production: À ce stade, vous n'aurez pas besoin de déployer ce serveur en production.
+Chaque message reçu ou répondu par le chat-bot doit être représenté par un document défini par les trois propriétés suivantes:
 
-Cet exercice s'appuie à la fois sur le code écrit lors de la partie précédente, et sur le code écrit dans l'exercice 1 (ci-dessus).
+  - `_id` (type: `ObjectId`): un identifiant unique, généré automatiquement par MongoDB pour chaque message;
+  - `from` (type: `string`): l'émetteur du message, `bot` ou `user`;
+  - `msg` (type: `string`): le contenu du message. (ex: `demain = Mercredi`)
 
 ### Étapes proposées
 
-1. Modifier `server.js` pour qu'il se connecte à la base de données "`chat-bot`".
+1. Modifier `server.js` pour qu'il se connecte à la base de données.
 2. Implémenter et tester le point d'accès `GET /messages/all`. (il devrait retourner un tableau vide)
 3. Faire en sorte que ce point d'accès retourne l'historique des conversations => Enregistrer les messages de l'utilisateur et les réponses du chat-bot dans la collection `messages`.
 4. Implémenter le point d'accès `DELETE /messages/last`, et vérifier à l'aide d'une requête à `GET /messages/all` qu'il fonctionne bien comme prévu.
+5. Rédiger la documentation demandée dans `README.md`.
 
-## Exercice 3 - API et base de données en production
+## Exercice 3 - Chat-bot et base de données en production
 
-Le but de cet exercice est de mettre le serveur API développé ci-dessus en production, afin qu'il soit accessible en permanence et à quiconque sur internet.
-
-### Objectifs
-
-- Fonctionnel: Même fonctionnalités que l'exercice précédent.
-- Lisibilité: 80 lignes de code max, utilisation de `async`/`await` pour les appels asynchrones.
-- Structure: Le code source du projet ne doit pas contenir plus de 7 fichiers. (dont `server.js`, `package.json` et `README.md`)
-- Accessibilité: Votre `README.md` doit décrire les 3 commandes (max.) nécessaires pour télécharger et faire fonctionner ce serveur depuis une autre machine.
-- Production: Le serveur et sa base de données sont accessible sur Internet.
-
-ℹ️ Rendu: Il faudra fournir l'URL du dépôt dans lequel votre code est disponible, ainsi que l'URL à laquelle l'API est accessible sur internet.
+Le but de cet exercice est de mettre le serveur développé ci-dessus en production, afin qu'il soit accessible en permanence et à quiconque sur internet.
 
 ### Étapes proposées
 

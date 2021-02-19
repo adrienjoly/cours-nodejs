@@ -139,6 +139,24 @@ Une `Promise` peut être:
 
 Les fonctions `.then()` et `.catch()` permettent de définir le comportement à adopter si la `Promise` est _résolue_ ou _rejetée_, respectivement.
 
+Propriété intéressante: les appels à `.then()` et `.catch()` retournent la `Promise` éventuellement retournée par la fonction passée en paramètre, ce qui rend possible le chaînage de plusieurs opérations asynchrones.
+
+```js
+incrémenter(0) // (cette fonction retourne une Promise)
+  .then((résultat) => {
+    // résultat === 1
+    return incrémenter(résultat); // (on retourne à nouveau une Promise)
+  })
+  .then((résultat) => {
+    // résultat === 2
+    return incrémenter(résultat); // (on retourne à nouveau une Promise)
+  })
+  .then((résultat) => {
+    // résultat === 3
+    console.log('résultat final:', résultat);
+  });
+```
+
 ### Exemples
 
 Définition de fonction Asynchrone retournant une `Promise`:

@@ -53,11 +53,11 @@ try {
 
 Les fonctions synchrones sont appropriées pour effectuer des opérations courtes, rapides, tant qu'il n'est pas problématique de monopoliser le fil d'exécution du programme Node.js.
 
-Quand on développe un programme effectuant des opérations d'entrées et de sorties de données – que ce soit sur le système de fichier, sur un réseau, ou sur n'importe quel matériel périphérique – il vaut mieux lancer ces opérations en tâche de fond, tout en continuant l'exécution du reste du programme.
+Quand on développe un programme effectuant des opérations d'entrées / sorties de données – que ce soit sur le système de fichier, sur un réseau, ou sur n'importe quel matériel périphérique – il vaut mieux lancer ces opérations en tâche de fond, tout en continuant l'exécution du reste du programme.
 
-Par exemple: tout serveur doit être prêt à répondre à une requête à tout instant, même une autre requête est déjà en cours de traitement.
+Par exemple: un serveur doit être prêt à répondre à des requêtes à tout instant, même si une autre requête est déjà en cours de traitement.
 
-Pour permettre l'exécution de plusieurs opérations en parallèle – sans bloquer l'exécution du reste du programme – le langage JavaScript fournit plusieurs manières de définir et appeler des fonctions _asynchrones_.
+Pour permettre l'exécution de plusieurs opérations en parallèle – sans bloquer l'exécution du reste du programme – le langage JavaScript fournit plusieurs manières de définir et d'appeler des fonctions _Asynchrones_.
 
 Le principe de _fonction de callback_ est la manière la plus classique de procéder:
 
@@ -65,7 +65,7 @@ Le principe de _fonction de callback_ est la manière la plus classique de proc�
 - la fonction asynchrone (A) rend immédiatement la main au programme;
 - la fonction de callback (B) sera appelée une fois que l'opération aura terminé son exécution.
 
-Ainsi, quand on appelle plusieurs fonctions synchrones d'affilée, l'ordre d'exécution des fonctions de callback n'est pas forcément le même.
+Ainsi, quand on appelle plusieurs fonctions asynchrones d'affilée, leurs fonctions de callback respectives ne seront pas forcément exécutées dans le même ordre !
 
 ```js
 // setTimeout() est une fonction asynchrone qui exécute la fonction de callback
@@ -76,6 +76,13 @@ setTimeout(() => console.log('c'), 20); // afficher c dans 20 millisecondes
 // => ordre d'affichage: c, a, puis b
 //    car les opérations asynchrones s'exécutent en parallèle
 ```
+
+### Convention
+
+En Node.js, une fonction de callback prend généralement deux paramètres:
+
+1. le premier paramètre est une instance de la classe `Error` – si l'opération a échoué – ou `null`;
+2. le deuxième paramètre est le résultat de l'exécution de l'opération, dans le cas où elle s'est exécutée sans erreur. C'est la valeur qu'on aurait passé à `return` si notre fonction était synchrone.
 
 ### Exemples
 
@@ -121,9 +128,16 @@ meaningOfLife(function (err, answer) {
 
 ### Principe
 
-En guise d'alternative à l'usage de fonctions de _callback_, Le concept de _promesse_ (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript afin de simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le _callback hell_.
+En guise d'alternative à l'usage de fonctions de _callback_, le concept de _promesse_ (en anglais: `Promise`; cf [javascript.info](https://javascript.info/promise-basics) et [Référence MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)) a été intégré au langage JavaScript pour simplifier le séquençage d'appels asynchrones, et améliorer leur lisibilité en évitant le _callback hell_.
 
 Ainsi, il est désormais possible de définir une fonction asynchrone en lui faisant retourner une `Promise`. Pour récupérer la résultat final de l'exécution de cette fonction, l'appelant doit appeler les fonction `.then()` et `.catch()` de cette _promesse_.
+
+Une `Promise` peut être:
+
+- _résolue_ (`resolve`), si l'opération asynchrone s'est exécutée avec succès;
+- _rejetée_ (`reject`), si une erreur est survenue pendant l'exécution de cette opération.
+
+Les fonctions `.then()` et `.catch()` permettent de définir le comportement à adopter si la `Promise` est _résolue_ ou _rejetée_, respectivement.
 
 ### Exemples
 

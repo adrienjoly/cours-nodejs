@@ -112,10 +112,10 @@ function somme(nombre1, nombre2) {
 
 1. En vous appuyant sur la signature de la fonction `somme()` et de sa documentation fournie en commentaires, proposer 3 intitulés de tests unitaires pour cette fonction, en respectant la forme suivante:
 
-  > _Avec les valeurs de paramètres `X` et `Y`,_
-  > _la fonction `somme()` est sensée retrourner la valeur `Z`_
-  
-  Remplacer `X`, `Y` et `Z` par de vraies valeurs.
+    > _Avec les valeurs de paramètres `X` et `Y`,_  
+    > _la fonction `somme()` est sensée retrourner la valeur `Z`_
+    
+    Remplacer `X`, `Y` et `Z` par de vraies valeurs.
 
 2. Après avoir formulé en français ces trois intitulés, implémenter les tests unitaires correspondants en JavaScript, dans un fichier `test.js`, de manière à ce qu'ils soient compréhensibles par [Mocha](https://mochajs.org/).
 

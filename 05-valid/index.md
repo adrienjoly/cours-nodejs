@@ -110,15 +110,20 @@ function somme(nombre1, nombre2) {
 
 Étapes:
 
-1. En vous appuyant sur la signature de la fonction et de sa documentation fournie en commentaires, proposer 3 intitulés de tests selon la forme suivante: _Avec les valeurs de paramètres `A` et `B`, la fonction somme() est sensée `C`_ (`C` décrivant le résultat obtenu en appelant la fonction en lui passant les paramètre `A` et `B`, sous forme d'un verbe + d'un complément. exemples: `retourner la valeur X de type Y` ou `lever une exception intitulée Z`)
+1. En vous appuyant sur la signature de la fonction `somme()` et de sa documentation fournie en commentaires, proposer 3 intitulés de tests unitaires pour cette fonction, en respectant la forme suivante:
 
-2. Après avoir formulé en français ces trois intitulés, implémenter les tests correspondants en JavaScript, dans un fichier `test.js`, de manière à ce qu'ils soient compréhensibles par [Mocha](https://mochajs.org/).
+  > _Avec les valeurs de paramètres `X` et `Y`,_
+  > _la fonction `somme()` est sensée retrourner la valeur `Z`_
+  
+  Remplacer `X`, `Y` et `Z` par de vraies valeurs.
 
-3. Dans le même fichier, ajouter la fonction `somme()` fournie ci-dessus, telle quelle. Exécuter la suite de tests avec Mocha. Tous les tests devraient échouer, car la fonction n'est pas implémentée.
+2. Après avoir formulé en français ces trois intitulés, implémenter les tests unitaires correspondants en JavaScript, dans un fichier `test.js`, de manière à ce qu'ils soient compréhensibles par [Mocha](https://mochajs.org/).
+
+3. Dans le même fichier, ajouter la fonction `somme()` fournie ci-dessus, telle quelle. Exécuter la suite de tests avec Mocha. Tous les tests devraient échouer, car la fonction n'est pas encore implémentée.
 
 4. Compléter l'implémentation de la fonction `somme()` de manière à ce qu'elle fonctionne comme prévu. Vérifier que tous les tests passent, désormais.
 
-5. Initialiser puis compléter le fichier `package.json` pour que n'importe quel autre développeur puisse lancer vos tests depuis sa machine, en tapant seulement les commandes `npm install` et `npm test`.
+5. Si ce n'est pas encore fait, initialiser puis compléter le fichier `package.json` pour que n'importe quel autre développeur puisse lancer vos tests depuis sa machine, en tapant seulement les commandes `npm install` et `npm test`.
 
 ---
 

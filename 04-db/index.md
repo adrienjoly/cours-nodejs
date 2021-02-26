@@ -85,9 +85,9 @@ Le code source devrait tenir sur une quarantaine de lignes.
 
 ### Étapes proposées
 
-1. Initialiser un serveur de base de données MongoDB. (cf __Comment disposer d'un serveur MongoDB ?__, plus haut)
+1. Initialiser un serveur de base de données MongoDB. (cf _Comment disposer d'un serveur MongoDB ?_, plus haut)
 
-2. Vérifier que vous parvenez bien à vous connecter à ce serveur depuis votre shell Linux. (cf __Comment tester la connection à un serveur MongoDB ?__, plus haut)
+2. Vérifier que vous parvenez bien à vous connecter à ce serveur depuis votre shell Linux. (cf _Comment tester la connection à un serveur MongoDB ?_, plus haut)
 
 3. Initialiser un projet Node.js dans un répertoire vide, installer le package `mongodb` avec npm, et vérifier qu'il a bien été ajouté au fichier `package.json` du projet.
 

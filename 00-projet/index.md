@@ -4,7 +4,6 @@ layout: default
 ---
 
 <!-- REFERENCE LINKS
-- skeleton with tests: https://github.com/adrienjoly/cours-nodejs-project-tester
 - https://github.com/adrienjoly/cours-nodejs-project-solution
 - https://circleci.com/gh/eemi-aj/node-note-keeper [RIP]
 - https://trello.com/c/OY8UVMiS/25-%F0%9F%8E%93-cours#comment-5c33318474ebba6e5f47f9d9
@@ -14,7 +13,7 @@ L'objectif est d'écrire et de mettre en production une API HTTP de gestion de n
 
 Ce travail est à effectuer en groupe, et sera évalué à la fois de manière collective et individuelle.
 
-Afin de vérifier son bon fonctionnement, ainsi que le respect du cahier des charges et des critères d'évaluation fournis ci-dessous, le code source rendu sera exécuté et vérifié par une suite de tests automatisés écrits par l'enseignant.
+Afin de vérifier son bon fonctionnement, ainsi que le respect du cahier des charges et des critères d'évaluation fournis ci-dessous, le code source rendu sera exécuté et vérifié par une suite de tests automatisés écrits par le client.
 
 ## Critères d'évaluation
 
@@ -26,6 +25,7 @@ Chaque groupe devra rendre trois URLs:
 Le travail du groupe et de chacune des personnes du groupe sera évalué selon les critères suivants:
 
 - Fonctionnel: Les fonctionnalités ont été implémentées conformément au cahier des charges fourni ci-dessous.
+- Technique: Les routes (endpoints) sont implémentées à l'aide du module demandé à chaque groupe, et non à l'aide d'Express.
 - Lisibilité: Le dépôt git contient un fichier `README.md` qui explique comment cloner, faire fonctionner et tester l'API depuis une autre machine que la sienne. Les fichiers JavaScript doivent respecter les conventions de codage du [guide de style de Airbnb](https://github.com/airbnb/javascript): chaînes de caractères entre apostrophes, indentation à 2 espaces, usage de point-virgules pour ponctuer chaque instruction.
 - Production: L'API doit être accessible et fonctionnelle en production, à l'URL fournie.
 - Collaboration: Chaque collaborateur de l'équipe devra avoir contribué une partie substantielle du code source de l'API. Ceci sera notamment vérifié grâce à l'historique des commits git.
@@ -241,9 +241,3 @@ Cas d'erreurs (avec valeur correspondante pour la propriété `error`):
 - si l'utilisateur n'est pas connecté => `Utilisateur non connecté` et retourner un code HTTP `401`.
 - si `id` n'est associé à aucune note stockée dans la base de données => `Cet identifiant est inconnu` et retourner un code HTTP `404`.
 - si `id` est associé à une note appartenant à un autre utilisateur => `Accès non autorisé à cette note` et retourner un code HTTP `403`.
-
-## Annexes
-
-Pour faciliter l'initialisation de votre projet et sa recette lors de votre rendu, nous fournissons un dépôt contenant un code source de départ et quelques tests automatisés: [cours-nodejs-project-tester](https://github.com/adrienjoly/cours-nodejs-project-tester).
-
-Libre à vous d'utiliser ou pas ce canevas.

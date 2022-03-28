@@ -215,6 +215,7 @@ Questions auxquelles savoir répondre:
 
 - Aide-mémoire: [Fonctions synchrones VS asynchrones](../sync-vs-async)
 - [Apprendre les mécanismes de base de l'asynchrone en JavaScript, un tutoriel de Yahiko](https://javascript.developpez.com/actu/102019/Apprendre-les-mecanismes-de-base-de-l-asynchrone-en-JavaScript-un-tutoriel-de-Yahiko/)
+- [What the heck is the event loop anyway? | Philip Roberts | JSConf EU - YouTube](https://www.youtube.com/watch?v=8aGhZQkoFbQ) (26mn, VOST)
 - [Callbacks - The Art of Node](https://github.com/maxogden/art-of-node#callbacks)
 - [Promises in 15 minutes - DEV Community](https://dev.to/marianesantana/promises-in-15-minutes-9l7)
 - [JavaScript Visualized: Promises & Async/Await - DEV Community](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)

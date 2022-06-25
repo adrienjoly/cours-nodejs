@@ -6,7 +6,7 @@
     "esprima": "^4.0.1",
     "expect.js": "^0.3.1",
     "mocha": "^8.2.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   },
   "scripts": {
     "jekyll:install": "gem install bundler && bundle install # requires ruby-lang.org",

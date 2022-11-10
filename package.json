@@ -5,7 +5,7 @@
   "dependencies": {
     "esprima": "^4.0.1",
     "expect.js": "^0.3.1",
-    "mocha": "^8.2.1",
+    "mocha": "^10.1.0",
     "node-fetch": "^2.6.1"
   },
   "scripts": {
